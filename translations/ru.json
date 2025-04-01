@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "WaiWai.diy"
+  },
+  "header": {
+    "discussProject": "Обсудить\nпроект"
+  },
+  "hero": {
+    "title": "Искусственный интеллект, который действительно понимает ваш бизнес",
+    "subtitle": "Находите лиды, отправляйте им персональные сообщения и ведите с ними переписку. Освободите ресурсы для развития вашего бизнеса, а рутиной займется AI"
+  },
+  "team": {
+    "title": "Вот они -\nслева направо",
+    "mikWiseman": {
+      "name": "Мик Вайсман",
+      "roles": ["Co-founder, CTO", "exCEO at Trinity Monsters", "exCTO at Red_mad_robot"]
+    },
+    "andreyLisitsyn": {
+      "name": "Андрей Лисицын",
+      "roles": ["Co-founder, CPO", "exHead of Design at TripleTen", "exHead of Product at Yandex Practicum"]
+    }
+  },
+  "cases": {
+    "title": "Кейсы",
+    "comingSoon": "Кейс скоро будет",
+    "yourProject": "Место для вашего проекта",
+    "falcone": {
+      "stats": {
+        "salesGrowth": "21%",
+        "salesGrowthDesc": "Рост продаж благодаря WaiWai",
+        "responseIncrease": "5.7x",
+        "responseIncreaseDesc": "Увеличение числа ответов клиентов на сообщения"
+      },
+      "description": "Нашли клиентов для сервиса доставки — селлеров Ozon, Wildberries, Yandex Market. WaiWai сделала рассылку персонализированных писем, используя открытые данные о клиентах и их потребностях.",
+      "tags": ["Логистика", "Маркетплейсы", "Продажи", "Email"]
+    },
+    "akBarsBank": {
+      "stats": {
+        "timeReduction": "41%",
+        "timeReductionDesc": "Сокращение времени закрытия вакансии",
+        "timeFreed": "28%",
+        "timeFreedDesc": "Высвободилось времени рекрутеров на другие задачи"
+      },
+      "description": "Автоматизировали процесс набора персонала на HeadHunter. Для поиска сотрудников WaiWai создает персонализированные письма на основе профилей кандидатов. Система сортирует входящие запросы и отвечает на них, экономя время рекрутеров.",
+      "tags": ["Финансы", "Рекрутмент", "Рассылки", "HH.ru", "LinkedIn"]
+    },
+    "ontico": {
+      "stats": {
+        "salesGrowth": "16%",
+        "salesGrowthDesc": "Рост продаж благодаря WaiWai",
+        "responseIncrease": "2.4x",
+        "responseIncreaseDesc": "Увеличение числа ответов клиентов на сообщения"
+      },
+      "description": "Для продажи билетов на берлинскую конференцию WaiWai нашла программистов по языку программирования и посещению схожих мероприятий. Подбор релевантных лидов и персонализированные сообщения увеличили конверсию в 2,4 раза.",
+      "tags": ["Мероприятия", "Продажи", "LinkedIn"]
+    },
+    "rossi": {
+      "stats": {
+        "salesGrowth": "12%",
+        "salesGrowthDesc": "Рост продаж благодаря WaiWai",
+        "responseIncrease": "2.1x",
+        "responseIncreaseDesc": "Увеличение числа ответов клиентов на сообщения"
+      },
+      "description": "Увеличили поток бизнес-клиентов для отеля. WaiWai разослала персонализированные сообщения в компании, отправляющие сотрудников в командировки в Санкт-Петербург. Основным каналом поиска лидов стал LinkedIn.",
+      "tags": ["Туризм", "Продажи", "LinkedIn", "Email"]
+    }
+  },
+  "blog": {
+    "title": "Блог"
+  },
+  "cta": {
+    "title": "Пока конкуренты ищут клиентов — ваши уже читают сообщения от WaiWai",
+    "bookCall": "Забронируйте слот для звонка"
+  },
+  "awards": {
+    "title": "Награды",
+    "ethGlobalSf": {
+      "title": "ETHglobal San Francisco",
+      "award": "1 место, номинация AI-collabs (2024)"
+    },
+    "ethGlobalBrussels": {
+      "title": "ETHGlobal Brussels",
+      "award": "1 место, номинация AI-chat-bots (2024)"
+    },
+    "ethGlobalSingapore": {
+      "title": "ETHGlobal Singapore",
+      "award": "3 место, номинация «Web3 services» (2024)"
+    }
+  }
+} 

@@ -1,0 +1,9 @@
+{
+  "name": "waiwaidiy-web",
+  "version": "1.0.0",
+  "description": "WaiWai.diy website with internationalization support",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
