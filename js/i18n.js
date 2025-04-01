@@ -1,6 +1,12 @@
 // Default language and translations setup
 let currentLanguage = 'en';
 
+// Initialize language immediately when script loads
+document.addEventListener('DOMContentLoaded', () => {
+    initializeLanguage();
+    updatePageContent();
+});
+
 // Function to get the current language from URL
 function getLanguageFromURL() {
     const pathSegments = window.location.pathname.split('/');
@@ -9,26 +15,20 @@ function getLanguageFromURL() {
 
 // Function to set language based on URL and localStorage
 function initializeLanguage() {
-    // First check URL for language
+    // Check URL for language
     const urlLanguage = getLanguageFromURL();
     
-    // If URL has language, use it
-    if (urlLanguage) {
-        currentLanguage = urlLanguage;
-        localStorage.setItem('language', urlLanguage);
+    // If URL has /ru, use Russian
+    if (urlLanguage === 'ru') {
+        currentLanguage = 'ru';
+        localStorage.setItem('language', 'ru');
     } else {
-        // If no language in URL, check localStorage
-        const storedLanguage = localStorage.getItem('language');
-        if (storedLanguage) {
-            currentLanguage = storedLanguage;
-            // Update URL if stored language is Russian
-            if (storedLanguage === 'ru' && !window.location.pathname.startsWith('/ru')) {
-                window.history.replaceState({}, '', '/ru' + window.location.pathname);
-            }
-        } else {
-            // Default to English if no stored preference
-            currentLanguage = 'en';
-            localStorage.setItem('language', 'en');
+        // Default to English in all other cases
+        currentLanguage = 'en';
+        localStorage.setItem('language', 'en');
+        // Remove /ru from path if it exists
+        if (window.location.pathname.startsWith('/ru')) {
+            window.history.replaceState({}, '', window.location.pathname.replace(/^\/ru/, ''));
         }
     }
 }
@@ -238,21 +238,17 @@ function switchLanguage(lang) {
     
     // Update URL
     if (lang === 'ru') {
-        const newPath = '/ru' + window.location.pathname.replace(/^\/ru/, '');
+        // Add /ru to the beginning of the path
+        const newPath = '/ru' + (window.location.pathname === '/' ? '' : window.location.pathname).replace(/^\/ru/, '');
         window.history.pushState({}, '', newPath);
     } else {
+        // Remove /ru from the beginning of the path
         const newPath = window.location.pathname.replace(/^\/ru/, '');
-        window.history.pushState({}, '', newPath);
+        window.history.pushState({}, '', newPath || '/');
     }
     
     updatePageContent();
 }
-
-// Initialize translations when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    initializeLanguage();
-    updatePageContent();
-});
 
 // Handle browser back/forward buttons
 window.addEventListener('popstate', () => {
