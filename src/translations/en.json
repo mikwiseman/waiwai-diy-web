@@ -3,7 +3,7 @@
     "title": "WaiWai.diy"
   },
   "header": {
-    "discussProject": "Discuss\nproject"
+    "discussProject": "Discuss project"
   },
   "hero": {
     "title": "Artificial Intelligence that truly understands your business",
@@ -24,43 +24,29 @@
     "title": "Cases",
     "comingSoon": "Case coming soon",
     "yourProject": "Place for your project",
+    "stats": {
+      "salesGrowth": "Sales growth thanks to WaiWai",
+      "responseIncrease": "Increase in customer response rate",
+      "timeReduction": "Reduction in vacancy closing time",
+      "timeFreed": "Recruiters' time freed up for other tasks"
+    },
     "falcone": {
-      "stats": {
-        "salesGrowth": "21%",
-        "salesGrowthDesc": "Sales growth thanks to WaiWai",
-        "responseIncrease": "5.7x",
-        "responseIncreaseDesc": "Increase in customer response rate"
-      },
+      "title": "Falcone",
       "description": "Found clients for delivery service - sellers from Ozon, Wildberries, Yandex Market. WaiWai sent personalized emails using open data about clients and their needs.",
       "tags": ["Logistics", "Marketplaces", "Sales", "Email"]
     },
     "akBarsBank": {
-      "stats": {
-        "timeReduction": "41%",
-        "timeReductionDesc": "Reduction in vacancy closing time",
-        "timeFreed": "28%",
-        "timeFreedDesc": "Recruiters' time freed up for other tasks"
-      },
+      "title": "Ak Bars Bank",
       "description": "Automated the recruitment process on HeadHunter. WaiWai creates personalized letters based on candidate profiles for employee search. The system sorts incoming requests and responds to them, saving recruiters' time.",
       "tags": ["Finance", "Recruitment", "Mailings", "HH.ru", "LinkedIn"]
     },
     "ontico": {
-      "stats": {
-        "salesGrowth": "16%",
-        "salesGrowthDesc": "Sales growth thanks to WaiWai",
-        "responseIncrease": "2.4x",
-        "responseIncreaseDesc": "Increase in customer response rate"
-      },
+      "title": "Ontico Conferences",
       "description": "For selling tickets to the Berlin conference, WaiWai found programmers based on programming language and attendance at similar events. Selection of relevant leads and personalized messages increased conversion by 2.4 times.",
       "tags": ["Events", "Sales", "LinkedIn"]
     },
     "rossi": {
-      "stats": {
-        "salesGrowth": "12%",
-        "salesGrowthDesc": "Sales growth thanks to WaiWai",
-        "responseIncrease": "2.1x",
-        "responseIncreaseDesc": "Increase in customer response rate"
-      },
+      "title": "Hotel Rossi",
       "description": "Increased business client flow for the hotel. WaiWai sent personalized messages to companies sending employees on business trips to Saint Petersburg. LinkedIn became the main channel for lead search.",
       "tags": ["Tourism", "Sales", "LinkedIn", "Email"]
     }
@@ -86,5 +72,15 @@
       "title": "ETHGlobal Singapore",
       "award": "3rd place, «Web3 services» nomination (2024)"
     }
+  },
+  "contact": {
+    "title": "Contacts",
+    "email": "email:",
+    "telegram": "Telegram:",
+    "phone": "Phone:",
+    "address": "ADDRESS:",
+    "russia": "(Russia)",
+    "leaveRequest": "Leave a request,\nand we'll contact you",
+    "copyright": "2025 ALL RIGHTS RESERVED"
   }
 } 

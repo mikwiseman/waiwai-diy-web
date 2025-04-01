@@ -1,0 +1,75 @@
+<template>
+  <div id="app">
+    <div id="luxy">
+      <router-view/>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  mounted() {
+    // Initialize Luxy.js
+    if (!/iPhone|iPad|Android/i.test(navigator.userAgent)) {
+      window.luxy.init({
+        wrapper: '#luxy',
+        wrapperSpeed: 0.08,
+      });
+    }
+  }
+}
+</script>
+
+<style>
+@import '@/assets/css/normalize.css';
+@import '@/assets/css/webflow.css';
+@import '@/assets/css/waiwaidiy.webflow.css';
+
+/* Language switcher styles */
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 8px;
+}
+
+.language-button {
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.language-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.language-button.active {
+  background: #fff;
+  color: #000;
+}
+
+/* Other styles */
+.logo-card-whoverp .logo-image-media {
+  filter: grayscale(100%);
+  opacity: 50%;
+  transition: opacity 0.3s ease;
+  transition: filter 0.3s ease;
+}
+
+.logo-card-whoverp:hover .logo-image-media {
+  filter: none;
+  opacity: 100%;
+}
+
+.bg-gradient:tiny {
+  filter: blur(100px);
+  -webkit-filter: blur(100px);
+}
+</style>
