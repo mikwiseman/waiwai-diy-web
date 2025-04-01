@@ -179,7 +179,7 @@
       </div>
       <div class="project-container">
         <!-- First Blog Post -->
-        <router-link :to="{ name: $i18n.locale === 'ru' ? 'blog-post-ru' : 'blog-post', params: { id: 'poisk-klientov' }}" class="project-card blog-card">
+        <router-link :to="{ name: $i18n.locale === 'ru' ? 'blog-post-ru' : 'blog-post', params: { id: 'post1' }}" class="project-card blog-card">
           <div class="blog-preview">
             <img src="@/assets/images/poisk-klientov.jpg" loading="lazy" alt="AI Agent Client Search" class="blog-preview-image">
           </div>
@@ -199,15 +199,15 @@
         </router-link>
 
         <!-- Second Blog Post -->
-        <router-link :to="{ name: $i18n.locale === 'ru' ? 'blog-post-ru' : 'blog-post', params: { id: 'germes-presentation' }}" class="project-card blog-card">
+        <router-link :to="{ name: $i18n.locale === 'ru' ? 'blog-post-ru' : 'blog-post', params: { id: 'post2' }}" class="project-card blog-card">
           <div class="blog-preview">
             <img src="@/assets/images/germes-presentation.jpg" loading="lazy" alt="AI Sales Presentation" class="blog-preview-image">
           </div>
           <div class="blog-content">
             <div class="project-info">
               <div class="project-title">
-                <div class="proj-title">{{ $t('blog.post2.title', 'Мик Вайсман выступит с докладом об AI в продажах в бизнес-клубе Germes') }}</div>
-                <div class="proj-description">{{ $t('blog.post2.description', '17 апреля при поддержке Московской Торгово-Промышленной палаты состоится встреча бизнес-клуба Germes. Тема мероприятия: «Цифровая трансформация российского бизнеса: ключевые вызовы, успехи и перспективы».') }}</div>
+                <div class="proj-title">{{ $t('blog.post2.title') }}</div>
+                <div class="proj-description">{{ $t('blog.post2.description') }}</div>
               </div>
               <div class="project-chips-container">
                 <div class="chip on-color dark">Events</div>
