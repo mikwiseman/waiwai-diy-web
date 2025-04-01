@@ -172,6 +172,54 @@
       <img src="@/assets/images/line.svg" loading="lazy" alt="" class="illustration-info">
     </div>
 
+    <!-- Blog Section -->
+    <div class="blog">
+      <div class="title-container">
+        <h2 class="blog-title">{{ $t('blog.title') }}</h2>
+      </div>
+      <div class="project-container">
+        <!-- First Blog Post -->
+        <router-link :to="{ name: $i18n.locale === 'ru' ? 'blog-post-ru' : 'blog-post', params: { id: 'poisk-klientov' }}" class="project-card blog-card">
+          <div class="blog-preview">
+            <img src="@/assets/images/poisk-klientov.jpg" loading="lazy" alt="AI Agent Client Search" class="blog-preview-image">
+          </div>
+          <div class="blog-content">
+            <div class="project-info">
+              <div class="project-title">
+                <div class="proj-title">{{ $t('blog.post1.title') }}</div>
+                <div class="proj-description">{{ $t('blog.post1.description') }}</div>
+              </div>
+              <div class="project-chips-container">
+                <div class="chip on-color dark">AI</div>
+                <div class="chip on-color dark">B2B</div>
+                <div class="chip on-color dark">Sales</div>
+              </div>
+            </div>
+          </div>
+        </router-link>
+
+        <!-- Second Blog Post -->
+        <router-link :to="{ name: $i18n.locale === 'ru' ? 'blog-post-ru' : 'blog-post', params: { id: 'ai-trends' }}" class="project-card blog-card">
+          <div class="blog-preview">
+            <img src="@/assets/images/poisk-klientov.jpg" loading="lazy" alt="AI Trends" class="blog-preview-image">
+          </div>
+          <div class="blog-content">
+            <div class="project-info">
+              <div class="project-title">
+                <div class="proj-title">{{ $t('blog.post2.title') }}</div>
+                <div class="proj-description">{{ $t('blog.post2.description') }}</div>
+              </div>
+              <div class="project-chips-container">
+                <div class="chip on-color dark">AI Trends</div>
+                <div class="chip on-color dark">Technology</div>
+                <div class="chip on-color dark">Future</div>
+              </div>
+            </div>
+          </div>
+        </router-link>
+      </div>
+    </div>
+
     <!-- Awards section -->
     <div class="awards">
       <div class="dot-block">
@@ -248,17 +296,17 @@
           </div>
         </div>
       </div>
-      <div id="w-node-f7b89fee-4fa0-a52e-d7a5-9d0145ca1cf9-b9cd35b6" class="form-container">
-        <div id="w-node-f7b89fee-4fa0-a52e-d7a5-9d0145ca1cfd-b9cd35b6" class="form-title white">{{ $t('contact.leaveRequest') }}</div>
-        <div id="w-node-c93d6324-cde1-923f-b9c7-dece9dafa6f3-b9cd35b6" class="foot-logo-container">
+      <div class="form-container">
+        <div class="form-title white">{{ $t('contact.leaveRequest') }}</div>
+        <div class="foot-logo-container">
           <img src="@/assets/images/logo_02.svg" loading="lazy" width="246" alt="" class="image-2">
-          <p class="footer-copyright">{{ $t('contact.copyright') }}</p>
         </div>
-        <div class="absolute-container">
-          <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button-footer w-inline-block">
-            <div class="button-text footer">{{ $t('header.discussProject') }}</div>
+        <div class="contact-button-circle">
+          <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button-circle-link">
+            <div class="button-text-circle">DISCUSS PROJECT</div>
           </a>
         </div>
+        <div class="copyright-text">2025 ALL RIGHTS RESERVED</div>
       </div>
     </div>
   </div>
@@ -268,4 +316,68 @@
 export default {
   name: 'HomePage'
 }
-</script> 
+</script>
+
+<style scoped>
+.copyright-text {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  font-family: 'Courier', monospace;
+  font-size: 14px;
+  color: #E5FF32;
+  opacity: 0.8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.contact-button-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background-color: #E5FF32;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.contact-button-circle:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.contact-button-circle:hover .button-text-circle {
+  transform: rotate(5deg);
+}
+
+.button-text-circle {
+  font-family: 'Courier', monospace;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: transform 0.5s ease;
+  color: #002713;
+}
+
+.form-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #002713;
+  overflow: hidden;
+}
+
+.foot-logo-container {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+}
+</style> 

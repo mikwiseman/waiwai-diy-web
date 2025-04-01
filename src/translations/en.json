@@ -52,7 +52,15 @@
     }
   },
   "blog": {
-    "title": "Blog"
+    "title": "Blog",
+    "post1": {
+      "title": "Finding Clients with AI Agent: Capabilities and Limitations",
+      "description": "Learn about AI agents, how they can help find B2B clients, and what are their current limitations."
+    },
+    "post2": {
+      "title": "AI Trends in 2024",
+      "description": "Explore the latest AI trends and how they are transforming various industries."
+    }
   },
   "cta": {
     "title": "While competitors are looking for clients — yours are already reading messages from WaiWai",
