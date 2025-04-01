@@ -1,16 +1,18 @@
 <template>
-  <div class="blog-post-container">
-    <div class="blog-post-header">
-      <img :src="post.image" :alt="post.title" class="blog-post-image">
-    </div>
-    <div class="blog-post-content">
-      <h1 class="blog-post-title">{{ post.title }}</h1>
-      <div class="project-chips-container">
-        <div v-for="(tag, index) in post.tags" :key="index" class="chip on-color dark">
-          {{ tag }}
-        </div>
+  <div class="blog-post">
+    <div class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">{{ $t(`blog.${postId}.title`) }}</h1>
       </div>
-      <div class="blog-post-text" v-html="post.content"></div>
+    </div>
+    
+    <div class="blog-content">
+      <div class="container">
+        <div class="blog-image">
+          <img :src="require(`@/assets/images/${postId}.jpg`)" :alt="$t(`blog.${postId}.title`)" />
+        </div>
+        <div class="blog-text" v-html="formattedContent"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -18,133 +20,87 @@
 <script>
 export default {
   name: 'BlogPost',
-  data() {
-    return {
-      post: {
-        title: '',
-        image: '',
-        tags: [],
-        content: ''
-      }
+  props: {
+    id: {
+      type: String,
+      required: true
     }
   },
-  created() {
-    // Here we would normally fetch the blog post data based on the route parameter
-    // For now, we'll use hardcoded data for the example post
-    if (this.$route.params.id === 'poisk-klientov') {
-      this.post = {
-        title: this.$t('blog.post1.title'),
-        image: require('@/assets/images/poisk-klientov.jpg'),
-        tags: ['AI', 'B2B', 'Sales'],
-        content: `
-          <h2>Что такое AI-агенты?</h2>
-          <p>AI-агенты – программы на базе искусственного интеллекта, способные самостоятельно выполнять широкий спектр задач. Главная их особенность — они могут выполнять самостоятельные действия.</p>
-          
-          <p>Подробнее, почему это один из главных трендов среди новых технологий и почему AI-агенты скоро появятся в самых разных отраслях экономики — можете прочитать в нашей статье для проекта Sostav.ru Aitoolz.</p>
-          
-          <h2>Как AI-агенты ищут клиентов?</h2>
-          <p>Продажи сложная ниша с большим количеством рутины. Поэтому мы разработали AI-агента — систему WaiWai, которая автоматизирует поиск клиентов в b2b секторе. Ориентируясь по заданному портрету клиента, она находит подобных в открытых источниках данных и ведет с ними переписку. Инструмент создан упростить процесс лидогенерации, экономя время и ресурсы бизнеса.</p>
-          
-          <h2>Какие лиды может найти система?</h2>
-          <p>Наша система способна находить потенциальных клиентов по широкому спектру параметров. Основная возможность – поиск по профессиональным характеристикам потенциального клиента.</p>
-          
-          <p>Гибкость системы позволяет формировать как очень широкие запросы, например, «IT-специалисты в России», так и узкоспециализированные, например «брокеры в Нью-Йорке со знанием русского языка».</p>
-          
-          <p>Например, мы можем искать:</p>
-          <ul>
-            <li>Представителей определенных должностей: директора технические (CTO), по маркетингу (CMO), финансовые, по продукту и владельцы бизнеса по различным отраслям.</li>
-            <li>Специалистов конкретных профессий: разработчики на C или Python, дантисты, организаторы мероприятий, логисты, брокеры, юристы — список можно продолжать до бесконечности.</li>
-            <li>Людей по дополнительным критериям. Например, сотрудников компаний определенного размера или специалистов, интересующихся edtech, участвовавших в профильных мероприятиях.</li>
-          </ul>
-          
-          <h2>Ограничения системы: что AI-агент не может найти?</h2>
-          <p>Несмотря на высокую эффективность, наша система имеет определенные ограничения:</p>
-          <ul>
-            <li>Данные из закрытых источников</li>
-            <li>Технически невозможные запросы</li>
-          </ul>
-          
-          <h2>Заключение</h2>
-          <p>AI-агент по поиску клиентов для B2B – мощный инструмент для целевого поиска потенциальных клиентов. Он позволяет быстро и эффективно находить лидов по широкому спектру параметров, при этом работая исключительно с легальными открытыми источниками данных.</p>
-          
-          <p>Система отлично справляется с типовыми запросами по должности, локации и отрасли, а для особо сложных кейсов предлагает кастомные решения.</p>
-        `
-      }
+  computed: {
+    postId() {
+      return this.id;
+    },
+    formattedContent() {
+      return this.$t(`blog.${this.postId}.content`).split('\n').map(paragraph => 
+        paragraph.startsWith('-') ? 
+          `<li>${paragraph.substring(2)}</li>` : 
+          `<p>${paragraph}</p>`
+      ).join('');
     }
   }
 }
 </script>
 
-<style>
-.blog-post-container {
+<style scoped>
+.blog-post {
+  background-color: #002713;
+  min-height: 100vh;
+  color: #E5FF32;
+}
+
+.container {
   max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.blog-post-header {
-  margin-bottom: 2rem;
+.blog-header {
+  padding: 60px 0;
+  background-color: #001a0d;
 }
 
-.blog-post-image {
+.blog-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0;
+  color: #E5FF32;
+}
+
+.blog-image {
+  margin: 40px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blog-image img {
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 0.5rem;
+  height: auto;
+  display: block;
 }
 
-.blog-post-title {
-  font-family: Inter Tight, sans-serif;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  margin-bottom: 1rem;
+.blog-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
 }
 
-.blog-post-text {
-  font-family: Inter, sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.75;
-  color: #000000;
-  margin-top: 2rem;
+.blog-text p {
+  margin: 24px 0;
 }
 
-.blog-post-text h2 {
-  font-family: Inter Tight, sans-serif;
-  font-size: 1.75rem;
-  line-height: 2rem;
-  margin: 2rem 0 1rem;
+.blog-text li {
+  margin: 12px 0;
+  list-style-type: none;
+  position: relative;
+  padding-left: 24px;
 }
 
-.blog-post-text p {
-  margin-bottom: 1rem;
-}
-
-.blog-post-text ul {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-}
-
-.blog-post-text li {
-  margin-bottom: 0.5rem;
-}
-
-@media screen and (max-width: 767px) {
-  .blog-post-container {
-    margin: 1rem auto;
-  }
-
-  .blog-post-title {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-
-  .blog-post-text {
-    font-size: 1rem;
-  }
-
-  .blog-post-text h2 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
+.blog-text li:before {
+  content: "•";
+  color: #E5FF32;
+  position: absolute;
+  left: 0;
 }
 </style> 

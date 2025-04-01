@@ -32,7 +32,8 @@ const routes = [
     beforeEnter: (to, from, next) => {
       i18n.locale = 'en'
       next()
-    }
+    },
+    props: true
   },
   {
     path: '/ru/blog/:id',
@@ -41,7 +42,8 @@ const routes = [
     beforeEnter: (to, from, next) => {
       i18n.locale = 'ru'
       next()
-    }
+    },
+    props: true
   }
 ]
 
