@@ -172,54 +172,6 @@
       <img src="@/assets/images/line.svg" loading="lazy" alt="" class="illustration-info">
     </div>
 
-    <!-- Blog Section -->
-    <div class="blog">
-      <div class="title-container">
-        <h2 class="blog-title">{{ $t('blog.title') }}</h2>
-      </div>
-      <div class="project-container">
-        <!-- First Blog Post -->
-        <router-link :to="{ name: $i18n.locale === 'ru' ? 'blog-post-ru' : 'blog-post', params: { id: 'post1' }}" class="project-card blog-card">
-          <div class="blog-preview">
-            <img src="@/assets/images/poisk-klientov.jpg" loading="lazy" alt="AI Agent Client Search" class="blog-preview-image">
-          </div>
-          <div class="blog-content">
-            <div class="project-info">
-              <div class="project-title">
-                <div class="proj-title">{{ $t('blog.post1.title') }}</div>
-                <div class="proj-description">{{ $t('blog.post1.description') }}</div>
-              </div>
-              <div class="project-chips-container">
-                <div class="chip on-color dark">AI</div>
-                <div class="chip on-color dark">B2B</div>
-                <div class="chip on-color dark">Sales</div>
-              </div>
-            </div>
-          </div>
-        </router-link>
-
-        <!-- Second Blog Post -->
-        <router-link :to="{ name: $i18n.locale === 'ru' ? 'blog-post-ru' : 'blog-post', params: { id: 'post2' }}" class="project-card blog-card">
-          <div class="blog-preview">
-            <img src="@/assets/images/germes-presentation.jpg" loading="lazy" alt="AI Sales Presentation" class="blog-preview-image">
-          </div>
-          <div class="blog-content">
-            <div class="project-info">
-              <div class="project-title">
-                <div class="proj-title">{{ $t('blog.post2.title') }}</div>
-                <div class="proj-description">{{ $t('blog.post2.description') }}</div>
-              </div>
-              <div class="project-chips-container">
-                <div class="chip on-color dark">Events</div>
-                <div class="chip on-color dark">AI Sales</div>
-                <div class="chip on-color dark">Business</div>
-              </div>
-            </div>
-          </div>
-        </router-link>
-      </div>
-    </div>
-
     <!-- Awards section -->
     <div class="awards">
       <div class="dot-block">
@@ -267,15 +219,10 @@
       </div>
     </div>
 
-    <!-- Offer section -->
-    <div class="offer-section">
-      <div class="offer-container">
-        <a :href="$i18n.locale === 'ru' ? 'https://docs.google.com/document/d/1Xh5HF6y-1nSrwcg6mxpdzgU_uz3Q9DNy' : 'https://docs.google.com/document/d/1wAv1IuOxSROJ8Vr4aRrxPFLmZvnWeyIu'" 
-           target="_blank" 
-           class="offer-link">
-          {{ $t('offer.viewOffer') }}
-        </a>
-      </div>
+    <!-- Blog Section -->
+    <div class="blog">
+      <h2 class="blog-title">{{ $t('blog.title') }}</h2>
+      <div id="dib-posts"></div>
     </div>
 
     <div class="contact-section">
@@ -448,5 +395,87 @@ export default {
 
 .footer-link:hover {
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* Blog styles */
+.blog {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.blog-title {
+  font-family: Inter Tight, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+/* DropInBlog custom styles */
+:deep(.dib-posts) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+:deep(.dib-post) {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+:deep(.dib-post:hover) {
+  transform: translateY(-4px);
+}
+
+:deep(.dib-post-image) {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+:deep(.dib-post-content) {
+  padding: 1.5rem;
+}
+
+:deep(.dib-post-title) {
+  font-family: Inter Tight, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+:deep(.dib-post-excerpt) {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+:deep(.dib-post-meta) {
+  font-family: Inter, sans-serif;
+  font-size: 0.875rem;
+  color: #999;
+}
+
+@media screen and (max-width: 767px) {
+  .blog {
+    padding: 2rem 1rem;
+  }
+  
+  .blog-title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  
+  :deep(.dib-posts) {
+    grid-template-columns: 1fr;
+  }
 }
 </style> 

@@ -1017,19 +1017,7 @@ body {
 }
 
 .logo-card-whoverp {
-  border: 1px solid var(--border);
-  cursor: auto;
-  border-radius: 1rem;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  transition: border-color .2s;
-  display: flex;
-}
-
-.logo-card-whoverp:hover {
-  border-color: #0003;
+  /* Your card styles */
 }
 
 .address-text {

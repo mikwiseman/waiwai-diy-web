@@ -9,6 +9,9 @@
     "title": "Artificial Intelligence that truly understands your business",
     "subtitle": "Find leads, send them personalized messages and maintain correspondence with them. Free up resources for your business development while AI handles the routine"
   },
+  "blog": {
+    "title": "Blog"
+  },
   "team": {
     "title": "Here they are -\nleft to right",
     "mikWiseman": {
@@ -49,19 +52,6 @@
       "title": "Hotel Rossi",
       "description": "Increased business client flow for the hotel. WaiWai sent personalized messages to companies sending employees on business trips to Saint Petersburg. LinkedIn became the main channel for lead search.",
       "tags": ["Tourism", "Sales", "LinkedIn", "Email"]
-    }
-  },
-  "blog": {
-    "title": "Blog",
-    "post1": {
-      "title": "Finding Clients with AI Agent: Capabilities and Limitations",
-      "description": "Learn how AI can revolutionize your B2B client search and engagement strategy",
-      "content": "What are AI Agents?\nAI agents are artificial intelligence-based programs capable of independently performing a wide range of tasks. Their main feature is their ability to take autonomous actions.\n\nTo learn more about why this is one of the main trends in new technologies and why AI agents will soon appear in various sectors of the economy, you can read our article for the Sostav.ru Aitoolz project.\n\nHow do AI Agents find clients?\nSales is a challenging niche with a lot of routine tasks. That's why we developed an AI agent - the WaiWai system, which automates client search in the B2B sector. Based on a given client profile, it finds similar prospects in open data sources and engages in correspondence with them. The tool is designed to simplify the lead generation process, saving business time and resources.\n\nWhat kinds of leads can the system find?\nOur system can find potential clients across a wide range of parameters. The main capability is searching by professional characteristics of potential clients.\n\nThe system's flexibility allows for both broad queries, such as 'IT specialists in Russia,' and highly specialized ones, like 'brokers in New York who speak Russian.'\n\nFor example, we can search for:\n\n-Representatives of specific positions: Technical Directors (CTO), Marketing Directors (CMO), Financial Officers, Product Managers, and business owners across various industries\n-Specialists in specific professions: C or Python developers, dentists, event organizers, logisticians, brokers, lawyers - the list is endless\n-People by additional criteria: For example, employees of companies of a certain size or specialists interested in edtech who have participated in relevant events\n\nThe system allows narrowing the search by additional parameters, making it more effective. These parameters can include:\n\n-Location: for example, 'technical directors in Berlin,' 'developers in Moscow,' 'dentists in St. Petersburg'\n-Educational background: where the potential client studied\n-Workplace: company size, industry, specific organization\n-Interests: can also be a search parameter - from golf to numismatics\n\nSystem Limitations: What can't the AI agent find?\nDespite its high efficiency, our system has certain limitations:\n\nData from closed sources\nThe system works exclusively with legal open data sources. For example, we cannot:\n-Enrich data using phone numbers and full names\n-Use leaked databases or illegal information sources\n-Access information from closed government registries\n\nOur system is specifically designed for B2B client search.\n\nTechnically impossible requests\nThere are requests that are impossible to fulfill in principle. For example - searching for companies that have declared goods at customs (no open APIs).\nHowever, some specific complex requests are feasible but require custom development. For example, searching for businesses with legal entities in Russia but trading with Kazakhstan, using specific platforms.\n\nConclusion\nThe B2B client search AI agent is a powerful tool for targeted prospect search. It allows quick and efficient lead finding across a wide range of parameters while working exclusively with legal open data sources.\n\nThe system excels at typical requests by position, location, and industry, and offers custom solutions for particularly complex cases."
-    },
-    "post2": {
-      "title": "Mik Wiseman to Present on AI in Sales at Germes Business Club",
-      "description": "On April 17th, supported by the Moscow Chamber of Commerce and Industry, the Germes Business Club will host a meeting. The event's theme: 'Digital Transformation of Russian Business: Key Challenges, Successes, and Prospects.'",
-      "content": "On April 17th, supported by the Moscow Chamber of Commerce and Industry, the Germes Business Club will host a meeting. The event's theme: 'Digital Transformation of Russian Business: Key Challenges, Successes, and Prospects.'\n\nWaiWai CEO Mik Wiseman will present 'From Cold Calls to Hot Dialogues: Why Personalized AI-outreach is the New Oil in B2B.'\n\nVenue: Moscow, Petrovka St., 15/1, Main Hall of Moscow Chamber of Commerce and Industry (entrance from Stoleshnikov Lane).\n\nThe Germes Business Club brings together business owners and CEOs. The club was created by the Association of Procurement Participants (forumauz.ru)."
     }
   },
   "cta": {

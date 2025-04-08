@@ -17,6 +17,12 @@ export default {
         wrapperSpeed: 0.08,
       });
     }
+
+    // Initialize DropInBlog
+    const dibScript = document.createElement('script');
+    dibScript.async = true;
+    dibScript.src = 'https://io.dropinblog.com/embedjs/17c5ce72-538c-4e85-bb74-4caf5c615779.js';
+    document.head.appendChild(dibScript);
   }
 }
 </script>
