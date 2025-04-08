@@ -8,11 +8,7 @@
         <a href="#" class="contact-button top w-inline-block">
           <div class="button-text">{{ $t('header.discussProject') }}</div>
         </a>
-        <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-vertical">
-        <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-horizontal">
-        <router-link to="/blog" class="nav-link">
-          {{ $t('blog.title') }}
-        </router-link>
+        <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-horizontal">        
       </div>
       <div class="bottom-text">
         <h1 class="heading">
