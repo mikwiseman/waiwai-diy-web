@@ -17,7 +17,7 @@ function initializeLanguage() {
 // Update all translatable elements on the page
 function updatePageContent() {
     // Update meta title
-    document.title = 'WaiWai.diy';
+    document.title = 'WaiWai';
     
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
