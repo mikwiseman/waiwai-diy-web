@@ -8,6 +8,9 @@
         <a href="#" class="contact-button top w-inline-block">
           <div class="button-text">{{ $t('header.discussProject') }}</div>
         </a>
+        <router-link :to="'/' + ($i18n.locale === 'ru' ? 'ru/' : '') + 'blog'" class="nav-link">
+          {{ $t('blog.title') }}
+        </router-link>
         <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-vertical">
         <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-horizontal">
       </div>
@@ -476,6 +479,28 @@ export default {
   
   :deep(.dib-posts) {
     grid-template-columns: 1fr;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-right: 1rem;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 767px) {
+  .nav-link {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
   }
 }
 </style> 
