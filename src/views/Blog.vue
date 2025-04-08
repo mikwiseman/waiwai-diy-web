@@ -1,7 +1,6 @@
 <template>
   <div class="blog-page">
     <div class="blog-container">
-      <h1 class="blog-title">{{ $t('blog.title') }}</h1>
       <div id="dib-posts"></div>
     </div>
   </div>
