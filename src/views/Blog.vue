@@ -13,9 +13,6 @@ export default defineComponent({
   name: 'BlogPage',
   setup() {
     onMounted(() => {
-      // Set the page title
-      document.title = 'WaiWai';
-      
       // Initialize DropInBlog if not already initialized
       if (!document.querySelector('script[src*="dropinblog"]')) {
         const dibScript = document.createElement('script');
