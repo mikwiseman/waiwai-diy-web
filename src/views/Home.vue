@@ -171,6 +171,33 @@
       <img src="@/assets/images/line.svg" loading="lazy" alt="" class="illustration-info">
     </div>
 
+    <!-- Media Mentions Section -->
+    <div class="media-mentions">
+      <h2 class="media-title">{{ $t('media.title') }}</h2>
+      <div class="media-logos">
+        <a href="https://rb.ru/opinion/it-gumanitarii/" target="_blank" class="media-logo-link">
+          <img src="@/assets/images/rb.svg" alt="RB.RU" class="media-logo bw">
+          <img src="@/assets/images/rb.svg" alt="RB.RU" class="media-logo color">
+        </a>
+        <a href="https://pro.rbc.ru/demo/65df21019a79476a26d4cedb" target="_blank" class="media-logo-link">
+          <img src="@/assets/images/rbc.svg" alt="RBC" class="media-logo bw">
+          <img src="@/assets/images/rbc.svg" alt="RBC" class="media-logo color">
+        </a>
+        <a href="https://secretmag.ru/practice/kak-rabotat-s-inostrannymi-partnyorami-laifkhaki-rossiiskikh-biznesmenov.htm" target="_blank" class="media-logo-link">
+          <img src="@/assets/images/sf.svg" alt="Secret Firmy" class="media-logo bw">
+          <img src="@/assets/images/sf.svg" alt="Secret Firmy" class="media-logo color">
+        </a>
+        <a href="https://hightech.fm/2024/01/23/ai-kills" target="_blank" class="media-logo-link">
+          <img src="@/assets/images/hitech.svg" alt="Hightech" class="media-logo bw">
+          <img src="@/assets/images/hitech.svg" alt="Hightech" class="media-logo color">
+        </a>
+        <a href="https://www.it-world.ru/cionews/practice/214762.html" target="_blank" class="media-logo-link">
+          <img src="@/assets/images/itworld.svg" alt="IT World" class="media-logo bw">
+          <img src="@/assets/images/itworld.svg" alt="IT World" class="media-logo color">
+        </a>
+      </div>
+    </div>
+
     <!-- Awards section -->
     <div class="awards">
       <div class="dot-block">
@@ -501,6 +528,89 @@ export default {
   .nav-link {
     right: 1rem;
     font-size: 0.875rem;
+  }
+}
+
+/* Media Mentions Section */
+.media-mentions {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.media-title {
+  font-family: Inter Tight, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 3rem;
+  color: #000;
+}
+
+.media-logos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.media-logo-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.media-logo {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.media-logo.bw {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.media-logo.color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.media-logo-link:hover .media-logo.bw {
+  opacity: 0;
+}
+
+.media-logo-link:hover .media-logo.color {
+  opacity: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .media-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .media-mentions {
+    padding: 2rem 1rem;
+  }
+
+  .media-title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .media-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 </style> 
