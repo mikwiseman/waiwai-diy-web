@@ -267,6 +267,17 @@
       </div>
     </div>
 
+    <!-- Offer section -->
+    <div class="offer-section">
+      <div class="offer-container">
+        <a :href="$i18n.locale === 'ru' ? 'https://docs.google.com/document/d/1Xh5HF6y-1nSrwcg6mxpdzgU_uz3Q9DNy' : 'https://docs.google.com/document/d/1wAv1IuOxSROJ8Vr4aRrxPFLmZvnWeyIu'" 
+           target="_blank" 
+           class="offer-link">
+          {{ $t('offer.viewOffer') }}
+        </a>
+      </div>
+    </div>
+
     <div class="contact-section">
       <div class="contacts">
         <div class="contacts-container">
@@ -379,5 +390,33 @@ export default {
   position: absolute;
   left: 24px;
   bottom: 24px;
+}
+
+.offer-section {
+  padding: 40px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.offer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.offer-link {
+  display: inline-block;
+  padding: 16px 32px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.offer-link:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
 }
 </style> 

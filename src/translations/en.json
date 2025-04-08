@@ -92,5 +92,8 @@
     "russia": "(Russia)",
     "leaveRequest": "Leave a request,\nand we'll contact you",
     "copyright": "2025 ALL RIGHTS RESERVED"
+  },
+  "offer": {
+    "viewOffer": "Service Agreement"
   }
 } 
