@@ -1,38 +1,8 @@
 <template>
   <div class="blog-page">
     <div class="blog-container">
-      <h1 class="integration-title">Blog Integration Guide</h1>
-      
-      <div class="integration-step">
-        <h2>Step 1: Add the Blog Script to Your Page</h2>
-        <p>Copy and paste this script anywhere on your page.</p>
-        <p>If you're using a website builder, you can place it in an Embed Code or Custom HTML block.</p>
-        <div class="code-block">
-          <code>&lt;script async src="https://io.dropinblog.com/embedjs/17c5ce72-538c-4e85-bb74-4caf5c615779.js"&gt;&lt;/script&gt;</code>
-        </div>
-      </div>
-
-      <div class="integration-step">
-        <h2>Step 2: Choose Where Your Blog Appears</h2>
-        <p>Paste this code in the same block (if using a builder) or anywhere on your page where you want the blog to show.</p>
-        <div class="code-block">
-          <code>&lt;div id="dib-posts"&gt;&lt;/div&gt;</code>
-        </div>
-      </div>
-
-      <div class="blog-preview">
-        <h2>Blog Preview</h2>
-        <div id="dib-posts"></div>
-      </div>
-
-      <div class="help-section">
-        <h2>Need help?</h2>
-        <ul>
-          <li><a href="https://dropinblog.com/docs" target="_blank">View integration guides</a></li>
-          <li><a href="https://dropinblog.com/video" target="_blank">Watch integration video</a></li>
-          <li><a href="https://dropinblog.com/contact" target="_blank">Message us</a></li>
-        </ul>
-      </div>
+      <h1 class="blog-title">{{ $t('blog.title') }}</h1>
+      <div id="dib-posts"></div>
     </div>
   </div>
 </template>
@@ -41,12 +11,12 @@
 export default {
   name: 'BlogPage',
   mounted() {
-    // Ensure DropInBlog script is loaded
-    if (!document.querySelector('script[src*="dropinblog.com"]')) {
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://io.dropinblog.com/embedjs/17c5ce72-538c-4e85-bb74-4caf5c615779.js';
-      document.head.appendChild(script);
+    // Initialize DropInBlog if not already initialized
+    if (!document.querySelector('script[src*="dropinblog"]')) {
+      const dibScript = document.createElement('script');
+      dibScript.async = true;
+      dibScript.src = 'https://io.dropinblog.com/embedjs/17c5ce72-538c-4e85-bb74-4caf5c615779.js';
+      document.head.appendChild(dibScript);
     }
   }
 }
@@ -64,101 +34,80 @@ export default {
   margin: 0 auto;
 }
 
-.integration-title {
+.blog-title {
   font-family: Inter Tight, sans-serif;
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1.2;
   margin-bottom: 3rem;
   color: #000;
 }
 
-.integration-step {
-  margin-bottom: 3rem;
+/* DropInBlog custom styles */
+:deep(.dib-posts) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.integration-step h2 {
-  font-family: Inter Tight, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: #000;
+:deep(.dib-post) {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.code-block {
-  background: #f5f5f5;
-  border-radius: 8px;
+:deep(.dib-post:hover) {
+  transform: translateY(-4px);
+}
+
+:deep(.dib-post-image) {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+:deep(.dib-post-content) {
   padding: 1.5rem;
-  margin: 1rem 0;
-  overflow-x: auto;
 }
 
-.code-block code {
-  font-family: 'Courier New', monospace;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-.blog-preview {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid #eee;
-}
-
-.blog-preview h2 {
+:deep(.dib-post-title) {
   font-family: Inter Tight, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 2rem;
-  color: #000;
-}
-
-.help-section {
-  margin-top: 4rem;
-  padding: 2rem;
-  background: #f9f9f9;
-  border-radius: 12px;
-}
-
-.help-section h2 {
-  font-family: Inter Tight, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
+  line-height: 1.8rem;
   margin-bottom: 1rem;
   color: #000;
 }
 
-.help-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.help-section li {
-  margin-bottom: 0.5rem;
-}
-
-.help-section a {
-  color: #0066cc;
-  text-decoration: none;
+:deep(.dib-post-excerpt) {
   font-family: Inter, sans-serif;
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
-.help-section a:hover {
-  color: #004999;
-  text-decoration: underline;
+:deep(.dib-post-meta) {
+  font-family: Inter, sans-serif;
+  font-size: 0.875rem;
+  color: #999;
 }
 
 @media screen and (max-width: 767px) {
   .blog-page {
     padding: 2rem 1rem;
   }
-
-  .integration-title {
+  
+  .blog-title {
     font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
   }
-
-  .integration-step h2 {
-    font-size: 1.25rem;
+  
+  :deep(.dib-posts) {
+    grid-template-columns: 1fr;
   }
 }
 </style> 
