@@ -10,7 +10,7 @@
         </a>
         <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-vertical">
         <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-horizontal">
-        <router-link :to="$i18n.locale === 'ru' ? '/ru/blog' : '/blog'" class="nav-link">
+        <router-link to="/blog" class="nav-link">
           {{ $t('blog.title') }}
         </router-link>
       </div>

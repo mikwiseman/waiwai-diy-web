@@ -32,35 +32,6 @@ export default {
 @import '@/assets/css/webflow.css';
 @import '@/assets/css/waiwaidiy.webflow.css';
 
-/* Language switcher styles */
-.language-switcher {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  display: flex;
-  gap: 8px;
-}
-
-.language-button {
-  padding: 8px 16px;
-  border: 1px solid #fff;
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.language-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.language-button.active {
-  background: #fff;
-  color: #000;
-}
-
 /* Other styles */
 .logo-card-whoverp .logo-image-media {
   filter: grayscale(100%);
