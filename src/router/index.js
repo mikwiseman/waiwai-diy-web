@@ -9,18 +9,12 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home,
-    meta: {
-      title: 'WaiWai'
-    }
+    component: Home
   },
   {
     path: '/blog',
     name: 'blog',
-    component: Blog,
-    meta: {
-      title: 'WaiWai'
-    }
+    component: Blog
   }
 ]
 
@@ -30,10 +24,12 @@ const router = new VueRouter({
   routes
 })
 
-// Navigation guard to update page title
-router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'WaiWai'
-  next()
+// Global after hook
+router.afterEach(() => {
+  // Set title after route change
+  Vue.nextTick(() => {
+    document.title = 'WaiWai'
+  })
 })
 
 export default router 
