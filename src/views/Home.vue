@@ -309,15 +309,22 @@
       </div>
       <div class="form-container">
         <div class="form-title white">{{ $t('contact.leaveRequest') }}</div>
-        <div class="foot-logo-container">
+        <div id="w-node-c93d6324-cde1-923f-b9c7-dece9dafa6f3-b9cd35b6" class="foot-logo-container">
           <img src="@/assets/images/logo_02.svg" loading="lazy" width="246" alt="" class="image-2">
+          <div class="footer-bottom">
+            <p class="footer-copyright">2025 ALL RIGHTS RESERVED</p>
+            <a :href="$i18n.locale === 'ru' ? 'https://docs.google.com/document/d/1Xh5HF6y-1nSrwcg6mxpdzgU_uz3Q9DNy' : 'https://docs.google.com/document/d/1wAv1IuOxSROJ8Vr4aRrxPFLmZvnWeyIu'" 
+               target="_blank" 
+               class="footer-copyright footer-link">
+              {{ $t('offer.viewOffer') }}
+            </a>
+          </div>
         </div>
         <div class="contact-button-circle">
           <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button-circle-link">
             <div class="button-text-circle">DISCUSS PROJECT</div>
           </a>
         </div>
-        <div class="copyright-text">2025 ALL RIGHTS RESERVED</div>
       </div>
     </div>
   </div>
@@ -418,5 +425,28 @@ export default {
 .offer-link:hover {
   background: rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 </style> 
