@@ -312,7 +312,7 @@
         <div id="w-node-c93d6324-cde1-923f-b9c7-dece9dafa6f3-b9cd35b6" class="foot-logo-container">
           <img src="@/assets/images/logo_02.svg" loading="lazy" width="246" alt="" class="image-2">
           <div class="footer-bottom">
-            <p class="footer-copyright">2025 ALL RIGHTS RESERVED</p>
+            <p class="footer-copyright">{{ $t('contact.copyright') }}</p>
             <a :href="$i18n.locale === 'ru' ? 'https://docs.google.com/document/d/1Xh5HF6y-1nSrwcg6mxpdzgU_uz3Q9DNy' : 'https://docs.google.com/document/d/1wAv1IuOxSROJ8Vr4aRrxPFLmZvnWeyIu'" 
                target="_blank" 
                class="footer-copyright footer-link">
