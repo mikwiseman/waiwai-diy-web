@@ -7,21 +7,25 @@
 </template>
 
 <script>
-export default {
+import { defineComponent, onMounted } from 'vue'
+
+export default defineComponent({
   name: 'BlogPage',
-  mounted() {
-    // Set the page title
-    document.title = 'WaiWai';
-    
-    // Initialize DropInBlog if not already initialized
-    if (!document.querySelector('script[src*="dropinblog"]')) {
-      const dibScript = document.createElement('script');
-      dibScript.async = true;
-      dibScript.src = 'https://io.dropinblog.com/embedjs/17c5ce72-538c-4e85-bb74-4caf5c615779.js';
-      document.head.appendChild(dibScript);
-    }
+  setup() {
+    onMounted(() => {
+      // Set the page title
+      document.title = 'WaiWai';
+      
+      // Initialize DropInBlog if not already initialized
+      if (!document.querySelector('script[src*="dropinblog"]')) {
+        const dibScript = document.createElement('script');
+        dibScript.async = true;
+        dibScript.src = 'https://io.dropinblog.com/embedjs/17c5ce72-538c-4e85-bb74-4caf5c615779.js';
+        document.head.appendChild(dibScript);
+      }
+    })
   }
-}
+})
 </script>
 
 <style scoped>

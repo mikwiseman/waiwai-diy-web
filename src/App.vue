@@ -7,22 +7,26 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
+
 export default {
   name: 'App',
-  mounted() {
-    // Initialize Luxy.js
-    if (!/iPhone|iPad|Android/i.test(navigator.userAgent)) {
-      window.luxy.init({
-        wrapper: '#luxy',
-        wrapperSpeed: 0.08,
-      });
-    }
+  setup() {
+    onMounted(() => {
+      // Initialize Luxy.js
+      if (!/iPhone|iPad|Android/i.test(navigator.userAgent)) {
+        window.luxy.init({
+          wrapper: '#luxy',
+          wrapperSpeed: 0.08,
+        });
+      }
 
-    // Initialize DropInBlog
-    const dibScript = document.createElement('script');
-    dibScript.async = true;
-    dibScript.src = 'https://io.dropinblog.com/embedjs/17c5ce72-538c-4e85-bb74-4caf5c615779.js';
-    document.head.appendChild(dibScript);
+      // Initialize DropInBlog
+      const dibScript = document.createElement('script');
+      dibScript.async = true;
+      dibScript.src = 'https://io.dropinblog.com/embedjs/17c5ce72-538c-4e85-bb74-4caf5c615779.js';
+      document.head.appendChild(dibScript);
+    })
   }
 }
 </script>

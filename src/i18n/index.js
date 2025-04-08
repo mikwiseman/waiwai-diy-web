@@ -1,10 +1,8 @@
-import Vue from 'vue'
-import VueI18n from 'vue-i18n'
+import { createI18n } from 'vue-i18n'
 import ru from '@/translations/ru.json'
 
-Vue.use(VueI18n)
-
-export default new VueI18n({
+export default createI18n({
+  legacy: false, // Set to false to use Composition API
   locale: 'ru',
   fallbackLocale: 'ru',
   messages: {
