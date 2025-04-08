@@ -12,17 +12,6 @@
   "blog": {
     "title": "Блог"
   },
-  "team": {
-    "title": "Вот они -\nслева направо",
-    "mikWiseman": {
-      "name": "Мик Вайсман",
-      "roles": ["Co-founder, CTO", "exCEO at Trinity Monsters", "exCTO at Red_mad_robot"]
-    },
-    "andreyLisitsyn": {
-      "name": "Андрей Лисицын",
-      "roles": ["Co-founder, CPO", "exHead of Design at TripleTen", "exHead of Product at Yandex Practicum"]
-    }
-  },
   "cases": {
     "title": "Кейсы",
     "comingSoon": "Кейс скоро будет",
@@ -79,7 +68,7 @@
     "telegram": "Telegram:",
     "phone": "Телефон:",
     "address": "АДРЕС:",
-    "russia": "(Россия)",
+    "russia": "",
     "leaveRequest": "Оставьте заявку,\nи мы свяжемся с вами",
     "copyright": "2025 ВСЕ ПРАВА ЗАЩИЩЕНЫ"
   },

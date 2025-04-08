@@ -154,10 +154,6 @@ body {
   color: #00000080;
 }
 
-.team-section {
-  padding: 1rem 2rem 4rem;
-  display: none;
-}
 
 .icon-container {
   background-color: var(--main-accent);
@@ -1444,10 +1440,6 @@ body {
     display: block;
   }
 
-  .team-section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 
   .heading-2 {
     font-size: 2rem;

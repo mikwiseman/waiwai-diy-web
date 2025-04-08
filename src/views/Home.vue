@@ -247,11 +247,11 @@
             <div class="address-block">
               <div class="link-container">
                 <div class="contact-text label">{{ $t('contact.phone') }}</div>
-                <p class="address-text">+7 (499) 391-20-14 <span class="dimmed">{{ $t('contact.russia') }}</span><br></p>
+                <p class="address-text">+7 (499) 391-20-14 <br></p>
               </div>
               <div class="link-container">
                 <div class="contact-text label">{{ $t('contact.address') }}</div>
-                <p class="address-text">5/1 Bolshaya Sadovaya St., 4th floor</p>
+                <p class="address-text">г.Москва, ул. Большая Садовая, 5/1, 4 этаж</p>
               </div>
             </div>
           </div>
@@ -272,7 +272,7 @@
         </div>
         <div class="contact-button-circle">
           <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button-circle-link">
-            <div class="button-text-circle">DISCUSS PROJECT</div>
+            <div class="button-text-circle">{{ $t('header.discussProject') }}</div>
           </a>
         </div>
       </div>
