@@ -5,7 +5,7 @@ import en from '@/translations/en.json'
 // Function to determine locale based on domain
 function getLocaleFromDomain() {
   const domain = window.location.hostname
-  if (domain === 'wai.sales') {
+  if (domain === 'wai.sales' || domain === 'wai.sale') {
     return 'en'
   }
   return 'ru' // Default to Russian for waiwai.diy and other domains
