@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "WaiWai"
+  },
+  "header": {
+    "discussProject": "Discuss Project"
+  },
+  "hero": {
+    "title": "Artificial Intelligence that truly understands your business",
+    "subtitle": "Find leads, send them personalized messages, and manage conversations. Free up resources for business growth while AI handles the routine"
+  },
+  "blog": {
+    "title": "Blog"
+  },
+  "cases": {
+    "title": "Case Studies",
+    "comingSoon": "Case study coming soon",
+    "yourProject": "Place for your project",
+    "stats": {
+      "salesGrowth": "Sales growth with WaiWai",
+      "responseIncrease": "Increase in customer response",
+      "timeReduction": "Reduction in hiring time",
+      "timeFreed": "Recruiters' time freed up for other tasks"
+    },
+    "falcone": {
+      "title": "Falcone",
+      "description": "Found clients for delivery service - Ozon, Wildberries, Yandex Market sellers. WaiWai sent personalized emails using open data about customers and their needs.",
+      "tags": ["Logistics", "Marketplaces", "Sales", "Email"]
+    },
+    "akBarsBank": {
+      "title": "Ak Bars Bank",
+      "description": "Automated the recruitment process on HeadHunter. For employee search, WaiWai creates personalized letters based on candidate profiles. The system sorts incoming requests and responds to them, saving recruiters' time.",
+      "tags": ["Finance", "Recruitment", "Email Campaigns", "HH.ru", "LinkedIn"]
+    },
+    "ontico": {
+      "title": "Ontico Conferences",
+      "description": "For selling tickets to the Berlin conference, WaiWai found programmers by programming language and attendance at similar events. Selecting relevant leads and personalized messages increased conversion by 2.4 times.",
+      "tags": ["Events", "Sales", "LinkedIn"]
+    },
+    "rossi": {
+      "title": "Rossi Hotel",
+      "description": "Increased business client flow for the hotel. WaiWai sent personalized messages to companies sending employees on business trips to St. Petersburg. LinkedIn became the main channel for lead generation.",
+      "tags": ["Tourism", "Sales", "LinkedIn", "Email"]
+    }
+  },
+  "cta": {
+    "title": "While competitors are looking for clients - yours are already reading messages from WaiWai",
+    "bookCall": "Book a call slot"
+  },
+  "awards": {
+    "title": "Awards",
+    "ethGlobalSf": {
+      "title": "ETHglobal San Francisco",
+      "award": "1st place, AI-collabs category (2024)"
+    },
+    "ethGlobalBrussels": {
+      "title": "ETHGlobal Brussels",
+      "award": "1st place, AI-chat-bots category (2024)"
+    },
+    "ethGlobalSingapore": {
+      "title": "ETHGlobal Singapore",
+      "award": "3rd place, Web3 services category (2024)"
+    }
+  },
+  "media": {
+    "title": "Media Mentions"
+  },
+  "contact": {
+    "title": "Contacts",
+    "email": "email:",
+    "telegram": "Telegram:",
+    "phone": "Phone:",
+    "address": "ADDRESS:",
+    "russia": "",
+    "leaveRequest": "Leave a request,\nand we will contact you",
+    "copyright": "2025 ALL RIGHTS RESERVED"
+  },
+  "offer": {
+    "viewOffer": "TERMS OF SERVICE"
+  }
+} 
