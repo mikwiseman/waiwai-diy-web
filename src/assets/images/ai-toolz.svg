@@ -1,0 +1,18 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 300 80"
+        width="300"
+        height="80">
+
+    <!-- Transparent background by default -->
+
+    <text
+            x="0"
+            y="60"
+            font-family="Montserrat, 'Arial Black', sans-serif"
+            font-size="64"
+            font-weight="900"
+            fill="#000000">
+        Aitoolz
+    </text>
+</svg>

@@ -195,6 +195,18 @@
           <img src="@/assets/images/itworld.svg" alt="IT World" class="media-logo bw">
           <img src="@/assets/images/itworld.svg" alt="IT World" class="media-logo color">
         </a>
+        <a href="https://www.cnews.ru/news/line/2025-04-23_ceo_trinity_monsters_zapustil_startap" target="_blank" class="media-logo-link">
+          <img src="@/assets/images/cnews.svg" alt="CNews" class="media-logo bw">
+          <img src="@/assets/images/cnews.svg" alt="CNews" class="media-logo color">
+        </a>
+        <a href="https://secrets.tbank.ru/startapnaya-elegiya" target="_blank" class="media-logo-link">
+          <img src="@/assets/images/biznes-sekrety.svg" alt="Secrets Tbank" class="media-logo bw">
+          <img src="@/assets/images/biznes-sekrety.svg" alt="Secrets Tbank" class="media-logo color">
+        </a>
+        <a href="https://aitoolz.ru/news/ai-agenty-ot-khajpa-k-realnym-biznes-instrumentam-stoimostyu-do-20-000-v-mesyats@215" target="_blank" class="media-logo-link">
+          <img src="@/assets/images/ai-toolz.svg" alt="AI Toolz" class="media-logo bw">
+          <img src="@/assets/images/ai-toolz.svg" alt="AI Toolz" class="media-logo color">
+        </a>
       </div>
     </div>
 
