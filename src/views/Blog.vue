@@ -1,5 +1,11 @@
 <template>
   <div class="blog-page">
+    <MetaTags
+      title="Блог WaiWai DIY - AI агенты и автоматизация продаж"
+      description="Экспертные статьи и кейсы об AI агентах, автоматизации продаж и маркетинга. Практические примеры внедрения искусственного интеллекта в бизнес-процессы. Обзоры технологий, кейсы успеха и руководства по оптимизации."
+      keywords="AI агенты, искусственный интеллект, блог, автоматизация продаж, маркетинг, кейсы, статьи, email-маркетинг, CRM, автоматизация маркетинга, чат-боты, AI ассистенты, умные агенты, автоматизация бизнеса, искусственный интеллект в продажах, автоматизация коммуникаций, AI для бизнеса, кейсы внедрения AI, оптимизация бизнес-процессов"
+      ogImage="https://waiwai.diy/blog-og-image.jpg"
+    />
     <div class="blog-container">
       <div id="dib-posts"></div>
     </div>
@@ -8,9 +14,13 @@
 
 <script>
 import { defineComponent, onMounted } from 'vue'
+import MetaTags from '@/components/MetaTags.vue'
 
 export default defineComponent({
   name: 'BlogPage',
+  components: {
+    MetaTags
+  },
   setup() {
     onMounted(() => {
       // Initialize DropInBlog if not already initialized

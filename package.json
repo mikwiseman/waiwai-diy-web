@@ -5,14 +5,19 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "generate-sitemap": "vue-cli-service sitemap"
   },
   "dependencies": {
+    "@nuxtjs/robots": "^5.2.10",
+    "@nuxtjs/sitemap": "^7.2.10",
+    "@vueuse/head": "^2.0.0",
     "core-js": "^3.8.3",
     "vue": "^3.3.0",
+    "vue-i18n": "^9.2.2",
+    "vue-meta": "^2.4.0",
     "vue-router": "^4.2.0",
-    "vuex": "^4.1.0",
-    "vue-i18n": "^9.2.2"
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "~5.0.0",

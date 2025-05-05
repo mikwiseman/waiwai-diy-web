@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /blog/
+
+# Main search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandexbot
+Allow: /
+
+# AI crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Social media
+User-agent: Twitterbot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+# Sitemap
+Sitemap: https://waiwai.diy/sitemap.xml 
