@@ -3,7 +3,7 @@ export default {
   gzip: true,
   exclude: [
     '/404',
-    '/en/**'
+    '/admin/**'
   ],
   defaults: {
     changefreq: 'daily',
@@ -15,6 +15,12 @@ export default {
       url: '/',
       changefreq: 'daily',
       priority: 1,
+      lastmod: new Date()
+    },
+    {
+      url: '/blog',
+      changefreq: 'daily',
+      priority: 0.9,
       lastmod: new Date()
     }
   ]

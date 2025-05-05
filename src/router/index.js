@@ -20,10 +20,4 @@ const router = createRouter({
   routes
 })
 
-// Global after hook
-router.afterEach(() => {
-  // Set title after route change
-  document.title = 'WaiWai'
-})
-
 export default router 

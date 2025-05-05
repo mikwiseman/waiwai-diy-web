@@ -2,6 +2,8 @@ User-agent: *
 Allow: /
 Allow: /en/
 Allow: /blog/
+Disallow: /admin/
+Disallow: /404
 
 # Main search engines
 User-agent: Googlebot

@@ -1,11 +1,5 @@
 <template>
   <div class="smooth-scroll">
-    <MetaTags
-      title="WaiWai DIY - AI агенты для автоматизации продаж и маркетинга"
-      description="AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем время на рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей."
-      keywords="AI агенты, искусственный интеллект, автоматизация продаж, маркетинг, email-маркетинг, CRM, автоматизация маркетинга, увеличение продаж, оптимизация процессов, интеллектуальные агенты, чат-боты, автоматизация коммуникаций, AI ассистенты, умные агенты, автоматизация бизнеса, AI для бизнеса, искусственный интеллект в продажах"
-      ogImage="https://waiwai.diy/og-image.jpg"
-    />
     <div class="hero-section">
       <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button down w-inline-block">
         <div class="button-text">{{ t('header.discussProject') }}</div>
