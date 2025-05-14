@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && vue-cli-service sitemap",
-    "lint": "vue-cli-service lint",
-    "generate-sitemap": "vue-cli-service sitemap"
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@nuxtjs/robots": "^5.2.10",
