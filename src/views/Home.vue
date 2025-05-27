@@ -64,11 +64,11 @@
             </div>
             <div class="project-info card-stat">
               <div class="w-layout-hflex project-card for-you statistic">
-                <div class="proj-title">41%</div>
+                <div class="proj-title">61%</div>
                 <div class="proj-description">{{ t('cases.stats.timeReduction') }}</div>
               </div>
               <div class="w-layout-hflex project-card for-you statistic">
-                <div class="proj-title">28%</div>
+                <div class="proj-title">48%</div>
                 <div class="proj-description">{{ t('cases.stats.timeFreed') }}</div>
               </div>
             </div>
