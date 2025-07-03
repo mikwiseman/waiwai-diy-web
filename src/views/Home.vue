@@ -1,15 +1,26 @@
 <template>
   <div class="smooth-scroll">
     <div class="hero-section">
-      <a :href="locale === 'en' ? 'https://pitch.waiwai.diy/v/waiwai-vpcmxx' : 'https://pitch.waiwai.diy/v/waiwai-z5fmqd'" target="_blank" class="presentation-button w-inline-block">
-        <div class="button-text">{{ t('header.presentation') }}</div>
-      </a>
       <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button down w-inline-block">
         <div class="button-text">{{ t('header.discussProject') }}</div>
       </a>
+      <a :href="locale === 'en' ? 'https://pitch.waiwai.diy/v/waiwai-vpcmxx' : 'https://pitch.waiwai.diy/v/waiwai-z5fmqd'" target="_blank" class="contact-button down w-inline-block" style="right: 1.75rem; bottom: 12rem;">
+        <div class="button-text">{{ t('header.presentation') }}</div>
+      </a>
       <div class="header">
+        <a href="#" class="contact-button top w-inline-block">
+          <div class="button-text">{{ t('header.discussProject') }}</div>
+        </a>
         <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-horizontal">
-        <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-vertical">        
+        <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-vertical">
+      </div>
+      <div class="mobile-buttons">
+        <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button mobile w-inline-block">
+          <div class="button-text">{{ t('header.discussProject') }}</div>
+        </a>
+        <a :href="locale === 'en' ? 'https://pitch.waiwai.diy/v/waiwai-vpcmxx' : 'https://pitch.waiwai.diy/v/waiwai-z5fmqd'" target="_blank" class="contact-button mobile w-inline-block">
+          <div class="button-text">{{ t('header.presentation') }}</div>
+        </a>
       </div>
       <div class="bottom-text">
         <h1 class="heading">
@@ -634,65 +645,85 @@ export default defineComponent({
   }
 }
 
-/* Simplified button styles that work on all screen sizes */
-.presentation-button {
-  position: absolute;
-  right: 1.75rem;
-  bottom: 13rem;
-  z-index: 10;
-  background-color: var(--secondary);
-  border-radius: 100%;
-  justify-content: center;
+/* Mobile layout styles */
+.mobile-buttons {
+  display: none;
+  flex-direction: column;
   align-items: center;
-  width: 9rem;
-  height: 9rem;
-  transition: transform .5s cubic-bezier(.785, .135, .15, .86);
-  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.presentation-button:hover {
-  transform: rotate(20deg)scale(1.1);
+.contact-button.mobile {
+  background-color: var(--secondary);
+  position: static;
+  margin: 0;
 }
 
-/* Mobile responsive adjustments */
+.hero-logo-vertical {
+  display: none;
+  object-position: 50% 50%;
+  flex: 1;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 991px) {
-  .presentation-button {
-    right: 2rem;
-    bottom: 11rem;
+  .hero-logo-horizontal {
+    display: none;
   }
+  
+  .hero-logo-vertical {
+    display: block;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .contact-button.top {
+    display: none;
+  }
+  
   .contact-button.down {
-    right: 2rem;
-    bottom: 1.75rem;
+    display: none;
   }
-}
-
-@media screen and (max-width: 767px) {
-  .presentation-button {
-    right: 1rem;
-    bottom: 9.5rem;
-    width: 7rem;
-    height: 7rem;
+  
+  .mobile-buttons {
+    display: flex;
   }
-  .contact-button.down {
-    right: 1rem;
-    bottom: 1.75rem;
-    width: 7rem;
-    height: 7rem;
+  
+  .mobile-buttons .contact-button.mobile {
+    width: 16rem;
+    height: 4rem;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mobile-buttons .button-text {
+    font-size: 1rem;
+    line-height: 1rem;
+    position: static;
   }
 }
 
 @media screen and (max-width: 479px) {
-  .presentation-button {
-    right: 1rem;
-    bottom: 8rem;
-    width: 6rem;
-    height: 6rem;
+  .hero-logo-vertical {
+    width: 100%;
   }
-  .contact-button.down {
-    right: 1rem;
-    bottom: 1rem;
-    width: 6rem;
-    height: 6rem;
+  
+  .mobile-buttons .contact-button.mobile {
+    width: 14rem;
+    height: 3.5rem;
+  }
+  
+  .mobile-buttons .button-text {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
   }
 }
 </style> 
