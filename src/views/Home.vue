@@ -1,19 +1,13 @@
 <template>
   <div class="smooth-scroll">
     <div class="hero-section">
-      <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button down w-inline-block">
-        <div class="button-text">{{ t('header.discussProject') }}</div>
-      </a>
       <a :href="locale === 'en' ? 'https://pitch.waiwai.diy/v/waiwai-vpcmxx' : 'https://pitch.waiwai.diy/v/waiwai-z5fmqd'" target="_blank" class="presentation-button w-inline-block">
         <div class="button-text">{{ t('header.presentation') }}</div>
       </a>
+      <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button down w-inline-block">
+        <div class="button-text">{{ t('header.discussProject') }}</div>
+      </a>
       <div class="header">
-        <a href="#" class="contact-button top w-inline-block">
-          <div class="button-text">{{ t('header.discussProject') }}</div>
-        </a>
-        <a :href="locale === 'en' ? 'https://pitch.waiwai.diy/v/waiwai-vpcmxx' : 'https://pitch.waiwai.diy/v/waiwai-z5fmqd'" target="_blank" class="presentation-button-mobile w-inline-block">
-          <div class="button-text">{{ t('header.presentation') }}</div>
-        </a>
         <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-horizontal">
         <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-vertical">        
       </div>
@@ -640,7 +634,7 @@ export default defineComponent({
   }
 }
 
-/* Presentation button styles */
+/* Simplified button styles that work on all screen sizes */
 .presentation-button {
   position: absolute;
   right: 1.75rem;
@@ -660,37 +654,13 @@ export default defineComponent({
   transform: rotate(20deg)scale(1.1);
 }
 
-.presentation-button-mobile {
-  position: absolute;
-  right: 1.75rem;
-  bottom: 1.75rem;
-  z-index: 10;
-  background-color: var(--secondary);
-  border-radius: 100%;
-  justify-content: center;
-  align-items: center;
-  width: 9rem;
-  height: 9rem;
-  transition: transform .5s cubic-bezier(.785, .135, .15, .86);
-  display: none;
-}
-
-.presentation-button-mobile:hover {
-  transform: rotate(20deg)scale(1.1);
-}
-
+/* Mobile responsive adjustments */
 @media screen and (max-width: 991px) {
-  /* Hide desktop presentation button, show mobile version */
   .presentation-button {
-    display: none !important;
-  }
-  .presentation-button-mobile {
-    display: flex !important;
     right: 2rem;
-    bottom: calc(1.75rem + 9rem + 1rem); /* bottom of discuss button + height + gap */
+    bottom: 11rem;
   }
   .contact-button.down {
-    display: flex !important;
     right: 2rem;
     bottom: 1.75rem;
   }
@@ -698,12 +668,8 @@ export default defineComponent({
 
 @media screen and (max-width: 767px) {
   .presentation-button {
-    display: none !important;
-  }
-  .presentation-button-mobile {
-    display: flex !important;
     right: 1rem;
-    bottom: calc(1.75rem + 7rem + 1rem);
+    bottom: 9.5rem;
     width: 7rem;
     height: 7rem;
   }
@@ -717,12 +683,8 @@ export default defineComponent({
 
 @media screen and (max-width: 479px) {
   .presentation-button {
-    display: none !important;
-  }
-  .presentation-button-mobile {
-    display: flex !important;
     right: 1rem;
-    bottom: calc(1rem + 6rem + 1rem);
+    bottom: 8rem;
     width: 6rem;
     height: 6rem;
   }
@@ -731,12 +693,6 @@ export default defineComponent({
     bottom: 1rem;
     width: 6rem;
     height: 6rem;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .contact-button.top {
-    display: none !important;
   }
 }
 </style> 
