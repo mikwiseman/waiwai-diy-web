@@ -11,7 +11,11 @@
         <a href="#" class="contact-button top w-inline-block">
           <div class="button-text">{{ t('header.discussProject') }}</div>
         </a>
-        <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-horizontal">        
+        <a :href="locale === 'en' ? 'https://pitch.waiwai.diy/v/waiwai-vpcmxx' : 'https://pitch.waiwai.diy/v/waiwai-z5fmqd'" target="_blank" class="presentation-button-mobile w-inline-block">
+          <div class="button-text">{{ t('header.presentation') }}</div>
+        </a>
+        <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-horizontal">
+        <img src="@/assets/images/logo_01.svg" loading="lazy" height="92" alt="" class="hero-logo-vertical">        
       </div>
       <div class="bottom-text">
         <h1 class="heading">
@@ -656,29 +660,50 @@ export default defineComponent({
   transform: rotate(20deg)scale(1.1);
 }
 
+.presentation-button-mobile {
+  position: absolute;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  z-index: 10;
+  background-color: var(--secondary);
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  height: 9rem;
+  transition: transform .5s cubic-bezier(.785, .135, .15, .86);
+  display: none;
+}
+
+.presentation-button-mobile:hover {
+  transform: rotate(20deg)scale(1.1);
+}
+
 @media screen and (max-width: 991px) {
   .presentation-button {
-    right: 2rem;
-    bottom: -30%;
+    display: none;
+  }
+  
+  .presentation-button-mobile {
     display: flex;
+    right: 2rem;
+    bottom: -50%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .presentation-button {
+  .presentation-button-mobile {
     right: 1rem;
     bottom: -100%;
-    display: flex;
   }
 }
 
 @media screen and (max-width: 479px) {
-  .presentation-button {
+  .presentation-button-mobile {
     right: 1rem;
-    bottom: -5.5rem;
+    bottom: -2rem;
     width: 7rem;
     height: 7rem;
-    display: flex;
   }
 }
 </style> 
