@@ -4,7 +4,7 @@
       <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button down w-inline-block">
         <div class="button-text">{{ t('header.discussProject') }}</div>
       </a>
-      <a href="https://pitch.waiwai.diy/v/waiwai-vpcmxx" target="_blank" class="contact-button down w-inline-block" style="left: 1.75rem;">
+      <a :href="locale === 'en' ? 'https://pitch.waiwai.diy/v/waiwai-vpcmxx' : 'https://pitch.waiwai.diy/v/waiwai-z5fmqd'" target="_blank" class="contact-button down w-inline-block" style="left: 1.75rem; top: -2rem;">
         <div class="button-text">{{ t('header.presentation') }}</div>
       </a>
       <div class="header">
