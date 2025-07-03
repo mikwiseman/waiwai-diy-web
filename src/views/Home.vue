@@ -646,7 +646,7 @@ export default defineComponent({
   right: 1.75rem;
   bottom: 13rem;
   z-index: 10;
-  background-color: var(--main-dark);
+  background-color: var(--secondary);
   border-radius: 100%;
   justify-content: center;
   align-items: center;
@@ -665,7 +665,7 @@ export default defineComponent({
   right: 1.75rem;
   bottom: 1.75rem;
   z-index: 10;
-  background-color: var(--main-dark);
+  background-color: var(--secondary);
   border-radius: 100%;
   justify-content: center;
   align-items: center;
