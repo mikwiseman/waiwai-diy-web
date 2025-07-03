@@ -680,30 +680,45 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 991px) {
-  .presentation-button {
-    display: none;
-  }
-  
-  .presentation-button-mobile {
-    display: flex;
+  /* Make sure the discuss button is visible on mobile */
+  .contact-button.down {
+    display: flex !important;
     right: 2rem;
-    bottom: 20%;
+    bottom: 1.75rem;
+  }
+
+  .presentation-button-mobile {
+    bottom: calc(1.75rem + 9rem + 1rem); /* discuss button bottom + height + gap */
   }
 }
 
 @media screen and (max-width: 767px) {
+  .contact-button.down {
+    right: 1rem;
+    bottom: 1.75rem;
+    width: 7rem;
+    height: 7rem;
+  }
+
   .presentation-button-mobile {
     right: 1rem;
-    bottom: 25%;
+    bottom: calc(1.75rem + 7rem + 1rem); /* adjust for smaller button size */
   }
 }
 
 @media screen and (max-width: 479px) {
+  .contact-button.down {
+    right: 1rem;
+    bottom: 1rem;
+    width: 6rem;
+    height: 6rem;
+  }
+
   .presentation-button-mobile {
     right: 1rem;
-    bottom: 30%;
-    width: 7rem;
-    height: 7rem;
+    bottom: calc(1rem + 6rem + 1rem);
+    width: 6rem;
+    height: 6rem;
   }
 }
 </style> 
