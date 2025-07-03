@@ -687,21 +687,21 @@ export default defineComponent({
   .presentation-button-mobile {
     display: flex;
     right: 2rem;
-    bottom: 4rem;
+    bottom: 20%;
   }
 }
 
 @media screen and (max-width: 767px) {
   .presentation-button-mobile {
     right: 1rem;
-    bottom: 11rem;
+    bottom: 25%;
   }
 }
 
 @media screen and (max-width: 479px) {
   .presentation-button-mobile {
     right: 1rem;
-    bottom: 9rem;
+    bottom: 30%;
     width: 7rem;
     height: 7rem;
   }
