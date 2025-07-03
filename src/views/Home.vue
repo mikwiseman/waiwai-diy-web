@@ -682,10 +682,10 @@ export default defineComponent({
 @media screen and (max-width: 991px) {
   /* Hide desktop presentation button, show mobile version */
   .presentation-button {
-    display: none;
+    display: none !important;
   }
   .presentation-button-mobile {
-    display: flex;
+    display: flex !important;
     right: 2rem;
     bottom: calc(1.75rem + 9rem + 1rem); /* bottom of discuss button + height + gap */
   }
@@ -698,10 +698,10 @@ export default defineComponent({
 
 @media screen and (max-width: 767px) {
   .presentation-button {
-    display: none;
+    display: none !important;
   }
   .presentation-button-mobile {
-    display: flex;
+    display: flex !important;
     right: 1rem;
     bottom: calc(1.75rem + 7rem + 1rem);
     width: 7rem;
@@ -717,10 +717,10 @@ export default defineComponent({
 
 @media screen and (max-width: 479px) {
   .presentation-button {
-    display: none;
+    display: none !important;
   }
   .presentation-button-mobile {
-    display: flex;
+    display: flex !important;
     right: 1rem;
     bottom: calc(1rem + 6rem + 1rem);
     width: 6rem;
