@@ -18,7 +18,7 @@
       </div>
     </div>
     
-    <div class="sliding-content">
+    <div class="sliding-content" v-if="locale !== 'en'">
       <div class="proj-section">
         <div class="title-container">
           <h2 class="title">{{ t('cases.title') }}</h2>
@@ -161,7 +161,7 @@
       </div>
     </div>
 
-    <div class="swag-section">
+    <div class="swag-section" v-if="locale !== 'en'">
       <div class="title-centered">
         <br>
         <span>{{ t('cta.title') }}</span>
@@ -172,7 +172,7 @@
     </div>
 
     <!-- Media Mentions Section -->
-    <div class="media-mentions">
+    <div class="media-mentions" v-if="locale !== 'en'">
       <h2 class="media-title">{{ t('media.title') }}</h2>
       <div class="media-logos">
         <a href="https://rb.ru/opinion/it-gumanitarii/" target="_blank" class="media-logo-link">
@@ -211,7 +211,7 @@
     </div>
 
     <!-- Awards section -->
-    <div class="awards">
+    <div class="awards" v-if="locale !== 'en'">
       <div class="dot-block">
         <div class="icon-container"></div>
       </div>
@@ -258,12 +258,12 @@
     </div>
 
     <!-- Blog Section -->
-    <div class="blog">
+    <div class="blog" v-if="locale !== 'en'">
       <h2 class="blog-title">{{ t('blog.title') }}</h2>
       <div id="dib-posts"></div>
     </div>
 
-    <div class="contact-section">
+    <div class="contact-section" v-if="locale !== 'en'">
       <div class="contacts">
         <div class="contacts-container">
           <div class="form-title">{{ t('contact.title') }}</div>
@@ -322,8 +322,8 @@ import { useI18n } from 'vue-i18n'
 export default defineComponent({
   name: 'HomePage',
   setup() {
-    const { t } = useI18n()
-    return { t }
+    const { t, locale } = useI18n()
+    return { t, locale }
   }
 })
 </script>
