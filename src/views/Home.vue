@@ -733,4 +733,10 @@ export default defineComponent({
     height: 6rem;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .contact-button.top {
+    display: none !important;
+  }
+}
 </style> 
