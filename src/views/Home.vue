@@ -4,7 +4,7 @@
       <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="contact-button down w-inline-block">
         <div class="button-text">{{ t('header.discussProject') }}</div>
       </a>
-      <a :href="locale === 'en' ? 'https://pitch.waiwai.diy/v/waiwai-vpcmxx' : 'https://pitch.waiwai.diy/v/waiwai-z5fmqd'" target="_blank" class="contact-button down w-inline-block" style="right: 1.75rem; bottom: 13rem; left: auto;">
+      <a :href="locale === 'en' ? 'https://pitch.waiwai.diy/v/waiwai-vpcmxx' : 'https://pitch.waiwai.diy/v/waiwai-z5fmqd'" target="_blank" class="presentation-button w-inline-block">
         <div class="button-text">{{ t('header.presentation') }}</div>
       </a>
       <div class="header">
@@ -633,6 +633,52 @@ export default defineComponent({
   .media-logos {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+}
+
+/* Presentation button styles */
+.presentation-button {
+  position: absolute;
+  right: 1.75rem;
+  bottom: 13rem;
+  z-index: 10;
+  background-color: var(--main-dark);
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  height: 9rem;
+  transition: transform .5s cubic-bezier(.785, .135, .15, .86);
+  display: flex;
+}
+
+.presentation-button:hover {
+  transform: rotate(20deg)scale(1.1);
+}
+
+@media screen and (max-width: 991px) {
+  .presentation-button {
+    right: 2rem;
+    bottom: -30%;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .presentation-button {
+    right: 1rem;
+    bottom: -100%;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .presentation-button {
+    right: 1rem;
+    bottom: -5.5rem;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
   }
 }
 </style> 
