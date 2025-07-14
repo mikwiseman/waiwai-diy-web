@@ -13,6 +13,27 @@
   "blog": {
     "title": "Blog"
   },
+  "aiEmployees": {
+    "title": "Available AI Employees",
+    "seller": {
+      "title": "AI-Seller",
+      "feature1": "Lead search and qualification 24/7",
+      "feature2": "Personalized multi-channel campaigns",
+      "feature3": "Conversion growth by 2-3 times"
+    },
+    "recruiter": {
+      "title": "AI-Recruiter",
+      "feature1": "Automatic selection from 250+ resumes per vacancy",
+      "feature2": "61% reduction in hiring time",
+      "feature3": "48% of HR specialists' time freed up"
+    },
+    "support": {
+      "title": "AI-Support (coming soon)",
+      "feature1": "Closing up to 70% of typical requests",
+      "feature2": "Instant customer responses",
+      "feature3": "Integration with voice channels"
+    }
+  },
   "cases": {
     "title": "Case Studies",
     "comingSoon": "Case study coming soon",

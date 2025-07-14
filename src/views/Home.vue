@@ -31,6 +31,68 @@
     </div>
     
     <div class="sliding-content" v-if="locale !== 'en'">
+      <!-- AI Employees Section -->
+      <div class="ai-employees-section">
+        <div class="title-container">
+          <h2 class="title">{{ t('aiEmployees.title') }}</h2>
+        </div>
+        <div class="ai-employees-container">
+          <!-- AI-Seller Card -->
+          <div class="ai-employee-card">
+            <div class="ai-employee-header">
+              <h3 class="ai-employee-title">{{ t('aiEmployees.seller.title') }}</h3>
+            </div>
+            <div class="ai-employee-features">
+              <div class="ai-employee-feature">
+                {{ t('aiEmployees.seller.feature1') }}
+              </div>
+              <div class="ai-employee-feature">
+                {{ t('aiEmployees.seller.feature2') }}
+              </div>
+              <div class="ai-employee-feature">
+                {{ t('aiEmployees.seller.feature3') }}
+              </div>
+            </div>
+          </div>
+
+          <!-- AI-Recruiter Card -->
+          <div class="ai-employee-card">
+            <div class="ai-employee-header">
+              <h3 class="ai-employee-title">{{ t('aiEmployees.recruiter.title') }}</h3>
+            </div>
+            <div class="ai-employee-features">
+              <div class="ai-employee-feature">
+                {{ t('aiEmployees.recruiter.feature1') }}
+              </div>
+              <div class="ai-employee-feature">
+                {{ t('aiEmployees.recruiter.feature2') }}
+              </div>
+              <div class="ai-employee-feature">
+                {{ t('aiEmployees.recruiter.feature3') }}
+              </div>
+            </div>
+          </div>
+
+          <!-- AI-Support Card -->
+          <div class="ai-employee-card coming-soon">
+            <div class="ai-employee-header">
+              <h3 class="ai-employee-title">{{ t('aiEmployees.support.title') }}</h3>
+            </div>
+            <div class="ai-employee-features">
+              <div class="ai-employee-feature">
+                {{ t('aiEmployees.support.feature1') }}
+              </div>
+              <div class="ai-employee-feature">
+                {{ t('aiEmployees.support.feature2') }}
+              </div>
+              <div class="ai-employee-feature">
+                {{ t('aiEmployees.support.feature3') }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="proj-section">
         <div class="title-container">
           <h2 class="title">{{ t('cases.title') }}</h2>
@@ -558,6 +620,127 @@ export default defineComponent({
 @media screen and (max-width: 767px) {
   .nav-link {
     right: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* AI Employees Section */
+.ai-employees-section {
+  z-index: 5;
+  background-color: var(--main-dark);
+  border-radius: 2rem;
+  flex-direction: column;
+  grid-template: ". Area Area"
+  / 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  position: relative;
+}
+
+.ai-employees-container {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  flex-direction: row;
+  flex: 1;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
+  align-content: stretch;
+  align-items: stretch;
+  margin-left: -.25rem;
+  margin-right: -.25rem;
+  display: grid;
+}
+
+.ai-employee-card {
+  grid-column-gap: 0rem;
+  grid-row-gap: 1rem;
+  outline-offset: 0px;
+  background-color: #170030;
+  background-image: none;
+  border-radius: 1rem;
+  outline: 1px solid #ffffff1a;
+  flex-flow: column;
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: 20rem;
+  padding: 2rem;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.ai-employee-card:hover {
+  transform: translateY(-4px);
+}
+
+.ai-employee-card.coming-soon {
+  opacity: 0.7;
+  background-color: #120025;
+}
+
+.ai-employee-header {
+  margin-bottom: 1.5rem;
+}
+
+.ai-employee-title {
+  color: #fff;
+  font-family: Inter Tight, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+.ai-employee-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ai-employee-feature {
+  color: #ffffffbf;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.ai-employee-feature:before {
+  content: "•";
+  color: #E5FF32;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Mobile styles for AI Employees */
+@media screen and (max-width: 991px) {
+  .ai-employees-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .ai-employee-card {
+    min-height: 16rem;
+    padding: 1.5rem;
+  }
+  
+  .ai-employee-title {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+  
+  .ai-employee-feature {
     font-size: 0.875rem;
   }
 }
