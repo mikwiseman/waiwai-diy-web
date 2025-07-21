@@ -250,6 +250,7 @@
         <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="heding-link">{{ t('cta.bookCall') }}</a>
       </div>
       <img src="@/assets/images/line.svg" loading="lazy" alt="" class="illustration-info">
+      
     </div>
 
     <!-- Media Mentions Section -->
