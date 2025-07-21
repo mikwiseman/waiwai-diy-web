@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Meta Tags Test - How they will appear on each domain</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .domain-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #E5FF32;
+            padding-bottom: 10px;
+        }
+        .meta-tag {
+            background: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #E5FF32;
+            font-family: monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        .preview {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .preview h3 {
+            margin-top: 0;
+            color: #666;
+        }
+        .social-preview {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background: white;
+        }
+        .social-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #1a0dab;
+            margin-bottom: 5px;
+        }
+        .social-description {
+            color: #545454;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .social-url {
+            color: #006621;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meta Tags Implementation Test</h1>
+    <p>This shows how meta tags will appear on each domain after the Vue app loads and sets them dynamically.</p>
+    
+    <div class="domain-section">
+        <h2>🇷🇺 Russian Version - waiwai.diy</h2>
+        <p>When accessed from <strong>waiwai.diy</strong>, these meta tags will be set:</p>
+        
+        <div class="meta-tag">&lt;title&gt;WaiWai - AI агенты для автоматизации продаж и маркетинга&lt;/title&gt;</div>
+        <div class="meta-tag">&lt;meta name="description" content="AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем время на рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей."&gt;</div>
+        <div class="meta-tag">&lt;meta property="og:title" content="WaiWai - AI агенты для автоматизации продаж и маркетинга"&gt;</div>
+        <div class="meta-tag">&lt;meta property="og:description" content="AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем время на рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей."&gt;</div>
+        <div class="meta-tag">&lt;meta property="og:url" content="https://waiwai.diy"&gt;</div>
+        <div class="meta-tag">&lt;link rel="canonical" href="https://waiwai.diy"&gt;</div>
+        
+        <div class="preview">
+            <h3>Social Media Preview:</h3>
+            <div class="social-preview">
+                <div class="social-title">WaiWai - AI агенты для автоматизации продаж и маркетинга</div>
+                <div class="social-description">AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем время на рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей.</div>
+                <div class="social-url">waiwai.diy</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="domain-section">
+        <h2>🇬🇧 English Version - wai.sale</h2>
+        <p>When accessed from <strong>wai.sale</strong>, these meta tags will be set:</p>
+        
+        <div class="meta-tag">&lt;title&gt;WaiWai - AI Agents for Sales and Marketing Automation&lt;/title&gt;</div>
+        <div class="meta-tag">&lt;meta name="description" content="AI agents for sales and marketing automation. Increase sales by 21%, reduce routine work by 41%. Smart agents for email campaigns, CRM, marketplaces, and social media."&gt;</div>
+        <div class="meta-tag">&lt;meta property="og:title" content="WaiWai - AI Agents for Sales and Marketing Automation"&gt;</div>
+        <div class="meta-tag">&lt;meta property="og:description" content="AI agents for sales and marketing automation. Increase sales by 21%, reduce routine work by 41%. Smart agents for email campaigns, CRM, marketplaces, and social media."&gt;</div>
+        <div class="meta-tag">&lt;meta property="og:url" content="https://wai.sale"&gt;</div>
+        <div class="meta-tag">&lt;link rel="canonical" href="https://wai.sale"&gt;</div>
+        
+        <div class="preview">
+            <h3>Social Media Preview:</h3>
+            <div class="social-preview">
+                <div class="social-title">WaiWai - AI Agents for Sales and Marketing Automation</div>
+                <div class="social-description">AI agents for sales and marketing automation. Increase sales by 21%, reduce routine work by 41%. Smart agents for email campaigns, CRM, marketplaces, and social media.</div>
+                <div class="social-url">wai.sale</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="domain-section">
+        <h2>✅ Implementation Details</h2>
+        <ul>
+            <li><strong>Dynamic Detection:</strong> The system detects the domain using <code>window.location.hostname</code></li>
+            <li><strong>Automatic Updates:</strong> Meta tags are set dynamically when the Vue app loads</li>
+            <li><strong>SEO Friendly:</strong> Each domain has its own canonical URL and appropriate language tags</li>
+            <li><strong>Social Sharing:</strong> Open Graph and Twitter Card tags ensure proper previews on social media</li>
+        </ul>
+        
+        <h3>How it works:</h3>
+        <ol>
+            <li>User visits either waiwai.diy or wai.sale</li>
+            <li>Vue app detects the domain in <code>src/i18n/index.js</code></li>
+            <li>Appropriate locale is set (ru for waiwai.diy, en for wai.sale)</li>
+            <li>App.vue uses @vueuse/head to dynamically update all meta tags</li>
+            <li>Social media crawlers see the correct language meta tags</li>
+        </ol>
+    </div>
+    
+    <div class="domain-section">
+        <h2>🔍 Testing Instructions</h2>
+        <p>To verify the implementation works correctly:</p>
+        <ol>
+            <li><strong>Local Testing:</strong> The development server will default to Russian. To test English, you would need to modify the domain detection temporarily.</li>
+            <li><strong>Production Testing:</strong> Deploy to both domains and use social media debugging tools:
+                <ul>
+                    <li><a href="https://developers.facebook.com/tools/debug/" target="_blank">Facebook Sharing Debugger</a></li>
+                    <li><a href="https://cards-dev.twitter.com/validator" target="_blank">Twitter Card Validator</a></li>
+                    <li><a href="https://www.linkedin.com/post-inspector/" target="_blank">LinkedIn Post Inspector</a></li>
+                </ul>
+            </li>
+            <li><strong>Browser Testing:</strong> View page source after the Vue app loads to see the dynamically set meta tags</li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,6 +1,12 @@
 {
   "meta": {
-    "title": "WaiWai"
+    "title": "WaiWai - AI Agents for Sales and Marketing Automation",
+    "description": "AI agents for sales and marketing automation. Increase sales by 21%, reduce routine work by 41%. Smart agents for email campaigns, CRM, marketplaces, and social media.",
+    "keywords": "AI agents, artificial intelligence, sales automation, marketing, email marketing, CRM, marketing automation, increase sales, process optimization, intelligent agents, chatbots, communication automation, AI assistants, smart agents, business automation, AI for business, artificial intelligence in sales",
+    "ogTitle": "WaiWai - AI Agents for Sales and Marketing Automation",
+    "ogDescription": "AI agents for sales and marketing automation. Increase sales by 21%, reduce routine work by 41%. Smart agents for email campaigns, CRM, marketplaces, and social media.",
+    "twitterTitle": "WaiWai - AI Agents for Sales and Marketing Automation",
+    "twitterDescription": "AI agents for sales and marketing automation. Increase sales by 21%, reduce routine work by 41%. Smart agents for email campaigns, CRM, marketplaces, and social media."
   },
   "header": {
     "discussProject": "Discuss Project",
@@ -15,6 +21,7 @@
   },
   "aiEmployees": {
     "title": "Available AI Employees",
+    "demoButton": "Book a Demo",
     "seller": {
       "title": "AI-Seller",
       "feature1": "Lead search and qualification 24/7",

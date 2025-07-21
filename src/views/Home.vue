@@ -91,6 +91,13 @@
             </div>
           </div>
         </div>
+        
+        <!-- Demo Button -->
+        <div class="ai-employees-cta">
+          <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="ai-demo-button">
+            <div class="ai-demo-button-text">{{ t('aiEmployees.demoButton') }}</div>
+          </a>
+        </div>
       </div>
 
       <div class="proj-section">
@@ -240,7 +247,7 @@
         <br>
         <span>{{ t('cta.title') }}</span>
         <br>‍<br>‍
-        <a href="https://calendly.com/wisemik/hi" target="_blank" class="heding-link">{{ t('cta.bookCall') }}</a>
+        <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="heding-link">{{ t('cta.bookCall') }}</a>
       </div>
       <img src="@/assets/images/line.svg" loading="lazy" alt="" class="illustration-info">
     </div>
@@ -723,6 +730,42 @@ export default defineComponent({
   left: 0;
 }
 
+/* AI Employees CTA */
+.ai-employees-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.ai-demo-button {
+  background-color: #E5FF32;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ai-demo-button:hover {
+  background-color: #d4ed1f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(229, 255, 50, 0.3);
+}
+
+.ai-demo-button-text {
+  color: #002713;
+  font-family: Inter Tight, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* Mobile styles for AI Employees */
 @media screen and (max-width: 991px) {
   .ai-employees-container {
@@ -741,6 +784,14 @@ export default defineComponent({
   }
   
   .ai-employee-feature {
+    font-size: 0.875rem;
+  }
+  
+  .ai-demo-button {
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .ai-demo-button-text {
     font-size: 0.875rem;
   }
 }

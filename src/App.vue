@@ -7,11 +7,87 @@
 </template>
 
 <script>
-import { onMounted } from 'vue'
+import { onMounted, computed, watch } from 'vue'
+import { useHead } from '@vueuse/head'
+import { useI18n } from 'vue-i18n'
 
 export default {
   name: 'App',
   setup() {
+    const { t, locale } = useI18n()
+
+    // Compute meta tags based on current locale
+    const metaTags = computed(() => ({
+      title: t('meta.title'),
+      meta: [
+        {
+          name: 'description',
+          content: t('meta.description')
+        },
+        {
+          name: 'keywords',
+          content: t('meta.keywords')
+        },
+        // Open Graph tags
+        {
+          property: 'og:title',
+          content: t('meta.ogTitle')
+        },
+        {
+          property: 'og:description',
+          content: t('meta.ogDescription')
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          property: 'og:url',
+          content: locale.value === 'en' ? 'https://wai.sale' : 'https://waiwai.diy'
+        },
+        {
+          property: 'og:image',
+          content: 'https://waiwai.diy/og-image.jpg'
+        },
+        // Twitter Card tags
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image'
+        },
+        {
+          name: 'twitter:title',
+          content: t('meta.twitterTitle')
+        },
+        {
+          name: 'twitter:description',
+          content: t('meta.twitterDescription')
+        },
+        {
+          name: 'twitter:image',
+          content: 'https://waiwai.diy/og-image.jpg'
+        },
+        // Language tag
+        {
+          name: 'language',
+          content: locale.value
+        }
+      ],
+      link: [
+        {
+          rel: 'canonical',
+          href: locale.value === 'en' ? 'https://wai.sale' : 'https://waiwai.diy'
+        }
+      ]
+    }))
+
+    // Apply meta tags
+    useHead(metaTags)
+
+    // Watch for locale changes and update meta tags
+    watch(locale, () => {
+      // Meta tags will automatically update due to computed property
+    })
+
     onMounted(() => {
       // Initialize Luxy.js
       if (!/iPhone|iPad|Android/i.test(navigator.userAgent)) {
