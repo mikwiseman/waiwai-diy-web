@@ -45,14 +45,10 @@ export default {
           property: 'og:url',
           content: locale.value === 'en' ? 'https://wai.sale' : 'https://waiwai.diy'
         },
-        {
-          property: 'og:image',
-          content: 'https://waiwai.diy/og-image.jpg'
-        },
         // Twitter Card tags
         {
           name: 'twitter:card',
-          content: 'summary_large_image'
+          content: 'summary'
         },
         {
           name: 'twitter:title',
@@ -61,10 +57,6 @@ export default {
         {
           name: 'twitter:description',
           content: t('meta.twitterDescription')
-        },
-        {
-          name: 'twitter:image',
-          content: 'https://waiwai.diy/og-image.jpg'
         },
         // Language tag
         {
