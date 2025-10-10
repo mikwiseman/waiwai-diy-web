@@ -37,16 +37,25 @@
         </div>
         <div class="capabilities-content">
           <div class="capability-item">
-            <h3 class="section-subtitle">{{ t('capabilities.leadSearch.title') }}</h3>
-            <p>{{ t('capabilities.leadSearch.description') }}</p>
+            <div class="feature-icon"></div>
+            <div class="capability-text">
+              <h3 class="section-subtitle">{{ t('capabilities.leadSearch.title') }}</h3>
+              <p>{{ t('capabilities.leadSearch.description') }}</p>
+            </div>
           </div>
           <div class="capability-item">
-            <h3 class="section-subtitle">{{ t('capabilities.telegramSearch.title') }}</h3>
-            <p>{{ t('capabilities.telegramSearch.description') }}</p>
+            <div class="feature-icon"></div>
+            <div class="capability-text">
+              <h3 class="section-subtitle">{{ t('capabilities.telegramSearch.title') }}</h3>
+              <p>{{ t('capabilities.telegramSearch.description') }}</p>
+            </div>
           </div>
           <div class="capability-item">
-            <h3 class="section-subtitle">{{ t('capabilities.linkedinOutreach.title') }}</h3>
-            <p>{{ t('capabilities.linkedinOutreach.description') }}</p>
+            <div class="feature-icon"></div>
+            <div class="capability-text">
+              <h3 class="section-subtitle">{{ t('capabilities.linkedinOutreach.title') }}</h3>
+              <p>{{ t('capabilities.linkedinOutreach.description') }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -57,14 +66,20 @@
         </div>
         <div class="scenarios-content">
           <div class="scenario-module">
-            <h3 class="section-subtitle">{{ t('scenarios.leadModule.title') }}</h3>
-            <p>{{ t('scenarios.leadModule.paragraph1') }}</p>
-            <p>{{ t('scenarios.leadModule.paragraph2') }}</p>
+            <div class="feature-icon small"></div>
+            <div class="scenario-text">
+              <h3 class="section-subtitle">{{ t('scenarios.leadModule.title') }}</h3>
+              <p>{{ t('scenarios.leadModule.paragraph1') }}</p>
+              <p>{{ t('scenarios.leadModule.paragraph2') }}</p>
+            </div>
           </div>
           <div class="scenario-module">
-            <h3 class="section-subtitle">{{ t('scenarios.outreachModule.title') }}</h3>
-            <p>{{ t('scenarios.outreachModule.paragraph1') }}</p>
-            <p>{{ t('scenarios.outreachModule.paragraph2') }}</p>
+            <div class="feature-icon small"></div>
+            <div class="scenario-text">
+              <h3 class="section-subtitle">{{ t('scenarios.outreachModule.title') }}</h3>
+              <p>{{ t('scenarios.outreachModule.paragraph1') }}</p>
+              <p>{{ t('scenarios.outreachModule.paragraph2') }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -257,6 +272,18 @@
           </div>
         </div>
       </div>
+
+      <div class="faq-section">
+        <div class="title-container">
+          <h2 class="title">{{ t('faq.title') }}</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item" v-for="(item, index) in faqItems" :key="`faq-${index}`">
+            <div class="faq-question">{{ item.question }}</div>
+            <p class="faq-answer">{{ item.answer }}</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="swag-section" v-if="locale !== 'en'">
@@ -277,7 +304,10 @@
       </div>
       <div class="team-grid">
         <div class="team-card" v-for="member in teamMembers" :key="member.key">
-          <div class="team-avatar">{{ member.initials }}</div>
+          <div class="team-photo-wrapper">
+            <img v-if="member.image" :src="member.image" :alt="member.name" class="team-photo">
+            <div v-else class="team-avatar">{{ member.initials }}</div>
+          </div>
           <div class="team-name">{{ member.name }}</div>
           <div class="team-role">{{ member.role }}</div>
           <p class="team-description">{{ member.description }}</p>
@@ -375,6 +405,32 @@
           </div>
         </div>
       </div>
+      <div class="awards-container">
+        <div class="award-name">
+          <div class="awards-title">{{ t('awards.aiConversations.title') }}</div>
+        </div>
+        <div class="award-collection">
+          <div class="award-entry">
+            <div class="medal-gold"></div>
+            <div class="awards-subtitle">
+              {{ t('awards.aiConversations.award') }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="awards-container">
+        <div class="award-name">
+          <div class="awards-title">{{ t('awards.aiDigitalLeaders.title') }}</div>
+        </div>
+        <div class="award-collection">
+          <div class="award-entry">
+            <div class="medal-gold"></div>
+            <div class="awards-subtitle">
+              {{ t('awards.aiDigitalLeaders.award') }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Blog Section -->
@@ -439,20 +495,28 @@
 <script>
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import Team1 from '@/assets/images/team/1.jpeg'
+import Team2 from '@/assets/images/team/2.jpg'
+import Team3 from '@/assets/images/team/3.jpg'
+import Team4 from '@/assets/images/team/4.jpeg'
+import Team5 from '@/assets/images/team/5.jpeg'
+import Team6 from '@/assets/images/team/6.jpeg'
+import Team7 from '@/assets/images/team/7.jpeg'
+import Team8 from '@/assets/images/team/8.png'
 
 export default defineComponent({
   name: 'HomePage',
   setup() {
     const { t, tm, locale } = useI18n()
     const membersConfig = [
-      { key: 'egor' },
-      { key: 'pavel' },
-      { key: 'anastasiaM' },
-      { key: 'aleksey' },
-      { key: 'vyacheslav' },
-      { key: 'anastasiaS' },
-      { key: 'mik' },
-      { key: 'waiComputer' }
+      { key: 'egor', image: Team1 },
+      { key: 'pavel', image: Team2 },
+      { key: 'anastasiaM', image: Team3 },
+      { key: 'aleksey', image: Team4 },
+      { key: 'vyacheslav', image: Team5 },
+      { key: 'anastasiaS', image: Team6 },
+      { key: 'mik', image: Team7 },
+      { key: 'waiComputer', image: Team8 }
     ]
 
     const teamMembers = computed(() =>
@@ -471,7 +535,8 @@ export default defineComponent({
           name,
           role: t(`team.members.${member.key}.role`),
           description: t(`team.members.${member.key}.description`),
-          initials
+          initials,
+          image: member.image
         }
       })
     )
@@ -507,7 +572,18 @@ export default defineComponent({
       }
     })
 
-    return { t, locale, teamMembers, pricingPlans, enterprisePlan }
+    const faqItems = computed(() => {
+      const items = tm('faq.items')
+      if (!Array.isArray(items)) {
+        return []
+      }
+      return items.map((item) => ({
+        question: item.q,
+        answer: item.a
+      }))
+    })
+
+    return { t, locale, teamMembers, pricingPlans, enterprisePlan, faqItems }
   }
 })
 </script>
@@ -743,21 +819,40 @@ export default defineComponent({
   padding: 3rem 2.5rem;
   margin-top: 2rem;
   color: #0b0b0b;
+  border: 1px solid rgba(0, 39, 19, 0.08);
+  box-shadow: 0 24px 58px rgba(0, 39, 19, 0.08);
 }
 
 .capabilities-section .title,
 .scenarios-section .title {
-  color: #050505;
+  color: #04170e;
 }
 
 .capabilities-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
 .capability-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  background: #f6fbf7;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 39, 19, 0.05);
+  box-shadow: 0 16px 36px rgba(0, 39, 19, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capability-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(0, 39, 19, 0.1);
+}
+
+.capability-text {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -769,29 +864,62 @@ export default defineComponent({
   font-weight: 500;
   line-height: 1.5rem;
   margin: 0;
-  color: #050505;
+  color: #04170e;
 }
 
-.capability-item p,
-.scenario-module p {
+.capability-text p,
+.scenario-text p {
   font-family: Inter, sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.7);
   margin: 0;
 }
 
 .scenarios-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .scenario-module {
   display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 2rem 1.75rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f4faf6 100%);
+  border-radius: 1.75rem;
+  border: 1px solid rgba(0, 39, 19, 0.06);
+  box-shadow: 0 18px 40px rgba(0, 39, 19, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scenario-module:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 52px rgba(0, 39, 19, 0.11);
+}
+
+.scenario-text {
+  display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
+}
+
+.feature-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #002713;
+  box-shadow: 0 0 0 10px rgba(0, 39, 19, 0.12);
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+}
+
+.feature-icon.small {
+  width: 14px;
+  height: 14px;
+  box-shadow: 0 0 0 8px rgba(0, 39, 19, 0.1);
 }
 
 .pricing-section {
@@ -924,19 +1052,47 @@ export default defineComponent({
 }
 
 .team-card {
-  background: #fafafa;
-  border-radius: 1.5rem;
+  background: #ffffff;
+  border-radius: 1.75rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  box-shadow: 0 12px 32px rgba(8, 12, 54, 0.06);
-  border: 1px solid rgba(8, 12, 54, 0.08);
+  gap: 1rem;
+  border: 1px solid rgba(0, 27, 15, 0.06);
+  box-shadow: 0 20px 40px rgba(0, 39, 19, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(0, 39, 19, 0.12);
+}
+
+.team-photo-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #0f0428;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.team-card:hover .team-photo {
+  transform: scale(1.05);
 }
 
 .team-avatar {
-  width: 64px;
-  height: 64px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   background: #120025;
   color: #e5ff32;
@@ -973,6 +1129,48 @@ export default defineComponent({
   margin: 0;
 }
 
+.faq-section {
+  margin-top: 3rem;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(0, 39, 19, 0.08);
+  box-shadow: 0 24px 58px rgba(0, 39, 19, 0.08);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.faq-item {
+  background: #f6fbf7;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 39, 19, 0.05);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 16px 36px rgba(0, 39, 19, 0.08);
+}
+
+.faq-question {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #04170e;
+}
+
+.faq-answer {
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
 .recognition-section {
   padding: 3rem 2rem 1rem;
   background-color: #fff;
@@ -1000,11 +1198,24 @@ export default defineComponent({
     gap: 2rem;
   }
 
+  .capability-item,
+  .scenario-module {
+    padding: 1.5rem 1.25rem;
+  }
+
   .pricing-section {
     padding: 2.5rem 1.5rem;
   }
 
   .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .faq-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1018,6 +1229,10 @@ export default defineComponent({
 
   .team-card {
     padding: 1.75rem;
+  }
+
+  .team-photo-wrapper {
+    aspect-ratio: 3 / 4;
   }
 
   .recognition-section {

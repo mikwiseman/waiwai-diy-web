@@ -93,6 +93,27 @@
       "button": "Contact Us"
     }
   },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "q": "What is a DICH?",
+        "a": "One DICH equals a personalized touchpoint: an email, messenger outreach, or a crafted reply. Each plan includes a quota of DICH, and overage is billed at a flat rate."
+      },
+      {
+        "q": "How fast can we launch?",
+        "a": "A pilot takes about five business days. We collect data, align tone of voice, configure scenarios, and the first leads usually appear during the first week."
+      },
+      {
+        "q": "Can we plug in our data sources?",
+        "a": "Yes. We connect to CRM systems, Google Sheets, Notion, and internal databases. Enterprise deployments include integrations with proprietary systems and data buses."
+      },
+      {
+        "q": "Who supports the implementation?",
+        "a": "SaaS plans include onboarding materials and the WaiWai support team. Enterprise customers get a dedicated success manager and a project squad."
+      }
+    ]
+  },
   "team": {
     "title": "WaiWai Team",
     "members": {
@@ -189,6 +210,14 @@
     "ethGlobalSingapore": {
       "title": "ETHGlobal Singapore",
       "award": "3rd place, Web3 services category (2024)"
+    },
+    "aiConversations": {
+      "title": "AI Conversations 2025",
+      "award": "Winner — Best GenAI Startup (2025)"
+    },
+    "aiDigitalLeaders": {
+      "title": "AI Digital Leaders",
+      "award": "Best AI Startup (2025)"
     }
   },
   "media": {
