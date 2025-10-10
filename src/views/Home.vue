@@ -159,17 +159,6 @@
       </div>
     </div>
 
-    <div class="swag-section" v-if="locale !== 'en'">
-      <div class="title-centered">
-        <br>
-        <span>{{ t('cta.title') }}</span>
-        <br>‍<br>‍
-        <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="heding-link">{{ t('cta.bookCall') }}</a>
-      </div>
-      <img src="@/assets/images/line.svg" loading="lazy" alt="" class="illustration-info">
-      
-    </div>
-
     <!-- Team Section -->
     <div class="team-section" v-if="locale !== 'en'">
       <div class="title-container">
