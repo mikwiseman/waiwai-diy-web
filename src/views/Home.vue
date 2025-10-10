@@ -57,143 +57,33 @@
         <div class="title-container">
           <h2 class="title">{{ t('cases.title') }}</h2>
         </div>
-        <div class="project-container">
-          <!-- Falcone Card -->
-          <div class="project-card falcone">
-            <div class="project-header">
-              <img src="@/assets/images/falcone-logo-card.svg" loading="lazy" alt="" class="project-logo small">
-              <div class="chip on-color hide">{{ t('cases.comingSoon') }}</div>
+        <div class="cases-grid">
+          <div
+            class="case-card"
+            v-for="caseItem in caseCards"
+            :key="caseItem.key"
+          >
+            <div class="case-header">
+              <h3 class="section-subtitle">{{ caseItem.title }}</h3>
+              <p>{{ caseItem.description }}</p>
             </div>
-            <div class="project-info card-stat">
-              <div class="w-layout-hflex project-card for-you statistic">
-                <div class="proj-title">21%</div>
-                <div class="proj-description">{{ t('cases.stats.salesGrowth') }}</div>
-              </div>
-              <div class="w-layout-hflex project-card for-you statistic">
-                <div class="proj-title">5.7x</div>
-                <div class="proj-description">{{ t('cases.stats.responseIncrease') }}</div>
+            <div class="case-stats">
+              <div class="case-stat" v-for="stat in caseItem.stats" :key="stat.label">
+                <span class="case-stat-value">{{ stat.value }}</span>
+                <span class="case-stat-label">{{ stat.label }}</span>
               </div>
             </div>
-            <div class="project-content">
-              <div class="project-info">
-                <div class="project-title">
-                  <div class="proj-title">{{ t('cases.falcone.title') }}</div>
-                  <div class="proj-description">{{ t('cases.falcone.description') }}</div>
-                </div>
-                <div class="project-chips-container">
-                  <div class="chip on-color dark">Логистика</div>
-                  <div class="chip on-color dark">Маркетплейсы</div>
-                  <div class="chip on-color dark">Продажи</div>
-                  <div class="chip on-color dark">Email</div>
-                </div>
-              </div>
+            <div class="case-tags">
+              <span class="case-tag" v-for="(tag, index) in caseItem.tags" :key="`tag-${caseItem.key}-${index}`">
+                {{ tag }}
+              </span>
             </div>
           </div>
-
-          <!-- Ak Bars Bank Card -->
-          <div class="project-card">
-            <div class="project-header">
-              <img src="@/assets/images/02_logo.svg" loading="lazy" alt="" class="project-logo small">
-              <div class="chip on-color hide">{{ t('cases.comingSoon') }}</div>
+          <div class="case-card placeholder">
+            <div class="case-header">
+              <h3 class="section-subtitle">{{ t('cases.yourProject') }}</h3>
+              <p>{{ t('cases.invite') }}</p>
             </div>
-            <div class="project-info card-stat">
-              <div class="w-layout-hflex project-card for-you statistic">
-                <div class="proj-title">61%</div>
-                <div class="proj-description">{{ t('cases.stats.timeReduction') }}</div>
-              </div>
-              <div class="w-layout-hflex project-card for-you statistic">
-                <div class="proj-title">48%</div>
-                <div class="proj-description">{{ t('cases.stats.timeFreed') }}</div>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-info">
-                <div class="project-title">
-                  <div class="proj-title">{{ t('cases.akBarsBank.title') }}</div>
-                  <div class="proj-description">{{ t('cases.akBarsBank.description') }}</div>
-                </div>
-                <div class="project-chips-container">
-                  <div class="chip on-color dark">Финансы</div>
-                  <div class="chip on-color dark">Рекрутмент</div>
-                  <div class="chip on-color dark">Рассылки</div>
-                  <div class="chip on-color dark">HH.ru</div>
-                  <div class="chip on-color dark">LinkedIn</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Ontico Conferences Card -->
-          <div class="project-card bork">
-            <div class="project-header">
-              <img src="@/assets/images/04_logo.svg" loading="lazy" alt="" class="project-logo extra-small bork">
-              <div class="chip on-color hide">{{ t('cases.comingSoon') }}</div>
-            </div>
-            <div class="project-info card-stat">
-              <div class="w-layout-hflex project-card for-you statistic">
-                <div class="proj-title">16%</div>
-                <div class="proj-description">{{ t('cases.stats.salesGrowth') }}</div>
-              </div>
-              <div class="w-layout-hflex project-card for-you statistic">
-                <div class="proj-title">2.4x</div>
-                <div class="proj-description">{{ t('cases.stats.responseIncrease') }}</div>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-info">
-                <div class="project-title">
-                  <div class="proj-title">{{ t('cases.ontico.title') }}</div>
-                  <div class="proj-description">{{ t('cases.ontico.description') }}</div>
-                </div>
-                <div class="project-chips-container">
-                  <div class="chip on-color dark">Мероприятия</div>
-                  <div class="chip on-color dark">Продажи</div>
-                  <div class="chip on-color dark">LinkedIn</div>
-                  <div class="chip on-color dark">Email</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Kodix Card -->
-          <div class="project-card light">
-            <div class="project-header">
-              <img src="@/assets/images/03_logo.svg" loading="lazy" alt="" class="project-logo extra-small">
-              <div class="chip on-color light hide">{{ t('cases.comingSoon') }}</div>
-            </div>
-            <div class="project-info card-stat">
-              <div class="w-layout-hflex project-card for-you statistic-copy">
-                <div class="proj-title-copy">8-10</div>
-                <div class="proj-description-copy">{{ t('cases.kodix.messages') }}</div>
-              </div>
-              <div class="w-layout-hflex project-card for-you statistic-copy">
-                <div class="proj-title-copy">2970</div>
-                <div class="proj-description-copy">{{ t('cases.kodix.reach') }}</div>
-              </div>
-              <div class="w-layout-hflex project-card for-you statistic-copy">
-                <div class="proj-title-copy">12</div>
-                <div class="proj-description-copy">{{ t('cases.kodix.meetings') }}</div>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-info">
-                <div class="project-title">
-                  <div class="proj-title light">{{ t('cases.kodix.title') }}</div>
-                  <div class="proj-description light">{{ t('cases.kodix.description') }}</div>
-                </div>
-                <div class="project-chips-container">
-                  <div class="chip on-color light">Разработка</div>
-                  <div class="chip on-color light">Продажи</div>
-                  <div class="chip on-color light">Email</div>
-                  <div class="chip on-color light">LinkedIn</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="w-node-_08623629-3b20-0b06-c339-773cfed96f73-b9cd35b6" class="project-card for-you">
-            <img src="@/assets/images/favorite.svg" loading="lazy" alt="" class="image">
-            <div class="text-block">{{ t('cases.yourProject') }}</div>
           </div>
         </div>
       </div>
