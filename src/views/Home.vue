@@ -222,6 +222,27 @@
       
     </div>
 
+    <!-- Team Section -->
+    <div class="team-section" v-if="locale !== 'en'">
+      <div class="title-container">
+        <h2 class="title">{{ t('team.title') }}</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-card" v-for="member in teamMembers" :key="member.key">
+          <div class="team-avatar">{{ member.initials }}</div>
+          <div class="team-name">{{ member.name }}</div>
+          <div class="team-role">{{ member.role }}</div>
+          <p class="team-description">{{ member.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="recognition-section" v-if="locale !== 'en'">
+      <div class="title-centered">
+        <span>{{ t('recognition.text') }}</span>
+      </div>
+    </div>
+
     <!-- Media Mentions Section -->
     <div class="media-mentions" v-if="locale !== 'en'">
       <h2 class="media-title">{{ t('media.title') }}</h2>
@@ -367,14 +388,46 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   name: 'HomePage',
   setup() {
     const { t, locale } = useI18n()
-    return { t, locale }
+    const membersConfig = [
+      { key: 'egor' },
+      { key: 'pavel' },
+      { key: 'anastasiaM' },
+      { key: 'aleksey' },
+      { key: 'vyacheslav' },
+      { key: 'anastasiaS' },
+      { key: 'mik' },
+      { key: 'waiComputer' }
+    ]
+
+    const teamMembers = computed(() =>
+      membersConfig.map((member) => {
+        const name = t(`team.members.${member.key}.name`)
+        const initials = name
+          .split(' ')
+          .filter(Boolean)
+          .map((part) => part[0])
+          .join('')
+          .slice(0, 2)
+          .toUpperCase() || name.slice(0, 2).toUpperCase()
+
+        return {
+          key: member.key,
+          name,
+          role: t(`team.members.${member.key}.role`),
+          description: t(`team.members.${member.key}.description`),
+          initials
+        }
+      })
+    )
+
+    return { t, locale, teamMembers }
   }
 })
 </script>
@@ -660,6 +713,80 @@ export default defineComponent({
   gap: 1rem;
 }
 
+.team-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.team-card {
+  background: #fafafa;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 12px 32px rgba(8, 12, 54, 0.06);
+  border: 1px solid rgba(8, 12, 54, 0.08);
+}
+
+.team-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #120025;
+  color: #e5ff32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.team-name {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #040404;
+}
+
+.team-role {
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(8, 12, 54, 0.65);
+}
+
+.team-description {
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.72);
+  margin: 0;
+}
+
+.recognition-section {
+  padding: 3rem 2rem 1rem;
+  background-color: #fff;
+}
+
+.recognition-section .title-centered {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #050505;
+}
+
 @media screen and (max-width: 991px) {
   .capabilities-section,
   .scenarios-section {
@@ -673,6 +800,22 @@ export default defineComponent({
   .scenarios-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .team-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    padding: 1.75rem;
+  }
+
+  .recognition-section {
+    padding: 2.5rem 1.5rem 1rem;
   }
 }
 

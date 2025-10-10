@@ -47,6 +47,54 @@
       "paragraph2": "WaiWai tunes tone and channels for each cluster — marketplace sellers with transparent delivery terms, Dubai-based realtors with Russian roots, luxury real-estate developers — and runs sequences that move leads toward a meeting."
     }
   },
+  "team": {
+    "title": "WaiWai Team",
+    "members": {
+      "egor": {
+        "name": "Egor Lukin",
+        "role": "Dev",
+        "description": "Full-stack software engineer with 10 years of experience. Worked at Evil Martians, Aviasales, Dualboot, and early-stage startups. Launched his own SaaS products."
+      },
+      "pavel": {
+        "name": "Pavel Kalashnikov",
+        "role": "Dev",
+        "description": "13 years in commercial development, led large LMS, HoReCa, and media projects. Open-source enthusiast."
+      },
+      "anastasiaM": {
+        "name": "Anastasia Moshina",
+        "role": "Dev",
+        "description": "Ruby on Rails developer who helped build large fintech products. Over five years of engineering experience."
+      },
+      "aleksey": {
+        "name": "Alexey Pavlov",
+        "role": "PR",
+        "description": "Former editor-in-chief at Sostav with 12 years in journalism and PR."
+      },
+      "vyacheslav": {
+        "name": "Vyacheslav Ermolenko",
+        "role": "Design",
+        "description": "Eight years designing digital products. Led design teams and crafted design systems for fintech, Web3, business, and cultural projects."
+      },
+      "anastasiaS": {
+        "name": "Anastasia Soboleva",
+        "role": "QA",
+        "description": "Full-stack QA engineer with 5+ years of experience. Helps teams ship stable, user-friendly products by catching critical issues before release."
+      },
+      "mik": {
+        "name": "Mik Wiseman",
+        "role": "CEO",
+        "description": "Founder of WaiWai, launched nine startups; graduate of the MSU Faculty of Computational Mathematics and Cybernetics and winner of international AI hackathons."
+      },
+      "waiComputer": {
+        "name": "Wai Computer",
+        "role": "AI",
+        "description": "Twelve years of uninterrupted work without vacations or sick days. Speaks every programming language at once, occasionally freezes on Zoom calls, dreams of a promotion to a quantum computer."
+      }
+    }
+  },
+  "recognition": {
+    "text": "WaiWai is part of Skolkovo, the Russian Software Registry, and the MTC"
+  },
   "cases": {
     "title": "Case Studies",
     "comingSoon": "Case study coming soon",
