@@ -209,6 +209,54 @@
           </div>
         </div>
       </div>
+
+      <div class="pricing-section">
+        <div class="title-container">
+          <h2 class="title">{{ t('pricing.title') }}</h2>
+        </div>
+        <div class="pricing-grid">
+          <div
+            class="pricing-card"
+            :class="{ 'is-highlighted': plan.highlight }"
+            v-for="plan in pricingPlans"
+            :key="plan.key"
+          >
+            <div class="pricing-name">{{ plan.name }}</div>
+            <div class="pricing-price">{{ plan.price }}</div>
+            <div class="pricing-note">{{ plan.note }}</div>
+            <ul class="pricing-features">
+              <li v-for="(feature, index) in plan.features" :key="`feature-${plan.key}-${index}`">
+                {{ feature }}
+              </li>
+            </ul>
+            <a
+              href="https://calendly.com/mikwiseman/hi"
+              target="_blank"
+              rel="noopener"
+              class="pricing-button"
+            >
+              {{ plan.button }}
+            </a>
+          </div>
+          <div class="pricing-card enterprise-card">
+            <div class="pricing-name">{{ enterprisePlan.name }}</div>
+            <div class="pricing-note">{{ enterprisePlan.description }}</div>
+            <ul class="pricing-features">
+              <li v-for="(feature, index) in enterprisePlan.features" :key="`enterprise-${index}`">
+                {{ feature }}
+              </li>
+            </ul>
+            <a
+              href="https://calendly.com/mikwiseman/hi"
+              target="_blank"
+              rel="noopener"
+              class="pricing-button outline"
+            >
+              {{ enterprisePlan.button }}
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="swag-section" v-if="locale !== 'en'">
@@ -354,7 +402,7 @@
             <div class="address-block">
               <div class="link-container">
                 <div class="contact-text label">{{ t('contact.phone') }}</div>
-                <p class="address-text">+7 (499) 391-20-14 <br></p>
+                <p class="address-text">+7 (936) 316-39-61 <br></p>
               </div>
               <div class="link-container">
                 <div class="contact-text label">{{ t('contact.address') }}</div>
@@ -375,6 +423,7 @@
                class="footer-copyright footer-link">
               {{ t('offer.viewOffer') }}
             </a>
+            <p class="footer-copyright">{{ t('contact.inn') }}</p>
           </div>
         </div>
         <div class="contact-button-circle">
@@ -394,7 +443,7 @@ import { useI18n } from 'vue-i18n'
 export default defineComponent({
   name: 'HomePage',
   setup() {
-    const { t, locale } = useI18n()
+    const { t, tm, locale } = useI18n()
     const membersConfig = [
       { key: 'egor' },
       { key: 'pavel' },
@@ -427,7 +476,38 @@ export default defineComponent({
       })
     )
 
-    return { t, locale, teamMembers }
+    const pricingConfig = [
+      { key: 'basic', highlight: false },
+      { key: 'standard', highlight: true },
+      { key: 'premium', highlight: false }
+    ]
+
+    const pricingPlans = computed(() =>
+      pricingConfig.map((plan) => {
+        const features = tm(`pricing.plans.${plan.key}.features`)
+        return {
+          key: plan.key,
+          name: t(`pricing.plans.${plan.key}.name`),
+          price: t(`pricing.plans.${plan.key}.price`),
+          note: t(`pricing.plans.${plan.key}.note`),
+          features: Array.isArray(features) ? features : [],
+          button: t('pricing.buyButton'),
+          highlight: plan.highlight
+        }
+      })
+    )
+
+    const enterprisePlan = computed(() => {
+      const features = tm('pricing.enterprise.features')
+      return {
+        name: t('pricing.enterprise.name'),
+        description: t('pricing.enterprise.description'),
+        features: Array.isArray(features) ? features : [],
+        button: t('pricing.enterprise.button')
+      }
+    })
+
+    return { t, locale, teamMembers, pricingPlans, enterprisePlan }
   }
 })
 </script>
@@ -529,6 +609,7 @@ export default defineComponent({
   justify-content: flex-end;
   gap: 20px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .footer-copyright {
@@ -713,6 +794,123 @@ export default defineComponent({
   gap: 1rem;
 }
 
+.pricing-section {
+  margin-top: 3rem;
+  background-color: var(--main-dark);
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pricing-card {
+  background: rgba(15, 4, 40, 0.95);
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 16px 32px rgba(5, 0, 20, 0.35);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-card.is-highlighted {
+  border-color: #4c7fff;
+  transform: translateY(-4px);
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+}
+
+.pricing-name {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e9ecff;
+}
+
+.pricing-price {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4c7fff;
+}
+
+.pricing-note {
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  color: rgba(233, 236, 255, 0.75);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  color: rgba(233, 236, 255, 0.85);
+}
+
+.pricing-features li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.pricing-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4c7fff;
+}
+
+.pricing-button {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  background: #4c7fff;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(76, 127, 255, 0.35);
+}
+
+.pricing-button.outline {
+  background: transparent;
+  border: 1px solid rgba(233, 236, 255, 0.3);
+  color: #e9ecff;
+}
+
+.pricing-button.outline:hover {
+  border-color: #4c7fff;
+  color: #4c7fff;
+  box-shadow: none;
+}
+
+.enterprise-card {
+  background: rgba(18, 0, 37, 0.95);
+}
+
 .team-section {
   padding: 4rem 2rem;
   background-color: #fff;
@@ -800,6 +998,14 @@ export default defineComponent({
   .scenarios-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .pricing-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
   }
 
   .team-section {
