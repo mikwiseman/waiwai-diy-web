@@ -69,7 +69,7 @@
       ],
       "button": "Contact Us"
     },
-    "footnote": "DICH is an internal currency. Enriching a contact costs 1 DICH; sending a message through one channel uses 0.5 DICH. You can purchase extra DICH within any plan, and unused DICH rolls over to the next month."
+    "footnote": "* DICH is an internal currency. Enriching a contact costs 1 DICH; sending a message through one channel uses 0.5 DICH. You can purchase extra DICH within any plan, and unused DICH rolls over to the next month."
   },
   "faq": {},
   "team": {
@@ -144,17 +144,32 @@
     "falcone": {
       "title": "Falcone",
       "description": "Found clients for delivery service - Ozon, Wildberries, Yandex Market sellers. WaiWai sent personalized emails using open data about customers and their needs.",
-      "tags": ["Logistics", "Marketplaces", "Sales", "Email"]
+      "tags": [
+        "Logistics",
+        "Marketplaces",
+        "Sales",
+        "Email"
+      ]
     },
     "akBarsBank": {
       "title": "Ak Bars Bank",
       "description": "Automated the recruitment process on HeadHunter. For employee search, WaiWai creates personalized letters based on candidate profiles. The system sorts incoming requests and responds to them, saving recruiters' time.",
-      "tags": ["Finance", "Recruitment", "Email Campaigns", "HH.ru", "LinkedIn"]
+      "tags": [
+        "Finance",
+        "Recruitment",
+        "Email Campaigns",
+        "HH.ru",
+        "LinkedIn"
+      ]
     },
     "ontico": {
       "title": "Ontico Conferences",
       "description": "For selling tickets to the Berlin conference, WaiWai found programmers by programming language and attendance at similar events. Selecting relevant leads and personalized messages increased conversion by 2.4 times.",
-      "tags": ["Events", "Sales", "LinkedIn"]
+      "tags": [
+        "Events",
+        "Sales",
+        "LinkedIn"
+      ]
     },
     "kodix": {
       "title": "Kodix",
@@ -162,7 +177,12 @@
       "messages": "Average dialogue messages",
       "reach": "Contacts reached in 2 months",
       "meetings": "Meetings with potential clients",
-      "tags": ["Development", "Sales", "Email", "LinkedIn"]
+      "tags": [
+        "Development",
+        "Sales",
+        "Email",
+        "LinkedIn"
+      ]
     },
     "invite": "Tell us what result you want to achieve — we’ll showcase your case here."
   },
@@ -210,4 +230,4 @@
   "offer": {
     "viewOffer": "TERMS OF SERVICE"
   }
-} 
+}

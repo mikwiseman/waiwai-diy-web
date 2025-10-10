@@ -981,9 +981,98 @@ export default defineComponent({
   margin-right: auto;
 }
 
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.case-card {
+  background: #f6fbf7;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 39, 19, 0.05);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 16px 36px rgba(0, 39, 19, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(0, 39, 19, 0.1);
+}
+
+.case-card.placeholder {
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  border-style: dashed;
+}
+
+.case-card.placeholder .case-header p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.case-header p {
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.case-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.case-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.case-stat-value {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #002713;
+}
+
+.case-stat-label {
+  font-family: Inter, sans-serif;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.case-tag {
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: #002713;
+  color: #e5ff32;
+  font-family: Inter, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 .team-section {
   padding: 4rem 2rem;
   background-color: #fff;
+}
+
+.team-section .title {
+  color: #04170e;
 }
 
 .team-grid {
@@ -1102,6 +1191,10 @@ export default defineComponent({
   .capability-item,
   .scenario-module {
     padding: 1.5rem 1.25rem;
+  }
+
+  .cases-grid {
+    grid-template-columns: 1fr;
   }
 
   .pricing-section {
