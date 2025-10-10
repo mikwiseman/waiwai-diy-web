@@ -225,6 +225,24 @@
         </div>
       </div>
 
+      <div class="recognition-section" v-if="locale !== 'en'">
+        <div class="title-centered">
+          <span>{{ t('recognition.text') }}</span>
+        </div>
+      </div>
+
+      <div class="faq-section" v-if="locale !== 'en'">
+        <div class="title-container">
+          <h2 class="title">{{ t('faq.title') }}</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item" v-for="(item, index) in faqItems" :key="`faq-${index}`">
+            <div class="faq-question">{{ item.question }}</div>
+            <p class="faq-answer">{{ item.answer }}</p>
+          </div>
+        </div>
+      </div>
+
       <div class="pricing-section">
         <div class="title-container">
           <h2 class="title">{{ t('pricing.title') }}</h2>
@@ -238,7 +256,6 @@
           >
             <div class="pricing-name">{{ plan.name }}</div>
             <div class="pricing-price">{{ plan.price }}</div>
-            <div class="pricing-note">{{ plan.note }}</div>
             <ul class="pricing-features">
               <li v-for="(feature, index) in plan.features" :key="`feature-${plan.key}-${index}`">
                 {{ feature }}
@@ -272,18 +289,6 @@
           </div>
         </div>
       </div>
-
-      <div class="faq-section">
-        <div class="title-container">
-          <h2 class="title">{{ t('faq.title') }}</h2>
-        </div>
-        <div class="faq-grid">
-          <div class="faq-item" v-for="(item, index) in faqItems" :key="`faq-${index}`">
-            <div class="faq-question">{{ item.question }}</div>
-            <p class="faq-answer">{{ item.answer }}</p>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="swag-section" v-if="locale !== 'en'">
@@ -312,12 +317,6 @@
           <div class="team-role">{{ member.role }}</div>
           <p class="team-description">{{ member.description }}</p>
         </div>
-      </div>
-    </div>
-
-    <div class="recognition-section" v-if="locale !== 'en'">
-      <div class="title-centered">
-        <span>{{ t('recognition.text') }}</span>
       </div>
     </div>
 
@@ -495,28 +494,32 @@
 <script>
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Team1 from '@/assets/images/team/1.jpeg'
-import Team2 from '@/assets/images/team/2.jpg'
-import Team3 from '@/assets/images/team/3.jpg'
-import Team4 from '@/assets/images/team/4.jpeg'
-import Team5 from '@/assets/images/team/5.jpeg'
-import Team6 from '@/assets/images/team/6.jpeg'
-import Team7 from '@/assets/images/team/7.jpeg'
-import Team8 from '@/assets/images/team/8.png'
 
 export default defineComponent({
   name: 'HomePage',
   setup() {
     const { t, tm, locale } = useI18n()
+
+    const teamImages = [
+      new URL('../assets/images/team/1.jpeg', import.meta.url).href,
+      new URL('../assets/images/team/2.jpg', import.meta.url).href,
+      new URL('../assets/images/team/3.jpg', import.meta.url).href,
+      new URL('../assets/images/team/4.jpeg', import.meta.url).href,
+      new URL('../assets/images/team/5.jpeg', import.meta.url).href,
+      new URL('../assets/images/team/6.jpeg', import.meta.url).href,
+      new URL('../assets/images/team/7.jpeg', import.meta.url).href,
+      new URL('../assets/images/team/8.png', import.meta.url).href
+    ]
+
     const membersConfig = [
-      { key: 'egor', image: Team1 },
-      { key: 'pavel', image: Team2 },
-      { key: 'anastasiaM', image: Team3 },
-      { key: 'aleksey', image: Team4 },
-      { key: 'vyacheslav', image: Team5 },
-      { key: 'anastasiaS', image: Team6 },
-      { key: 'mik', image: Team7 },
-      { key: 'waiComputer', image: Team8 }
+      { key: 'egor', image: teamImages[0] },
+      { key: 'pavel', image: teamImages[1] },
+      { key: 'anastasiaM', image: teamImages[2] },
+      { key: 'aleksey', image: teamImages[3] },
+      { key: 'vyacheslav', image: teamImages[4] },
+      { key: 'anastasiaS', image: teamImages[5] },
+      { key: 'mik', image: teamImages[6] },
+      { key: 'waiComputer', image: teamImages[7] }
     ]
 
     const teamMembers = computed(() =>
@@ -554,7 +557,6 @@ export default defineComponent({
           key: plan.key,
           name: t(`pricing.plans.${plan.key}.name`),
           price: t(`pricing.plans.${plan.key}.price`),
-          note: t(`pricing.plans.${plan.key}.note`),
           features: Array.isArray(features) ? features : [],
           button: t('pricing.buyButton'),
           highlight: plan.highlight
@@ -938,7 +940,7 @@ export default defineComponent({
 
 .pricing-card {
   background: rgba(15, 4, 40, 0.95);
-  border: 1px solid transparent;
+  border: 1px solid rgba(76, 127, 255, 0.08);
   border-radius: 1.5rem;
   padding: 2rem;
   display: flex;
@@ -951,6 +953,7 @@ export default defineComponent({
 .pricing-card.is-highlighted {
   border-color: #4c7fff;
   transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(76, 127, 255, 0.25);
 }
 
 .pricing-card:hover {
@@ -987,18 +990,12 @@ export default defineComponent({
   font-family: Inter, sans-serif;
   font-size: 0.95rem;
   color: rgba(233, 236, 255, 0.85);
+  text-align: center;
 }
 
 .pricing-features li {
   position: relative;
-  padding-left: 1.25rem;
-}
-
-.pricing-features li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #4c7fff;
+  padding-left: 0;
 }
 
 .pricing-button {
@@ -1083,6 +1080,7 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.35s ease;
 }
 
@@ -1172,8 +1170,12 @@ export default defineComponent({
 }
 
 .recognition-section {
-  padding: 3rem 2rem 1rem;
+  margin-top: 3rem;
+  padding: 3rem 2.5rem;
   background-color: #fff;
+  border-radius: 2rem;
+  border: 1px solid rgba(0, 39, 19, 0.08);
+  box-shadow: 0 24px 58px rgba(0, 39, 19, 0.08);
 }
 
 .recognition-section .title-centered {
@@ -1236,7 +1238,7 @@ export default defineComponent({
   }
 
   .recognition-section {
-    padding: 2.5rem 1.5rem 1rem;
+    padding: 2.5rem 1.5rem;
   }
 }
 

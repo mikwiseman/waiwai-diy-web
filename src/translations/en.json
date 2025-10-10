@@ -54,31 +54,25 @@
       "basic": {
         "name": "Basic",
         "price": "29,990 ₽",
-        "note": "Great for pilots and first hypotheses",
         "features": [
-          "Includes 1,000 DICH – personalized touchpoints with leads",
-          "Overage: 30 ₽ per DICH",
-          "One active module (Telegram or LinkedIn) plus CRM export"
+          "Includes 1,000 DICH",
+          "Overage: 30 ₽ per DICH"
         ]
       },
       "standard": {
         "name": "Standard",
         "price": "49,990 ₽",
-        "note": "Built for a scaling sales funnel",
         "features": [
-          "Includes 2,000 DICH – automated personalized engagements",
-          "Overage: 25 ₽ per DICH",
-          "Run Telegram, LinkedIn, and Email modules simultaneously"
+          "Includes 2,000 DICH",
+          "Overage: 25 ₽ per DICH"
         ]
       },
       "premium": {
         "name": "Premium",
         "price": "99,990 ₽",
-        "note": "For large teams and high-volume campaigns",
         "features": [
-          "Includes 5,000 DICH – advanced segmentation and outreach",
-          "Overage: 20 ₽ per DICH",
-          "Dedicated success manager, SLA, and advanced analytics"
+          "Includes 5,000 DICH",
+          "Overage: 20 ₽ per DICH"
         ]
       }
     },
