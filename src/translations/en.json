@@ -144,16 +144,13 @@
     "title": "Accreditations and Partnerships",
     "items": [
       {
-        "title": "Skolkovo Resident",
-        "description": "We meet the innovation center requirements and collaborate within the Skolkovo ecosystem."
+        "title": "Skolkovo Resident"
       },
       {
-        "title": "Russian Software Registry",
-        "description": "The WaiWai AI platform is listed in the official domestic software registry."
+        "title": "Russian Software Registry"
       },
       {
-        "title": "International Technopark Member",
-        "description": "Participating in the Moscow International Technopark programs to scale globally."
+        "title": "International Technopark Member"
       }
     ]
   },

@@ -214,7 +214,6 @@
             <div class="feature-icon"></div>
             <div class="recognition-text">
               <h3 class="section-subtitle">{{ item.title }}</h3>
-              <p>{{ item.description }}</p>
             </div>
           </div>
         </div>
@@ -582,8 +581,7 @@ export default defineComponent({
         return []
       }
       return items.map((item) => ({
-        title: item.title,
-        description: item.description
+        title: item.title ?? item
       }))
     })
 
@@ -909,14 +907,6 @@ export default defineComponent({
 
 .capability-text p,
 .scenario-text p {
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
-  line-height: 1.65;
-  color: rgba(0, 0, 0, 0.7);
-  margin: 0;
-}
-
-.recognition-text p {
   font-family: Inter, sans-serif;
   font-size: 1rem;
   line-height: 1.65;
