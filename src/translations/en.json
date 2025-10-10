@@ -21,17 +21,13 @@
   },
   "capabilities": {
     "title": "Capabilities",
-    "leadSearch": {
-      "title": "Lead Discovery",
-      "description": "WaiWai assembles precise audiences for your campaigns: Node.js developers with Russian roots, retailers with physical stores, logistics companies trading with China, and other segments that previously required manual research."
+    "leads": {
+      "title": "WaiWai Leads",
+      "description": "Lead sourcing and enrichment: data sources, verification, scoring, deduplication."
     },
-    "telegramSearch": {
-      "title": "Telegram Keyword Search",
-      "description": "The agent monitors thematic channels and chats, tracks the keywords you care about, highlights fresh discussions, and captures relevant contacts while your team focuses on product work."
-    },
-    "linkedinOutreach": {
-      "title": "LinkedIn Messaging",
-      "description": "We craft multi-step sequences, tailor each message, nurture the dialogue until a warm reply arrives, and pass only sales-ready conversations to your team."
+    "outreach": {
+      "title": "WaiWai Outreach",
+      "description": "Personalized outreach and meeting booking (email / Telegram / LinkedIn)."
     }
   },
   "pricing": {
@@ -72,29 +68,10 @@
         "Dedicated WaiWai project squad and executive sponsor"
       ],
       "button": "Contact Us"
-    }
+    },
+    "footnote": "DICH is an internal currency. Enriching a contact costs 1 DICH; sending a message through one channel uses 0.5 DICH. You can purchase extra DICH within any plan, and unused DICH rolls over to the next month."
   },
-  "faq": {
-    "title": "FAQ",
-    "items": [
-      {
-        "q": "What is a DICH?",
-        "a": "One DICH equals a personalized touchpoint: an email, messenger outreach, or a crafted reply. Each plan includes a quota of DICH, and overage is billed at a flat rate."
-      },
-      {
-        "q": "How fast can we launch?",
-        "a": "A pilot takes about five business days. We collect data, align tone of voice, configure scenarios, and the first leads usually appear during the first week."
-      },
-      {
-        "q": "Can we plug in our data sources?",
-        "a": "Yes. We connect to CRM systems, Google Sheets, Notion, and internal databases. Enterprise deployments include integrations with proprietary systems and data buses."
-      },
-      {
-        "q": "Who supports the implementation?",
-        "a": "SaaS plans include onboarding materials and the WaiWai support team. Enterprise customers get a dedicated success manager and a project squad."
-      }
-    ]
-  },
+  "faq": {},
   "team": {
     "title": "WaiWai Team",
     "members": {

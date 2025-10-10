@@ -39,22 +39,15 @@
           <div class="capability-item">
             <div class="feature-icon"></div>
             <div class="capability-text">
-              <h3 class="section-subtitle">{{ t('capabilities.leadSearch.title') }}</h3>
-              <p>{{ t('capabilities.leadSearch.description') }}</p>
+              <h3 class="section-subtitle">{{ t('capabilities.leads.title') }}</h3>
+              <p>{{ t('capabilities.leads.description') }}</p>
             </div>
           </div>
           <div class="capability-item">
             <div class="feature-icon"></div>
             <div class="capability-text">
-              <h3 class="section-subtitle">{{ t('capabilities.telegramSearch.title') }}</h3>
-              <p>{{ t('capabilities.telegramSearch.description') }}</p>
-            </div>
-          </div>
-          <div class="capability-item">
-            <div class="feature-icon"></div>
-            <div class="capability-text">
-              <h3 class="section-subtitle">{{ t('capabilities.linkedinOutreach.title') }}</h3>
-              <p>{{ t('capabilities.linkedinOutreach.description') }}</p>
+              <h3 class="section-subtitle">{{ t('capabilities.outreach.title') }}</h3>
+              <p>{{ t('capabilities.outreach.description') }}</p>
             </div>
           </div>
         </div>
@@ -223,18 +216,6 @@
         </div>
       </div>
 
-      <div class="faq-section" v-if="locale !== 'en'">
-        <div class="title-container">
-          <h2 class="title">{{ t('faq.title') }}</h2>
-        </div>
-        <div class="faq-grid">
-          <div class="faq-item" v-for="(item, index) in faqItems" :key="`faq-${index}`">
-            <div class="faq-question">{{ item.question }}</div>
-            <p class="faq-answer">{{ item.answer }}</p>
-          </div>
-        </div>
-      </div>
-
       <div class="pricing-section">
         <div class="title-container">
           <h2 class="title">{{ t('pricing.title') }}</h2>
@@ -282,6 +263,9 @@
             </a>
           </div>
         </div>
+        <p class="pricing-footnote">
+          {{ t('pricing.footnote') }}
+        </p>
       </div>
     </div>
 
@@ -568,17 +552,6 @@ export default defineComponent({
       }
     })
 
-    const faqItems = computed(() => {
-      const items = tm('faq.items')
-      if (!Array.isArray(items)) {
-        return []
-      }
-      return items.map((item) => ({
-        question: item.q,
-        answer: item.a
-      }))
-    })
-
     const recognitionItems = computed(() => {
       const items = tm('recognition.items')
       if (!Array.isArray(items)) {
@@ -589,7 +562,7 @@ export default defineComponent({
       }))
     })
 
-    return { t, locale, teamMembers, pricingPlans, enterprisePlan, faqItems, recognitionItems }
+    return { t, locale, teamMembers, pricingPlans, enterprisePlan, recognitionItems }
   }
 })
 </script>
@@ -1070,6 +1043,18 @@ export default defineComponent({
   border-color: rgba(226, 255, 235, 0.15);
 }
 
+.pricing-footnote {
+  margin-top: 2.5rem;
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(226, 255, 235, 0.8);
+  max-width: 720px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .team-section {
   padding: 4rem 2rem;
   background-color: #fff;
@@ -1158,52 +1143,6 @@ export default defineComponent({
   font-size: 0.95rem;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.72);
-  margin: 0;
-}
-
-.faq-section {
-  margin-top: 3rem;
-  background: #fff;
-  border-radius: 2rem;
-  padding: 3rem 2rem;
-  border: 1px solid rgba(0, 39, 19, 0.08);
-  box-shadow: 0 24px 58px rgba(0, 39, 19, 0.08);
-}
-
-.faq-section .title {
-  color: #04170e;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.75rem;
-}
-
-.faq-item {
-  background: #f6fbf7;
-  border-radius: 1.5rem;
-  border: 1px solid rgba(0, 39, 19, 0.05);
-  padding: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  box-shadow: 0 16px 36px rgba(0, 39, 19, 0.08);
-}
-
-.faq-question {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: #04170e;
-}
-
-.faq-answer {
-  font-family: Inter, sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: rgba(0, 0, 0, 0.7);
   margin: 0;
 }
 
