@@ -163,7 +163,8 @@
       "reach": "Contacts reached in 2 months",
       "meetings": "Meetings with potential clients",
       "tags": ["Development", "Sales", "Email", "LinkedIn"]
-    }
+    },
+    "invite": "Tell us what result you want to achieve — we’ll showcase your case here."
   },
   "cta": {
     "title": "While competitors are looking for clients - yours are already reading messages from WaiWai",

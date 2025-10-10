@@ -442,6 +442,54 @@ export default defineComponent({
       }
     })
 
+    const casesConfig = [
+      {
+        key: 'falcone',
+        stats: [
+          { value: '21%', labelKey: 'cases.stats.salesGrowth' },
+          { value: '5.7x', labelKey: 'cases.stats.responseIncrease' }
+        ]
+      },
+      {
+        key: 'akBarsBank',
+        stats: [
+          { value: '61%', labelKey: 'cases.stats.timeReduction' },
+          { value: '48%', labelKey: 'cases.stats.timeFreed' }
+        ]
+      },
+      {
+        key: 'ontico',
+        stats: [
+          { value: '16%', labelKey: 'cases.stats.salesGrowth' },
+          { value: '2.4x', labelKey: 'cases.stats.responseIncrease' }
+        ]
+      },
+      {
+        key: 'kodix',
+        stats: [
+          { value: '8-10', labelKey: 'cases.kodix.messages' },
+          { value: '2970', labelKey: 'cases.kodix.reach' },
+          { value: '12', labelKey: 'cases.kodix.meetings' }
+        ]
+      }
+    ]
+
+    const caseCards = computed(() =>
+      casesConfig.map((item) => {
+        const tags = tm(`cases.${item.key}.tags`)
+        return {
+          key: item.key,
+          title: t(`cases.${item.key}.title`),
+          description: t(`cases.${item.key}.description`),
+          stats: item.stats.map((stat) => ({
+            value: stat.value,
+            label: t(stat.labelKey)
+          })),
+          tags: Array.isArray(tags) ? tags : []
+        }
+      })
+    )
+
     const recognitionItems = computed(() => {
       const items = tm('recognition.items')
       if (!Array.isArray(items)) {
@@ -452,7 +500,7 @@ export default defineComponent({
       }))
     })
 
-    return { t, locale, teamMembers, pricingPlans, enterprisePlan, recognitionItems }
+    return { t, locale, teamMembers, pricingPlans, enterprisePlan, caseCards, recognitionItems }
   }
 })
 </script>
@@ -799,8 +847,11 @@ export default defineComponent({
 
 .pricing-section {
   margin-top: 3rem;
-  background: transparent;
-  padding: 3rem 0;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(0, 39, 19, 0.08);
+  box-shadow: 0 24px 58px rgba(0, 39, 19, 0.08);
 }
 
 .pricing-grid {
@@ -811,48 +862,56 @@ export default defineComponent({
 }
 
 .pricing-card {
-  background: linear-gradient(150deg, #012b17 0%, #001b0f 100%);
-  border: 1px solid rgba(0, 132, 84, 0.2);
+  background: #f6fbf7;
+  border: 1px solid rgba(0, 39, 19, 0.05);
   border-radius: 1.5rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 16px 40px rgba(0, 39, 19, 0.35);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 16px 36px rgba(0, 39, 19, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pricing-card.is-highlighted {
-  border-color: #2ddaa8;
   transform: translateY(-4px);
-  box-shadow: 0 24px 46px rgba(45, 218, 168, 0.3);
+  box-shadow: 0 24px 48px rgba(0, 39, 19, 0.12);
 }
 
 .pricing-card:hover {
   transform: translateY(-6px);
 }
 
+.pricing-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #002713;
+  box-shadow: 0 0 0 10px rgba(0, 39, 19, 0.12);
+  margin-bottom: 0.5rem;
+}
+
 .pricing-name {
   font-family: "Inter Tight", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #e2ffe5;
-  text-align: center;
+  color: #04170e;
+  text-align: left;
 }
 
 .pricing-price {
   font-family: "Inter Tight", sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  color: #2ddaa8;
-  text-align: center;
+  color: #002713;
+  text-align: left;
 }
 
 .pricing-note {
   font-family: Inter, sans-serif;
   font-size: 0.95rem;
-  color: rgba(226, 255, 235, 0.8);
-  text-align: center;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: left;
 }
 
 .pricing-features {
@@ -864,12 +923,11 @@ export default defineComponent({
   gap: 0.75rem;
   font-family: Inter, sans-serif;
   font-size: 0.95rem;
-  color: rgba(226, 255, 235, 0.85);
-  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
 }
 
 .pricing-features li {
-  position: relative;
   padding-left: 0;
 }
 
@@ -880,8 +938,8 @@ export default defineComponent({
   justify-content: center;
   padding: 0.85rem 1.75rem;
   border-radius: 999px;
-  background: #2ddaa8;
-  color: #012b17;
+  background: #002713;
+  color: #e5ff32;
   text-decoration: none;
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
@@ -892,45 +950,23 @@ export default defineComponent({
 
 .pricing-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(76, 127, 255, 0.35);
+  box-shadow: 0 10px 24px rgba(0, 39, 19, 0.16);
 }
 
 .pricing-button.outline {
-  background: rgba(226, 255, 235, 0.12);
-  border: 1px solid rgba(226, 255, 235, 0.35);
-  color: #e2ffe5;
+  background: rgba(0, 39, 19, 0.08);
+  border: 1px solid rgba(0, 39, 19, 0.2);
+  color: #002713;
 }
 
 .pricing-button.outline:hover {
-  border-color: #2ddaa8;
-  color: #2ddaa8;
+  border-color: #002713;
+  color: #002713;
   box-shadow: none;
 }
 
-.pricing-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid rgba(226, 255, 235, 0.65);
-  position: relative;
-  margin: 0 auto 0.5rem;
-}
-
-.pricing-icon::after {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 2px solid rgba(226, 255, 235, 0.65);
-  top: 50%;
-  left: 58%;
-  transform: translate(-50%, -40%);
-}
-
 .enterprise-card {
-  background: linear-gradient(150deg, #031b10 0%, #020b07 100%);
-  border-color: rgba(226, 255, 235, 0.15);
+  background: #ffffff;
 }
 
 .pricing-footnote {
@@ -938,9 +974,9 @@ export default defineComponent({
   font-family: Inter, sans-serif;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: rgba(226, 255, 235, 0.8);
+  color: #04170e;
   max-width: 720px;
-  text-align: center;
+  text-align: left;
   margin-left: auto;
   margin-right: auto;
 }
