@@ -79,18 +79,24 @@
               </span>
             </div>
           </div>
-          <div class="case-card placeholder">
-            <div class="case-header">
-              <h3 class="section-subtitle">{{ t('cases.yourProject') }}</h3>
-              <p>{{ t('cases.invite') }}</p>
-            </div>
-          </div>
         </div>
       </div>
 
       <div class="recognition-section" v-if="locale !== 'en'">
         <div class="title-container">
           <h2 class="title">{{ t('recognition.title') }}</h2>
+        </div>
+        <div class="recognition-grid">
+          <div
+            class="recognition-item"
+            v-for="(item, index) in recognitionItems"
+            :key="`recognition-${index}`"
+          >
+            <div class="feature-icon"></div>
+            <div class="recognition-text">
+              <h3 class="section-subtitle">{{ item.title }}</h3>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -980,17 +986,6 @@ export default defineComponent({
 .case-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 22px 48px rgba(0, 39, 19, 0.1);
-}
-
-.case-card.placeholder {
-  justify-content: center;
-  text-align: center;
-  background: #ffffff;
-  border-style: dashed;
-}
-
-.case-card.placeholder .case-header p {
-  color: rgba(0, 0, 0, 0.6);
 }
 
 .case-header p {
