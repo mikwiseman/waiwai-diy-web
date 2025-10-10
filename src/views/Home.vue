@@ -162,7 +162,7 @@
             </div>
           </div>
 
-          <!-- Hotel Rossi Card -->
+          <!-- Kodix Card -->
           <div class="project-card light">
             <div class="project-header">
               <img src="@/assets/images/03_logo.svg" loading="lazy" alt="" class="project-logo extra-small">
@@ -170,25 +170,29 @@
             </div>
             <div class="project-info card-stat">
               <div class="w-layout-hflex project-card for-you statistic-copy">
-                <div class="proj-title-copy">12%</div>
-                <div class="proj-description-copy">{{ t('cases.stats.salesGrowth') }}</div>
+                <div class="proj-title-copy">8-10</div>
+                <div class="proj-description-copy">{{ t('cases.kodix.messages') }}</div>
               </div>
               <div class="w-layout-hflex project-card for-you statistic-copy">
-                <div class="proj-title-copy">2.1x</div>
-                <div class="proj-description-copy">{{ t('cases.stats.responseIncrease') }}</div>
+                <div class="proj-title-copy">2970</div>
+                <div class="proj-description-copy">{{ t('cases.kodix.reach') }}</div>
+              </div>
+              <div class="w-layout-hflex project-card for-you statistic-copy">
+                <div class="proj-title-copy">12</div>
+                <div class="proj-description-copy">{{ t('cases.kodix.meetings') }}</div>
               </div>
             </div>
             <div class="project-content">
               <div class="project-info">
                 <div class="project-title">
-                  <div class="proj-title light">{{ t('cases.rossi.title') }}</div>
-                  <div class="proj-description light">{{ t('cases.rossi.description') }}</div>
+                  <div class="proj-title light">{{ t('cases.kodix.title') }}</div>
+                  <div class="proj-description light">{{ t('cases.kodix.description') }}</div>
                 </div>
                 <div class="project-chips-container">
-                  <div class="chip on-color light">Туризм</div>
+                  <div class="chip on-color light">Разработка</div>
                   <div class="chip on-color light">Продажи</div>
-                  <div class="chip on-color light">LinkedIn</div>
                   <div class="chip on-color light">Email</div>
+                  <div class="chip on-color light">LinkedIn</div>
                 </div>
               </div>
             </div>

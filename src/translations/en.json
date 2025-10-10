@@ -179,10 +179,13 @@
       "description": "For selling tickets to the Berlin conference, WaiWai found programmers by programming language and attendance at similar events. Selecting relevant leads and personalized messages increased conversion by 2.4 times.",
       "tags": ["Events", "Sales", "LinkedIn"]
     },
-    "rossi": {
-      "title": "Rossi Hotel",
-      "description": "Increased business client flow for the hotel. WaiWai sent personalized messages to companies sending employees on business trips to St. Petersburg. LinkedIn became the main channel for lead generation.",
-      "tags": ["Tourism", "Sales", "LinkedIn", "Email"]
+    "kodix": {
+      "title": "Kodix",
+      "description": "Helped a custom dev studio enter the Saudi market and find new clients in Russia. WaiWai’s sales agent automated LinkedIn outreach with decision-makers at dealerships and auto brands.",
+      "messages": "Average dialogue messages",
+      "reach": "Contacts reached in 2 months",
+      "meetings": "Meetings with potential clients",
+      "tags": ["Development", "Sales", "Email", "LinkedIn"]
     }
   },
   "cta": {
