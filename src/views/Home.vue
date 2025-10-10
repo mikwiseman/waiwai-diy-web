@@ -92,18 +92,6 @@
         <div class="title-container">
           <h2 class="title">{{ t('recognition.title') }}</h2>
         </div>
-        <div class="recognition-grid">
-          <div
-            class="recognition-item"
-            v-for="(item, index) in recognitionItems"
-            :key="`recognition-${index}`"
-          >
-            <div class="feature-icon"></div>
-            <div class="recognition-text">
-              <h3 class="section-subtitle">{{ item.title }}</h3>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div class="pricing-section">
