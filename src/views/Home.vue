@@ -60,30 +60,6 @@
         </div>
       </div>
 
-      <div class="scenarios-section">
-        <div class="title-container">
-          <h2 class="title">{{ t('scenarios.title') }}</h2>
-        </div>
-        <div class="scenarios-content">
-          <div class="scenario-module">
-            <div class="feature-icon small"></div>
-            <div class="scenario-text">
-              <h3 class="section-subtitle">{{ t('scenarios.leadModule.title') }}</h3>
-              <p>{{ t('scenarios.leadModule.paragraph1') }}</p>
-              <p>{{ t('scenarios.leadModule.paragraph2') }}</p>
-            </div>
-          </div>
-          <div class="scenario-module">
-            <div class="feature-icon small"></div>
-            <div class="scenario-text">
-              <h3 class="section-subtitle">{{ t('scenarios.outreachModule.title') }}</h3>
-              <p>{{ t('scenarios.outreachModule.paragraph1') }}</p>
-              <p>{{ t('scenarios.outreachModule.paragraph2') }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="proj-section">
         <div class="title-container">
           <h2 class="title">{{ t('cases.title') }}</h2>
@@ -840,8 +816,7 @@ export default defineComponent({
 }
 
 /* Capabilities & Scenarios */
-.capabilities-section,
-.scenarios-section {
+.capabilities-section {
   background-color: #fff;
   border-radius: 2rem;
   padding: 3rem 2.5rem;
@@ -851,8 +826,7 @@ export default defineComponent({
   box-shadow: 0 24px 58px rgba(0, 39, 19, 0.08);
 }
 
-.capabilities-section .title,
-.scenarios-section .title {
+.capabilities-section .title {
   color: #04170e;
 }
 
@@ -940,36 +914,6 @@ export default defineComponent({
   line-height: 1.65;
   color: rgba(0, 0, 0, 0.7);
   margin: 0;
-}
-
-.scenarios-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.scenario-module {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  padding: 2rem 1.75rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f4faf6 100%);
-  border-radius: 1.75rem;
-  border: 1px solid rgba(0, 39, 19, 0.06);
-  box-shadow: 0 18px 40px rgba(0, 39, 19, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.scenario-module:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 52px rgba(0, 39, 19, 0.11);
-}
-
-.scenario-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
 .recognition-text p {
