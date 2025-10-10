@@ -1062,12 +1062,15 @@ export default defineComponent({
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
   margin-top: 2.5rem;
+  justify-items: center;
 }
 
 .team-card {
+  width: 100%;
+  max-width: 360px;
   background: #ffffff;
   border-radius: 1.75rem;
   padding: 2rem;
@@ -1086,7 +1089,7 @@ export default defineComponent({
 
 .team-photo-wrapper {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   border-radius: 1.25rem;
   overflow: hidden;
   background: #0f0428;
@@ -1200,15 +1203,16 @@ export default defineComponent({
   }
 
   .team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .team-card {
     padding: 1.75rem;
+    max-width: 320px;
   }
 
   .team-photo-wrapper {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
   }
 
   .recognition-section {
