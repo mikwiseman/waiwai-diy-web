@@ -19,26 +19,32 @@
   "blog": {
     "title": "Blog"
   },
-  "aiEmployees": {
-    "title": "Available AI Employees",
-    "demoButton": "Book a Demo",
-    "seller": {
-      "title": "AI-Seller",
-      "feature1": "Lead search and qualification 24/7",
-      "feature2": "Personalized multi-channel campaigns",
-      "feature3": "Conversion growth by 2-3 times"
+  "capabilities": {
+    "title": "Capabilities",
+    "leadSearch": {
+      "title": "Lead Discovery",
+      "description": "WaiWai assembles precise audiences for your campaigns: Node.js developers with Russian roots, retailers with physical stores, logistics companies trading with China, and other segments that previously required manual research."
     },
-    "recruiter": {
-      "title": "AI-Recruiter",
-      "feature1": "Automatic selection from 250+ resumes per vacancy",
-      "feature2": "61% reduction in hiring time",
-      "feature3": "48% of HR specialists' time freed up"
+    "telegramSearch": {
+      "title": "Telegram Keyword Search",
+      "description": "The agent monitors thematic channels and chats, tracks the keywords you care about, highlights fresh discussions, and captures relevant contacts while your team focuses on product work."
     },
-    "support": {
-      "title": "AI-Support (coming soon)",
-      "feature1": "Closing up to 70% of typical requests",
-      "feature2": "Instant customer responses",
-      "feature3": "Integration with voice channels"
+    "linkedinOutreach": {
+      "title": "LinkedIn Messaging",
+      "description": "We craft multi-step sequences, tailor each message, nurture the dialogue until a warm reply arrives, and pass only sales-ready conversations to your team."
+    }
+  },
+  "scenarios": {
+    "title": "Use Cases",
+    "leadModule": {
+      "title": "Lead Discovery",
+      "paragraph1": "When you need nuanced segments, WaiWai carefully brings them together: Node.js developers with Russian roots, business owners with a footprint in St. Petersburg, and founders with the right background.",
+      "paragraph2": "In parallel, the system tracks promising industries — offline retail networks, Russia–China logistics, startups with annual revenue from RUB 1M to 100M — and prepares a structured database ready for outreach."
+    },
+    "outreachModule": {
+      "title": "Lead Outreach",
+      "paragraph1": "Once the list is ready, the agent notices live signals: a company has just added a shipping section on its website, is actively hiring sales talent, or is promoting high-end real estate.",
+      "paragraph2": "WaiWai tunes tone and channels for each cluster — marketplace sellers with transparent delivery terms, Dubai-based realtors with Russian roots, luxury real-estate developers — and runs sequences that move leads toward a meeting."
     }
   },
   "cases": {

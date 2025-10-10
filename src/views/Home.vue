@@ -31,72 +31,41 @@
     </div>
     
     <div class="sliding-content" v-if="locale !== 'en'">
-      <!-- AI Employees Section -->
-      <div class="ai-employees-section">
+      <div class="capabilities-section">
         <div class="title-container">
-          <h2 class="title">{{ t('aiEmployees.title') }}</h2>
+          <h2 class="title">{{ t('capabilities.title') }}</h2>
         </div>
-        <div class="ai-employees-container">
-          <!-- AI-Seller Card -->
-          <div class="ai-employee-card">
-            <div class="ai-employee-header">
-              <h3 class="ai-employee-title">{{ t('aiEmployees.seller.title') }}</h3>
-            </div>
-            <div class="ai-employee-features">
-              <div class="ai-employee-feature">
-                {{ t('aiEmployees.seller.feature1') }}
-              </div>
-              <div class="ai-employee-feature">
-                {{ t('aiEmployees.seller.feature2') }}
-              </div>
-              <div class="ai-employee-feature">
-                {{ t('aiEmployees.seller.feature3') }}
-              </div>
-            </div>
+        <div class="capabilities-content">
+          <div class="capability-item">
+            <h3 class="section-subtitle">{{ t('capabilities.leadSearch.title') }}</h3>
+            <p>{{ t('capabilities.leadSearch.description') }}</p>
           </div>
-
-          <!-- AI-Recruiter Card -->
-          <div class="ai-employee-card">
-            <div class="ai-employee-header">
-              <h3 class="ai-employee-title">{{ t('aiEmployees.recruiter.title') }}</h3>
-            </div>
-            <div class="ai-employee-features">
-              <div class="ai-employee-feature">
-                {{ t('aiEmployees.recruiter.feature1') }}
-              </div>
-              <div class="ai-employee-feature">
-                {{ t('aiEmployees.recruiter.feature2') }}
-              </div>
-              <div class="ai-employee-feature">
-                {{ t('aiEmployees.recruiter.feature3') }}
-              </div>
-            </div>
+          <div class="capability-item">
+            <h3 class="section-subtitle">{{ t('capabilities.telegramSearch.title') }}</h3>
+            <p>{{ t('capabilities.telegramSearch.description') }}</p>
           </div>
-
-          <!-- AI-Support Card -->
-          <div class="ai-employee-card coming-soon">
-            <div class="ai-employee-header">
-              <h3 class="ai-employee-title">{{ t('aiEmployees.support.title') }}</h3>
-            </div>
-            <div class="ai-employee-features">
-              <div class="ai-employee-feature">
-                {{ t('aiEmployees.support.feature1') }}
-              </div>
-              <div class="ai-employee-feature">
-                {{ t('aiEmployees.support.feature2') }}
-              </div>
-              <div class="ai-employee-feature">
-                {{ t('aiEmployees.support.feature3') }}
-              </div>
-            </div>
+          <div class="capability-item">
+            <h3 class="section-subtitle">{{ t('capabilities.linkedinOutreach.title') }}</h3>
+            <p>{{ t('capabilities.linkedinOutreach.description') }}</p>
           </div>
         </div>
-        
-        <!-- Demo Button -->
-        <div class="ai-employees-cta">
-          <a href="https://calendly.com/mikwiseman/hi" target="_blank" class="ai-demo-button">
-            <div class="ai-demo-button-text">{{ t('aiEmployees.demoButton') }}</div>
-          </a>
+      </div>
+
+      <div class="scenarios-section">
+        <div class="title-container">
+          <h2 class="title">{{ t('scenarios.title') }}</h2>
+        </div>
+        <div class="scenarios-content">
+          <div class="scenario-module">
+            <h3 class="section-subtitle">{{ t('scenarios.leadModule.title') }}</h3>
+            <p>{{ t('scenarios.leadModule.paragraph1') }}</p>
+            <p>{{ t('scenarios.leadModule.paragraph2') }}</p>
+          </div>
+          <div class="scenario-module">
+            <h3 class="section-subtitle">{{ t('scenarios.outreachModule.title') }}</h3>
+            <p>{{ t('scenarios.outreachModule.paragraph1') }}</p>
+            <p>{{ t('scenarios.outreachModule.paragraph2') }}</p>
+          </div>
         </div>
       </div>
 
@@ -632,168 +601,78 @@ export default defineComponent({
   }
 }
 
-/* AI Employees Section */
-.ai-employees-section {
-  z-index: 5;
-  background-color: var(--main-dark);
+/* Capabilities & Scenarios */
+.capabilities-section,
+.scenarios-section {
+  background-color: #fff;
   border-radius: 2rem;
-  flex-direction: column;
-  grid-template: ". Area Area"
-  / 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  justify-content: flex-start;
-  align-items: stretch;
+  padding: 3rem 2.5rem;
   margin-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  display: flex;
-  position: relative;
+  color: #0b0b0b;
 }
 
-.ai-employees-container {
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-  flex-direction: row;
-  flex: 1;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: auto;
-  grid-auto-columns: 1fr;
-  grid-auto-flow: row;
-  align-content: stretch;
-  align-items: stretch;
-  margin-left: -.25rem;
-  margin-right: -.25rem;
+.capabilities-section .title,
+.scenarios-section .title {
+  color: #050505;
+}
+
+.capabilities-content {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 
-.ai-employee-card {
-  grid-column-gap: 0rem;
-  grid-row-gap: 1rem;
-  outline-offset: 0px;
-  background-color: #170030;
-  background-image: none;
-  border-radius: 1rem;
-  outline: 1px solid #ffffff1a;
-  flex-flow: column;
-  flex: 0 auto;
-  justify-content: flex-start;
-  align-items: stretch;
-  min-height: 20rem;
-  padding: 2rem;
+.capability-item {
   display: flex;
-  transition: transform 0.3s ease;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.ai-employee-card:hover {
-  transform: translateY(-4px);
-}
-
-.ai-employee-card.coming-soon {
-  opacity: 0.7;
-  background-color: #120025;
-}
-
-.ai-employee-header {
-  margin-bottom: 1.5rem;
-}
-
-.ai-employee-title {
-  color: #fff;
-  font-family: Inter Tight, sans-serif;
-  font-size: 1.5rem;
+.section-subtitle {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.5rem;
   margin: 0;
+  color: #050505;
 }
 
-.ai-employee-features {
+.capability-item p,
+.scenario-module p {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 0;
+}
+
+.scenarios-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.scenario-module {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.ai-employee-feature {
-  color: #ffffffbf;
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  position: relative;
-  padding-left: 1.25rem;
-}
-
-.ai-employee-feature:before {
-  content: "•";
-  color: #E5FF32;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
-/* AI Employees CTA */
-.ai-employees-cta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  padding-top: 1rem;
-}
-
-.ai-demo-button {
-  background-color: #E5FF32;
-  border-radius: 2rem;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.ai-demo-button:hover {
-  background-color: #d4ed1f;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(229, 255, 50, 0.3);
-}
-
-.ai-demo-button-text {
-  color: #002713;
-  font-family: Inter Tight, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Mobile styles for AI Employees */
 @media screen and (max-width: 991px) {
-  .ai-employees-container {
+  .capabilities-section,
+  .scenarios-section {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .capabilities-content {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
   
-  .ai-employee-card {
-    min-height: 16rem;
-    padding: 1.5rem;
-  }
-  
-  .ai-employee-title {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-  }
-  
-  .ai-employee-feature {
-    font-size: 0.875rem;
-  }
-  
-  .ai-demo-button {
-    padding: 0.875rem 1.5rem;
-  }
-  
-  .ai-demo-button-text {
-    font-size: 0.875rem;
+  .scenarios-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
