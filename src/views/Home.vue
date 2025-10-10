@@ -726,6 +726,10 @@ export default defineComponent({
   color: #04170e;
 }
 
+.proj-section .title {
+  color: #04170e;
+}
+
 .pricing-section .title {
   color: #04170e;
 }
