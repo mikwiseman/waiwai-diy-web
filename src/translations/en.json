@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "WaiWai - AI Agents for Sales and Marketing Automation",
-    "description": "AI agents for sales and marketing automation. Increase sales by 21%, reduce routine work by 41%. Smart agents for email campaigns, CRM, marketplaces, and social media.",
-    "keywords": "AI agents, artificial intelligence, sales automation, marketing, email marketing, CRM, marketing automation, increase sales, process optimization, intelligent agents, chatbots, communication automation, AI assistants, smart agents, business automation, AI for business, artificial intelligence in sales",
-    "ogTitle": "WaiWai - AI Agents for Sales and Marketing Automation",
-    "ogDescription": "AI agents for sales and marketing automation. Increase sales by 21%, reduce routine work by 41%. Smart agents for email campaigns, CRM, marketplaces, and social media.",
-    "twitterTitle": "WaiWai - AI Agents for Sales and Marketing Automation",
-    "twitterDescription": "AI agents for sales and marketing automation. Increase sales by 21%, reduce routine work by 41%. Smart agents for email campaigns, CRM, marketplaces, and social media."
+    "title": "WaiWai — AI агенты для автоматизации продаж и маркетинга",
+    "description": "AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей.",
+    "keywords": "AI агенты, искусственный интеллект, автоматизация продаж, маркетинг, email-маркетинг, CRM, автоматизация маркетинга, увеличение продаж, оптимизация процессов, интеллектуальные агенты, чат-боты, автоматизация коммуникаций, AI ассистенты, умные агенты, автоматизация бизнеса, AI для бизнеса, искусственный интеллект в продажах",
+    "ogTitle": "WaiWai — AI агенты для автоматизации продаж и маркетинга",
+    "ogDescription": "AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей.",
+    "twitterTitle": "WaiWai — AI агенты для автоматизации продаж и маркетинга",
+    "twitterDescription": "AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей."
   },
   "header": {
     "discussProject": "Discuss Project",
@@ -154,7 +154,21 @@
     }
   },
   "recognition": {
-    "text": "WaiWai is part of Skolkovo, the Russian Software Registry, and the MTC"
+    "title": "Accreditations and Partnerships",
+    "items": [
+      {
+        "title": "Skolkovo Resident",
+        "description": "We meet the innovation center requirements and collaborate within the Skolkovo ecosystem."
+      },
+      {
+        "title": "Russian Software Registry",
+        "description": "The WaiWai AI platform is listed in the official domestic software registry."
+      },
+      {
+        "title": "International Technopark Member",
+        "description": "Participating in the Moscow International Technopark programs to scale globally."
+      }
+    ]
   },
   "cases": {
     "title": "Case Studies",

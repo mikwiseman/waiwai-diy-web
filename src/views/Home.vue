@@ -226,8 +226,21 @@
       </div>
 
       <div class="recognition-section" v-if="locale !== 'en'">
-        <div class="title-centered">
-          <span>{{ t('recognition.text') }}</span>
+        <div class="title-container">
+          <h2 class="title">{{ t('recognition.title') }}</h2>
+        </div>
+        <div class="recognition-grid">
+          <div
+            class="recognition-item"
+            v-for="(item, index) in recognitionItems"
+            :key="`recognition-${index}`"
+          >
+            <div class="feature-icon"></div>
+            <div class="recognition-text">
+              <h3 class="section-subtitle">{{ item.title }}</h3>
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -254,6 +267,7 @@
             v-for="plan in pricingPlans"
             :key="plan.key"
           >
+            <div class="pricing-icon"></div>
             <div class="pricing-name">{{ plan.name }}</div>
             <div class="pricing-price">{{ plan.price }}</div>
             <ul class="pricing-features">
@@ -271,6 +285,7 @@
             </a>
           </div>
           <div class="pricing-card enterprise-card">
+            <div class="pricing-icon"></div>
             <div class="pricing-name">{{ enterprisePlan.name }}</div>
             <div class="pricing-note">{{ enterprisePlan.description }}</div>
             <ul class="pricing-features">
@@ -585,7 +600,18 @@ export default defineComponent({
       }))
     })
 
-    return { t, locale, teamMembers, pricingPlans, enterprisePlan, faqItems }
+    const recognitionItems = computed(() => {
+      const items = tm('recognition.items')
+      if (!Array.isArray(items)) {
+        return []
+      }
+      return items.map((item) => ({
+        title: item.title,
+        description: item.description
+      }))
+    })
+
+    return { t, locale, teamMembers, pricingPlans, enterprisePlan, faqItems, recognitionItems }
   }
 })
 </script>
@@ -830,6 +856,14 @@ export default defineComponent({
   color: #04170e;
 }
 
+.pricing-section .title {
+  color: #04170e;
+}
+
+.recognition-section .title {
+  color: #04170e;
+}
+
 .capabilities-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -855,6 +889,36 @@ export default defineComponent({
 }
 
 .capability-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recognition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.recognition-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  background: #f6fbf7;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 39, 19, 0.05);
+  box-shadow: 0 16px 36px rgba(0, 39, 19, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recognition-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(0, 39, 19, 0.1);
+}
+
+.recognition-text {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -908,6 +972,14 @@ export default defineComponent({
   gap: 0.75rem;
 }
 
+.recognition-text p {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
 .feature-icon {
   width: 18px;
   height: 18px;
@@ -926,9 +998,8 @@ export default defineComponent({
 
 .pricing-section {
   margin-top: 3rem;
-  background-color: var(--main-dark);
-  border-radius: 2rem;
-  padding: 3rem 2rem;
+  background: transparent;
+  padding: 3rem 0;
 }
 
 .pricing-grid {
@@ -939,21 +1010,21 @@ export default defineComponent({
 }
 
 .pricing-card {
-  background: rgba(15, 4, 40, 0.95);
-  border: 1px solid rgba(76, 127, 255, 0.08);
+  background: linear-gradient(150deg, #012b17 0%, #001b0f 100%);
+  border: 1px solid rgba(0, 132, 84, 0.2);
   border-radius: 1.5rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 16px 32px rgba(5, 0, 20, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 39, 19, 0.35);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .pricing-card.is-highlighted {
-  border-color: #4c7fff;
+  border-color: #2ddaa8;
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(76, 127, 255, 0.25);
+  box-shadow: 0 24px 46px rgba(45, 218, 168, 0.3);
 }
 
 .pricing-card:hover {
@@ -964,20 +1035,23 @@ export default defineComponent({
   font-family: "Inter Tight", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #e9ecff;
+  color: #e2ffe5;
+  text-align: center;
 }
 
 .pricing-price {
   font-family: "Inter Tight", sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  color: #4c7fff;
+  color: #2ddaa8;
+  text-align: center;
 }
 
 .pricing-note {
   font-family: Inter, sans-serif;
   font-size: 0.95rem;
-  color: rgba(233, 236, 255, 0.75);
+  color: rgba(226, 255, 235, 0.8);
+  text-align: center;
 }
 
 .pricing-features {
@@ -989,7 +1063,7 @@ export default defineComponent({
   gap: 0.75rem;
   font-family: Inter, sans-serif;
   font-size: 0.95rem;
-  color: rgba(233, 236, 255, 0.85);
+  color: rgba(226, 255, 235, 0.85);
   text-align: center;
 }
 
@@ -1005,8 +1079,8 @@ export default defineComponent({
   justify-content: center;
   padding: 0.85rem 1.75rem;
   border-radius: 999px;
-  background: #4c7fff;
-  color: #fff;
+  background: #2ddaa8;
+  color: #012b17;
   text-decoration: none;
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
@@ -1021,19 +1095,41 @@ export default defineComponent({
 }
 
 .pricing-button.outline {
-  background: transparent;
-  border: 1px solid rgba(233, 236, 255, 0.3);
-  color: #e9ecff;
+  background: rgba(226, 255, 235, 0.12);
+  border: 1px solid rgba(226, 255, 235, 0.35);
+  color: #e2ffe5;
 }
 
 .pricing-button.outline:hover {
-  border-color: #4c7fff;
-  color: #4c7fff;
+  border-color: #2ddaa8;
+  color: #2ddaa8;
   box-shadow: none;
 }
 
+.pricing-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(226, 255, 235, 0.65);
+  position: relative;
+  margin: 0 auto 0.5rem;
+}
+
+.pricing-icon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(226, 255, 235, 0.65);
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -40%);
+}
+
 .enterprise-card {
-  background: rgba(18, 0, 37, 0.95);
+  background: linear-gradient(150deg, #031b10 0%, #020b07 100%);
+  border-color: rgba(226, 255, 235, 0.15);
 }
 
 .team-section {
@@ -1136,6 +1232,10 @@ export default defineComponent({
   box-shadow: 0 24px 58px rgba(0, 39, 19, 0.08);
 }
 
+.faq-section .title {
+  color: #04170e;
+}
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1178,13 +1278,6 @@ export default defineComponent({
   box-shadow: 0 24px 58px rgba(0, 39, 19, 0.08);
 }
 
-.recognition-section .title-centered {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 500;
-  color: #050505;
-}
-
 @media screen and (max-width: 991px) {
   .capabilities-section,
   .scenarios-section {
@@ -1210,6 +1303,10 @@ export default defineComponent({
   }
 
   .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recognition-grid {
     grid-template-columns: 1fr;
   }
 
