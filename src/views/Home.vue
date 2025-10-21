@@ -58,12 +58,13 @@
           </h2>
         </div>
         <div class="capabilities-text">
-          <p
+          <div
             v-for="(paragraph, index) in capabilityParagraphs"
             :key="`capability-${index}`"
+            class="capabilities-item"
           >
             {{ paragraph }}
-          </p>
+          </div>
           <a
             href="https://hr.getwaiwai.com"
             target="_blank"
