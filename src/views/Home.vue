@@ -51,31 +51,6 @@
       v-if="locale !== 'en'"
       class="sliding-content"
     >
-      <div class="capabilities-section">
-        <div class="title-container">
-          <h2 class="title">
-            {{ t('capabilities.title') }}
-          </h2>
-        </div>
-        <div class="capabilities-text">
-          <div
-            v-for="(paragraph, index) in capabilityParagraphs"
-            :key="`capability-${index}`"
-            class="capabilities-item"
-          >
-            {{ paragraph }}
-          </div>
-          <a
-            href="https://hr.getwaiwai.com"
-            target="_blank"
-            rel="noopener"
-            class="capabilities-button"
-          >
-            {{ t('header.discussProject') }}
-          </a>
-        </div>
-      </div>
-
       <div class="proj-section">
         <div class="title-container">
           <h2 class="title">
@@ -551,11 +526,6 @@ export default defineComponent({
       })
     )
 
-    const capabilityParagraphs = computed(() => {
-      const paragraphs = tm('capabilities.paragraphs')
-      return Array.isArray(paragraphs) ? paragraphs : []
-    })
-
     const casesConfig = [
       {
         key: 'falcone',
@@ -604,7 +574,7 @@ export default defineComponent({
       })
     )
 
-    return { t, locale, teamMembers, caseCards, capabilityParagraphs }
+    return { t, locale, teamMembers, caseCards }
   }
 })
 </script>
@@ -832,55 +802,6 @@ export default defineComponent({
   }
 }
 
-/* Capabilities & Scenarios */
-.capabilities-section {
-  background-color: #fff;
-  border-radius: 2rem;
-  padding: 3rem 2.5rem;
-  margin-top: 2rem;
-  color: #0b0b0b;
-  border: 1px solid rgba(0, 39, 19, 0.08);
-  box-shadow: 0 24px 58px rgba(0, 39, 19, 0.08);
-}
-
-.capabilities-section .title {
-  color: #04170e;
-}
-
-.capabilities-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.capabilities-text p {
-  margin: 0;
-}
-
-.capabilities-button {
-  align-self: flex-start;
-  padding: 0.85rem 1.75rem;
-  border-radius: 999px;
-  background: #002713;
-  color: #e5ff32;
-  text-decoration: none;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.capabilities-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 39, 19, 0.16);
-}
-
 .proj-section .title {
   color: #04170e;
 }
@@ -913,39 +834,42 @@ export default defineComponent({
 .cases-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 2.25rem;
+  margin-top: 2.25rem;
 }
 
 .case-card {
-  background: #f6fbf7;
-  border-radius: 1.5rem;
-  border: 1px solid rgba(0, 39, 19, 0.05);
-  padding: 1.75rem;
+  background: #ffffff;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(0, 27, 15, 0.08);
+  padding: 2.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  box-shadow: 0 16px 36px rgba(0, 39, 19, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 39, 19, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .case-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 22px 48px rgba(0, 39, 19, 0.1);
+  box-shadow: 0 24px 48px rgba(0, 39, 19, 0.12);
 }
 
 .case-header p {
   font-family: Inter, sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(4, 23, 14, 0.72);
   margin: 0;
 }
 
 .case-stats {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 27, 15, 0.08);
 }
 
 .case-stat {
@@ -956,31 +880,34 @@ export default defineComponent({
 
 .case-stat-value {
   font-family: "Inter Tight", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-weight: 600;
-  color: #002713;
+  color: #04170e;
 }
 
 .case-stat-label {
   font-family: Inter, sans-serif;
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.95rem;
+  color: rgba(4, 23, 14, 0.6);
 }
 
 .case-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 27, 15, 0.08);
 }
 
 .case-tag {
-  padding: 0.4rem 0.85rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
-  background: #002713;
-  color: #e5ff32;
+  background: rgba(0, 39, 19, 0.08);
+  color: #04170e;
   font-family: Inter, sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
@@ -1083,11 +1010,6 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 991px) {
-  .capabilities-section,
-  .scenarios-section {
-    padding: 2.5rem 1.75rem;
-  }
-
   .scenarios-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1099,6 +1021,16 @@ export default defineComponent({
 
   .cases-grid {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .case-card {
+    padding: 1.75rem;
+    gap: 1rem;
+  }
+
+  .case-stats {
+    gap: 1.5rem;
   }
 
   .faq-section {
