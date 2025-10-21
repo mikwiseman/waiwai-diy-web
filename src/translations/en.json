@@ -1,75 +1,29 @@
 {
   "meta": {
-    "title": "WaiWai — AI агенты для автоматизации продаж и маркетинга",
-    "description": "AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей.",
-    "keywords": "AI агенты, искусственный интеллект, автоматизация продаж, маркетинг, email-маркетинг, CRM, автоматизация маркетинга, увеличение продаж, оптимизация процессов, интеллектуальные агенты, чат-боты, автоматизация коммуникаций, AI ассистенты, умные агенты, автоматизация бизнеса, AI для бизнеса, искусственный интеллект в продажах",
-    "ogTitle": "WaiWai — AI агенты для автоматизации продаж и маркетинга",
-    "ogDescription": "AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей.",
-    "twitterTitle": "WaiWai — AI агенты для автоматизации продаж и маркетинга",
-    "twitterDescription": "AI агенты для автоматизации продаж и маркетинга. Увеличиваем продажи на 21%, сокращаем рутину на 41%. Интеллектуальные агенты для email-рассылок, CRM, маркетплейсов и социальных сетей."
+    "title": "WaiWai — AI agents for hiring and recruiting",
+    "description": "An AI platform that automates sourcing, outreach, and candidate coordination. Close roles faster and give your HR team back precious time.",
+    "keywords": "AI recruiting, hiring automation, digital recruiter, HR technology, talent acquisition, AI for HR, candidate sourcing, ATS automation, automated outreach, recruitment automation",
+    "ogTitle": "WaiWai — AI agents for hiring and recruiting",
+    "ogDescription": "An AI platform that automates sourcing, outreach, and candidate coordination. Close roles faster and give your HR team back precious time.",
+    "twitterTitle": "WaiWai — AI agents for hiring and recruiting",
+    "twitterDescription": "An AI platform that automates sourcing, outreach, and candidate coordination. Close roles faster and give your HR team back precious time."
   },
   "header": {
-    "discussProject": "Discuss Project",
-    "presentation": "Presentation"
+    "discussProject": "Register"
   },
   "hero": {
-    "title": "Artificial Intelligence that truly understands your business",
-    "subtitle": "Find leads, send them personalized messages, and manage conversations. Free up resources for business growth while AI handles the routine"
+    "title": "AI recruiters that keep your hiring pipeline moving",
+    "subtitle": "We source qualified talent, run personalised conversations, and schedule interviews while your HR team focuses on selection."
   },
   "blog": {
     "title": "Blog"
   },
   "capabilities": {
     "title": "Capabilities",
-    "leads": {
-      "title": "WaiWai Leads",
-      "description": "Lead sourcing and enrichment: data sources, verification, scoring, deduplication."
-    },
-    "outreach": {
-      "title": "WaiWai Outreach",
-      "description": "Personalized outreach and meeting booking (email / Telegram / LinkedIn)."
-    }
-  },
-  "pricing": {
-    "title": "Pricing",
-    "buyButton": "Purchase",
-    "plans": {
-      "basic": {
-        "name": "Basic",
-        "price": "29,990 ₽",
-        "features": [
-          "Includes 1,000 DICH",
-          "Overage: 30 ₽ per DICH"
-        ]
-      },
-      "standard": {
-        "name": "Standard",
-        "price": "49,990 ₽",
-        "features": [
-          "Includes 2,000 DICH",
-          "Overage: 25 ₽ per DICH"
-        ]
-      },
-      "premium": {
-        "name": "Premium",
-        "price": "99,990 ₽",
-        "features": [
-          "Includes 5,000 DICH",
-          "Overage: 20 ₽ per DICH"
-        ]
-      }
-    },
-    "enterprise": {
-      "name": "Enterprise",
-      "description": "Custom architecture aligned with your compliance and security",
-      "features": [
-        "Deployment inside private clouds or on-prem environments",
-        "Integrations with corporate CRM and BI stacks",
-        "Dedicated WaiWai project squad and executive sponsor"
-      ],
-      "button": "Contact Us"
-    },
-    "footnote": "* DICH is an internal currency. Enriching a contact costs 1 DICH; sending a message through one channel uses 0.5 DICH. You can purchase extra DICH within any plan, and unused DICH rolls over to the next month."
+    "paragraphs": [
+      "WaiWai is a digital recruiter: it sources candidates from LinkedIn, job boards, communities, enriches profiles, and segments them by role requirements.",
+      "The agent messages candidates via email, Telegram, and LinkedIn, answers follow-up questions, and nurtures interest until the interview."
+    ]
   },
   "faq": {},
   "team": {
@@ -117,77 +71,60 @@
       }
     }
   },
-  "recognition": {
-    "title": "Accreditations and Partnerships",
-    "items": [
-      {
-        "title": "Skolkovo Resident"
-      },
-      {
-        "title": "Russian Software Registry"
-      },
-      {
-        "title": "International Technopark Member"
-      }
-    ]
-  },
   "cases": {
-    "title": "Case Studies",
-    "comingSoon": "Case study coming soon",
-    "yourProject": "Place for your project",
+    "title": "Hiring case studies",
+    "comingSoon": "New case study coming soon",
+    "yourProject": "Space for your HR project",
     "stats": {
-      "salesGrowth": "Sales growth with WaiWai",
-      "responseIncrease": "Increase in customer response",
-      "timeReduction": "Reduction in hiring time",
-      "timeFreed": "Recruiters' time freed up for other tasks"
+      "positionsClosed": "Roles closed per month",
+      "replyRateGrowth": "Growth in candidate reply rate",
+      "timeToHireCut": "Reduction in time-to-hire",
+      "hoursSaved": "Hours of recruiter work saved",
+      "interviewsScheduled": "Interviews scheduled automatically"
     },
     "falcone": {
       "title": "Falcone",
-      "description": "Found clients for delivery service - Ozon, Wildberries, Yandex Market sellers. WaiWai sent personalized emails using open data about customers and their needs.",
+      "description": "Automated hiring of couriers and warehouse teams. WaiWai gathers regional profiles, validates experience, and books interested candidates for HR interviews.",
       "tags": [
         "Logistics",
-        "Marketplaces",
-        "Sales",
+        "HR",
+        "Telegram",
         "Email"
       ]
     },
     "akBarsBank": {
       "title": "Ak Bars Bank",
-      "description": "Automated the recruitment process on HeadHunter. For employee search, WaiWai creates personalized letters based on candidate profiles. The system sorts incoming requests and responds to them, saving recruiters' time.",
+      "description": "Connected WaiWai to the bank's ATS to close analyst roles. The agent enriches hh.ru and LinkedIn profiles, manages conversations, and hands off motivated talent straight to HR.",
       "tags": [
         "Finance",
-        "Recruitment",
-        "Email Campaigns",
-        "HH.ru",
+        "HR",
+        "hh.ru",
         "LinkedIn"
       ]
     },
     "ontico": {
       "title": "Ontico Conferences",
-      "description": "For selling tickets to the Berlin conference, WaiWai found programmers by programming language and attendance at similar events. Selecting relevant leads and personalized messages increased conversion by 2.4 times.",
+      "description": "Built a pipeline of engineers for an international conference. WaiWai analyses attendee backgrounds, runs personalised outreach, and warms candidates up for HR interviews.",
       "tags": [
-        "Events",
-        "Sales",
+        "IT",
+        "HR",
         "LinkedIn"
       ]
     },
     "kodix": {
       "title": "Kodix",
-      "description": "Helped a custom dev studio enter the Saudi market and find new clients in Russia. WaiWai’s sales agent automated LinkedIn outreach with decision-makers at dealerships and auto brands.",
-      "messages": "Average dialogue messages",
-      "reach": "Contacts reached in 2 months",
-      "meetings": "Meetings with potential clients",
+      "description": "Helped the in-house HR team enter the Middle East market. The agent leads LinkedIn dialogues with product and marketing talent, updates funnel statuses, and confirms interview slots.",
       "tags": [
         "Development",
-        "Sales",
+        "HR",
         "Email",
         "LinkedIn"
       ]
     }
   },
   "cta": {
-    "title": "While competitors are looking for clients - yours are already reading messages from WaiWai",
-    "bookCall": "Book a call slot"
+    "title": "While competitors cold-call resumes, your candidates chat with WaiWai",
+    "bookCall": "Register"
   },
   "awards": {
     "title": "Awards",

@@ -1,7 +1,7 @@
 <template>
   <div class="blog-page">
     <div class="blog-container">
-      <div id="dib-posts"></div>
+      <div id="dib-posts" />
     </div>
   </div>
 </template>
