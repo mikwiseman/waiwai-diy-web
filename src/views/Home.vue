@@ -2,7 +2,7 @@
   <div class="smooth-scroll">
     <div class="hero-section">
       <a
-        href="https://calendly.com/mikwiseman/hi"
+        href="https://hr.getwaiwai.com"
         target="_blank"
         class="contact-button down w-inline-block"
       >
@@ -32,7 +32,7 @@
       </div>
       <div class="mobile-buttons">
         <a
-          href="https://calendly.com/mikwiseman/hi"
+          href="https://hr.getwaiwai.com"
           target="_blank"
           class="contact-button mobile w-inline-block"
         >
@@ -65,7 +65,7 @@
             {{ paragraph }}
           </p>
           <a
-            href="https://calendly.com/mikwiseman/hi"
+            href="https://hr.getwaiwai.com"
             target="_blank"
             rel="noopener"
             class="capabilities-button"
@@ -485,7 +485,7 @@
         </div>
         <div class="contact-button-circle">
           <a
-            href="https://calendly.com/mikwiseman/hi"
+            href="https://hr.getwaiwai.com"
             target="_blank"
             class="contact-button-circle-link"
           >
