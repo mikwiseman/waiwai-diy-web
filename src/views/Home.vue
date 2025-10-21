@@ -53,9 +53,9 @@
     >
       <div class="proj-section">
         <div class="title-container">
-          <h2 class="title">
-            {{ t('cases.title') }}
-          </h2>
+          <div class="section-label">
+            {{ t('cases.title').toUpperCase() }}
+          </div>
         </div>
         <div class="cases-grid">
           <div
@@ -804,6 +804,20 @@ export default defineComponent({
 
 .proj-section .title {
   color: #04170e;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: #e5ff32;
+  color: #04170e;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 1024px) {
