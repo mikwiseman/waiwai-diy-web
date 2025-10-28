@@ -109,7 +109,7 @@
           >
             <div class="case-header">
               <h3 class="section-subtitle">
-              {{ item.question }}
+                {{ item.question }}
               </h3>
               <p class="faq-answer">
                 {{ item.answer }}
@@ -439,7 +439,7 @@
       <h2 class="blog-title">
         {{ t('blog.title') }}
       </h2>
-      <div id="dib-posts" />
+      <div id="blog-widget" />
     </div>
 
     <div
@@ -541,13 +541,34 @@
 </template>
 
 <script>
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, nextTick, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { initBlogWidget } from '@/utils/initBlogWidget'
 
 export default defineComponent({
   name: 'HomePage',
   setup() {
     const { t, tm, locale } = useI18n()
+
+    const loadBlogWidget = () => {
+      if (locale.value === 'en') {
+        return
+      }
+
+      nextTick(() => {
+        initBlogWidget()
+      })
+    }
+
+    onMounted(() => {
+      loadBlogWidget()
+    })
+
+    watch(locale, (newLocale) => {
+      if (newLocale !== 'en') {
+        loadBlogWidget()
+      }
+    })
 
     const teamImages = [
       new URL('../assets/images/team/1.jpeg', import.meta.url).href,
@@ -810,58 +831,6 @@ export default defineComponent({
   color: #000;
 }
 
-/* DropInBlog custom styles */
-:deep(.dib-posts) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-:deep(.dib-post) {
-  background: #fff;
-  border-radius: 1rem;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-:deep(.dib-post:hover) {
-  transform: translateY(-4px);
-}
-
-:deep(.dib-post-image) {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-:deep(.dib-post-content) {
-  padding: 1.5rem;
-}
-
-:deep(.dib-post-title) {
-  font-family: Inter Tight, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.8rem;
-  margin-bottom: 1rem;
-  color: #000;
-}
-
-:deep(.dib-post-excerpt) {
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-:deep(.dib-post-meta) {
-  font-family: Inter, sans-serif;
-  font-size: 0.875rem;
-  color: #999;
-}
-
 @media screen and (max-width: 767px) {
   .blog {
     padding: 2rem 1rem;
@@ -870,10 +839,6 @@ export default defineComponent({
   .blog-title {
     font-size: 1.5rem;
     line-height: 1.5rem;
-  }
-  
-  :deep(.dib-posts) {
-    grid-template-columns: 1fr;
   }
 }
 
