@@ -959,10 +959,17 @@ export default defineComponent({
 
 .faq-section {
   margin-top: 4rem;
+  padding: 0 2rem;
 }
 
 .faq-grid {
   margin-top: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .faq-section {
+    padding: 0 1.25rem;
+  }
 }
 
 .faq-card .case-header {
