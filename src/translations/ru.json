@@ -57,7 +57,8 @@
       "manualTasksSaved": "Часов рутины автоматизировано",
       "workflowsAutomated": "Автосценариев запущено",
       "launchTime": "Время запуска",
-      "teamsUpskilled": "Команд обучили AI"
+      "teamsUpskilled": "Команд обучили AI",
+      "sessionsHeld": "Проведено воркшопов"
     },
     "sales": {
       "title": "Агент Sales",
@@ -105,13 +106,28 @@
       ]
     },
     "custom": {
-      "title": "Сборка на заказ и обучение AI",
-      "description": "Собираем агента под процессы компании и обучаем команду эффективно использовать AI-инструменты.",
+      "title": "Сборка агента на заказ",
+      "description": "Настраиваем и внедряем агента под ваши процессы с учетом CRM, каналов и правил согласований.",
       "presentationLink": "https://pitch.waiwai.diy/v/waiwai-custom-agent",
       "stats": [
         {
           "value": "10 дней",
           "labelKey": "agents.stats.launchTime"
+        },
+        {
+          "value": "9",
+          "labelKey": "agents.stats.workflowsAutomated"
+        }
+      ]
+    },
+    "training": {
+      "title": "Обучение AI и AI-агентам",
+      "description": "Проводим практические сессии: учим команду работать с AI-инструментами и строить собственные сценарии.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-ai-training",
+      "stats": [
+        {
+          "value": "6",
+          "labelKey": "agents.stats.sessionsHeld"
         },
         {
           "value": "4",

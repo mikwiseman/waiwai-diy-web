@@ -109,6 +109,29 @@
           </div>
         </div>
       </div>
+      <div class="faq-section">
+        <div class="title-container">
+          <div class="section-label">
+            {{ t('faq.title').toUpperCase() }}
+          </div>
+        </div>
+        <div class="cases-grid faq-grid">
+          <div
+            v-for="item in faqItems"
+            :key="item.key"
+            class="case-card faq-card"
+          >
+            <div class="case-header">
+              <h3 class="section-subtitle">
+              {{ item.question }}
+              </h3>
+              <p class="faq-answer">
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="proj-section">
         <div class="title-container">
           <div class="section-label">
@@ -145,29 +168,6 @@
               >
                 {{ tag }}
               </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="faq-section">
-        <div class="title-container">
-          <div class="section-label">
-            {{ t('faq.title').toUpperCase() }}
-          </div>
-        </div>
-        <div class="cases-grid faq-grid">
-          <div
-            v-for="item in faqItems"
-            :key="item.key"
-            class="case-card faq-card"
-          >
-            <div class="case-header">
-              <h3 class="section-subtitle">
-              {{ item.question }}
-              </h3>
-              <p class="faq-answer">
-                {{ item.answer }}
-              </p>
             </div>
           </div>
         </div>
