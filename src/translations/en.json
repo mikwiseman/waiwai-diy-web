@@ -25,7 +25,27 @@
       "The agent messages candidates via email, Telegram, and LinkedIn, answers follow-up questions, and nurtures interest until the interview."
     ]
   },
-  "faq": {},
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "question": "Can you deploy the LLM on-premises?",
+        "answer": "Yes, we can run the LLM within your corporate perimeter to keep data secure."
+      },
+      {
+        "question": "Which LLMs do you use?",
+        "answer": "We orchestrate models from the Qwen and Gemma families."
+      },
+      {
+        "question": "How do you handle localisation in Russia?",
+        "answer": "Our models are fine-tuned for the Russian context and comply with regulations such as Federal Law 152-FZ."
+      },
+      {
+        "question": "Do you have ready-to-use solutions?",
+        "answer": "Our first sales and hiring agents are already live and generating revenue for clients."
+      }
+    ]
+  },
   "team": {
     "title": "WaiWai Team",
     "members": {

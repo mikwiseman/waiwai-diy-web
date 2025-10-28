@@ -91,6 +91,30 @@
           </div>
         </div>
       </div>
+      <div class="faq-section">
+        <div class="title-container">
+          <div class="section-label">
+            {{ t('faq.title').toUpperCase() }}
+          </div>
+          <h2 class="title">
+            {{ t('faq.title') }}
+          </h2>
+        </div>
+        <div class="faq-list">
+          <div
+            v-for="item in faqItems"
+            :key="item.key"
+            class="faq-item"
+          >
+            <h3 class="faq-question">
+              {{ item.question }}
+            </h3>
+            <p class="faq-answer">
+              {{ item.answer }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Team Section -->
@@ -574,7 +598,20 @@ export default defineComponent({
       })
     )
 
-    return { t, locale, teamMembers, caseCards }
+    const faqItems = computed(() => {
+      const items = tm('faq.items')
+      if (!Array.isArray(items)) {
+        return []
+      }
+
+      return items.map((item, index) => ({
+        key: `faq-${index}`,
+        question: item?.question ?? '',
+        answer: item?.answer ?? ''
+      }))
+    })
+
+    return { t, locale, teamMembers, caseCards, faqItems }
   }
 })
 </script>
@@ -850,6 +887,40 @@ export default defineComponent({
   grid-template-columns: 1fr;
   gap: 2.25rem;
   margin-top: 2.25rem;
+}
+
+.faq-section {
+  margin-top: 4rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 27, 15, 0.08);
+  padding: 1.75rem;
+}
+
+.faq-question {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.75rem;
+  color: #04170e;
+}
+
+.faq-answer {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
 }
 
 .case-card {
