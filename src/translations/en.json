@@ -84,17 +84,17 @@
     },
     "falcone": {
       "title": "Falcone",
-      "description": "Automated hiring of couriers and warehouse teams. WaiWai gathers regional profiles, validates experience, and books interested candidates for HR interviews.",
+      "description": "Deployed a sales agent for the logistics service: WaiWai builds e-commerce lead lists, runs nurture campaigns, and books demos for the sales team.",
       "tags": [
         "Logistics",
-        "HR",
-        "Telegram",
-        "Email"
+        "Sales",
+        "Email",
+        "LinkedIn"
       ]
     },
     "akBarsBank": {
       "title": "Ak Bars Bank",
-      "description": "Connected WaiWai to the bank's ATS to close analyst roles. The agent enriches hh.ru and LinkedIn profiles, manages conversations, and hands off motivated talent straight to HR.",
+      "description": "Configured an HR agent to close analyst roles. The agent enriches hh.ru and LinkedIn profiles, manages conversations, schedules interviews, and hands off motivated talent straight to HR.",
       "tags": [
         "Finance",
         "HR",
@@ -104,18 +104,20 @@
     },
     "ontico": {
       "title": "Ontico Conferences",
-      "description": "Built a pipeline of engineers for an international conference. WaiWai analyses attendee backgrounds, runs personalised outreach, and warms candidates up for HR interviews.",
+      "description": "Launched a sales agent for the conference team: WaiWai targets tech companies, runs partnership outreach, and secures booth and ticket commitments.",
       "tags": [
         "IT",
-        "HR",
+        "Sales",
+        "Email",
         "LinkedIn"
       ]
     },
     "kodix": {
-      "title": "Kodix",
-      "description": "Helped the in-house HR team enter the Middle East market. The agent leads LinkedIn dialogues with product and marketing talent, updates funnel statuses, and confirms interview slots.",
+      "title": "Pro Codex",
+      "description": "Built a dual-mode agent for sales and HR: WaiWai sources enterprise leads, qualifies engineers, keeps both pipelines in sync, and confirms meetings.",
       "tags": [
         "Development",
+        "Sales",
         "HR",
         "Email",
         "LinkedIn"
