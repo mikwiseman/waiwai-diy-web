@@ -141,22 +141,21 @@
           <div class="section-label">
             {{ t('faq.title').toUpperCase() }}
           </div>
-          <h2 class="title">
-            {{ t('faq.title') }}
-          </h2>
         </div>
-        <div class="faq-list">
+        <div class="cases-grid faq-grid">
           <div
             v-for="item in faqItems"
             :key="item.key"
-            class="faq-item"
+            class="case-card faq-card"
           >
-            <h3 class="faq-question">
+            <div class="case-header">
+              <h3 class="section-subtitle">
               {{ item.question }}
-            </h3>
-            <p class="faq-answer">
-              {{ item.answer }}
-            </p>
+              </h3>
+              <p class="faq-answer">
+                {{ item.answer }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -962,26 +961,18 @@ export default defineComponent({
   margin-top: 4rem;
 }
 
-.faq-list {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 2rem;
+.faq-grid {
+  margin-top: 0;
 }
 
-.faq-item {
-  background: #ffffff;
-  border-radius: 1.5rem;
-  border: 1px solid rgba(0, 27, 15, 0.08);
-  padding: 1.75rem;
+.faq-card .case-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.faq-question {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.4;
-  margin: 0 0 0.75rem;
-  color: #04170e;
+.faq-card .section-subtitle {
+  font-size: 1.2rem;
 }
 
 .faq-answer {

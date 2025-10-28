@@ -62,6 +62,7 @@
     "sales": {
       "title": "Агент Sales",
       "description": "WaiWai собирает ICP-лиды, проверяет намерение и доводит до демо без участия менеджеров.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-vpcmxx",
       "stats": [
         {
           "value": "46%",
@@ -76,6 +77,7 @@
     "hr": {
       "title": "Агент HR",
       "description": "Закрывает вакансии: ищет кандидатов, отвечает на вопросы, договаривается о собеседованиях и ведет воронку.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-hr-agent",
       "stats": [
         {
           "value": "45%",
@@ -90,6 +92,7 @@
     "automation": {
       "title": "Агент автоматизации",
       "description": "Автоматизирует повторяющиеся процессы: обновляет CRM, готовит отчеты и эскалирует только сложные кейсы.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-automation-agent",
       "stats": [
         {
           "value": "120",
@@ -104,6 +107,7 @@
     "custom": {
       "title": "Сборка на заказ и обучение AI",
       "description": "Собираем агента под процессы компании и обучаем команду эффективно использовать AI-инструменты.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-custom-agent",
       "stats": [
         {
           "value": "10 дней",
