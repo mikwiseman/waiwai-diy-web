@@ -62,6 +62,7 @@
     "sales": {
       "title": "Sales Agent",
       "description": "WaiWai builds ICP lead lists, qualifies intent, and books demos without manual follow-up.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-vpcmxx",
       "stats": [
         {
           "value": "46%",
@@ -76,6 +77,7 @@
     "hr": {
       "title": "HR Agent",
       "description": "Sources and nurtures candidates, answers questions, and schedules interviews for the hiring team.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-hr-agent",
       "stats": [
         {
           "value": "45%",
@@ -90,6 +92,7 @@
     "automation": {
       "title": "Automation Agent",
       "description": "Automates repetitive operations, updates systems of record, and escalates only edge cases.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-automation-agent",
       "stats": [
         {
           "value": "120",
@@ -104,6 +107,7 @@
     "custom": {
       "title": "Custom Agent & Training",
       "description": "We assemble a tailored agent for your processes and train the team to use AI tools effectively.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-custom-agent",
       "stats": [
         {
           "value": "10 days",

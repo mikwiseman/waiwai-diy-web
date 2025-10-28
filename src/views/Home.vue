@@ -77,11 +77,24 @@
             :key="agent.key"
             class="case-card"
           >
-            <div class="case-header">
-              <h3 class="section-subtitle">
-                {{ agent.title }}
-              </h3>
-              <p>{{ agent.description }}</p>
+            <div class="case-header case-header--agent">
+              <div class="case-header-content">
+                <h3 class="section-subtitle">
+                  {{ agent.title }}
+                </h3>
+                <p>{{ agent.description }}</p>
+              </div>
+              <a
+                v-if="agent.presentationLink"
+                :href="agent.presentationLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-button-card"
+              >
+                <span class="contact-button-card-text">
+                  {{ t('header.presentation') }}
+                </span>
+              </a>
             </div>
             <div class="case-stats">
               <div
@@ -603,6 +616,7 @@ export default defineComponent({
           key,
           title: t(`agents.${key}.title`),
           description: t(`agents.${key}.description`),
+          presentationLink: t(`agents.${key}.presentationLink`),
           stats: Array.isArray(stats)
             ? stats.map((stat, index) => ({
                 value: stat?.value ?? '',
@@ -1016,6 +1030,61 @@ export default defineComponent({
   line-height: 1.7;
   color: rgba(4, 23, 14, 0.72);
   margin: 0;
+}
+
+.case-header--agent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.case-header-content {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-button-card {
+  flex: 0 0 auto;
+  background-color: var(--secondary);
+  border-radius: 999px;
+  padding: 0.9rem 1.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 24px rgba(0, 39, 19, 0.12);
+}
+
+.contact-button-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(0, 39, 19, 0.16);
+}
+
+.contact-button-card-text {
+  color: #04170e;
+  text-transform: uppercase;
+  font-feature-settings: "dlig" on, "ss07" on, "ss04" on;
+  font-family: Elmamono, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+}
+
+@media screen and (max-width: 767px) {
+  .case-header--agent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-button-card {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .case-stats {
