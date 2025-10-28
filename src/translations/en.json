@@ -57,7 +57,8 @@
       "manualTasksSaved": "Hours of manual work automated",
       "workflowsAutomated": "Workflows automated",
       "launchTime": "Launch time",
-      "teamsUpskilled": "Teams upskilled in AI"
+      "teamsUpskilled": "Teams upskilled in AI",
+      "sessionsHeld": "Workshops delivered"
     },
     "sales": {
       "title": "Sales Agent",
@@ -105,13 +106,28 @@
       ]
     },
     "custom": {
-      "title": "Custom Agent & Training",
-      "description": "We assemble a tailored agent for your processes and train the team to use AI tools effectively.",
+      "title": "Tailored Agent Build",
+      "description": "We configure and integrate an agent around your CRM, channels, and approval workflows.",
       "presentationLink": "https://pitch.waiwai.diy/v/waiwai-custom-agent",
       "stats": [
         {
           "value": "10 days",
           "labelKey": "agents.stats.launchTime"
+        },
+        {
+          "value": "9",
+          "labelKey": "agents.stats.workflowsAutomated"
+        }
+      ]
+    },
+    "training": {
+      "title": "AI & Agent Training",
+      "description": "Hands-on workshops that teach teams to apply AI tools and design their own agent playbooks.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-ai-training",
+      "stats": [
+        {
+          "value": "6",
+          "labelKey": "agents.stats.sessionsHeld"
         },
         {
           "value": "4",
