@@ -8,13 +8,6 @@
       >
         <div class="button-text">{{ t('header.discussProject') }}</div>
       </a>
-      <a
-        href="https://pitch.waiwai.diy/v/waiwai-vpcmxx"
-        target="_blank"
-        class="contact-button down w-inline-block contact-button--presentation"
-      >
-        <div class="button-text">{{ t('header.presentation') }}</div>
-      </a>
       <div class="header">
         <a
           href="https://calendly.com/mikwiseman/hi"
@@ -44,13 +37,6 @@
           class="contact-button mobile w-inline-block"
         >
           <div class="button-text">{{ t('header.discussProject') }}</div>
-        </a>
-        <a
-          href="https://pitch.waiwai.diy/v/waiwai-vpcmxx"
-          target="_blank"
-          class="contact-button mobile w-inline-block contact-button--presentation"
-        >
-          <div class="button-text">{{ t('header.presentation') }}</div>
         </a>
       </div>
       <div class="bottom-text">
@@ -995,16 +981,6 @@ export default defineComponent({
   line-height: 1.65;
   color: rgba(0, 0, 0, 0.7);
   margin: 0;
-}
-
-.contact-button--presentation {
-  right: auto;
-  left: 1.75rem;
-}
-
-.contact-button.down.contact-button--presentation,
-.contact-button.mobile.contact-button--presentation {
-  background-color: var(--main-accent);
 }
 
 .case-card {
