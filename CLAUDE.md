@@ -15,6 +15,7 @@ npm run build       # Build for production
 npm run lint        # Lint and fix files
 ```
 
+
 ## Architecture
 
 ### Internationalization (i18n)
