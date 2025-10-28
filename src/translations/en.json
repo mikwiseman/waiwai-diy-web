@@ -47,6 +47,75 @@
       }
     ]
   },
+  "agents": {
+    "title": "Agents",
+    "stats": {
+      "pipelineGrowth": "Pipeline growth",
+      "demosPerWeek": "Demos per week",
+      "timeToHireCut": "Time-to-hire reduction",
+      "candidatesNurtured": "Candidates nurtured",
+      "manualTasksSaved": "Hours of manual work automated",
+      "workflowsAutomated": "Workflows automated",
+      "launchTime": "Launch time",
+      "teamsUpskilled": "Teams upskilled in AI"
+    },
+    "sales": {
+      "title": "Sales Agent",
+      "description": "WaiWai builds ICP lead lists, qualifies intent, and books demos without manual follow-up.",
+      "stats": [
+        {
+          "value": "46%",
+          "labelKey": "agents.stats.pipelineGrowth"
+        },
+        {
+          "value": "12",
+          "labelKey": "agents.stats.demosPerWeek"
+        }
+      ]
+    },
+    "hr": {
+      "title": "HR Agent",
+      "description": "Sources and nurtures candidates, answers questions, and schedules interviews for the hiring team.",
+      "stats": [
+        {
+          "value": "45%",
+          "labelKey": "agents.stats.timeToHireCut"
+        },
+        {
+          "value": "180",
+          "labelKey": "agents.stats.candidatesNurtured"
+        }
+      ]
+    },
+    "automation": {
+      "title": "Automation Agent",
+      "description": "Automates repetitive operations, updates systems of record, and escalates only edge cases.",
+      "stats": [
+        {
+          "value": "120",
+          "labelKey": "agents.stats.manualTasksSaved"
+        },
+        {
+          "value": "14",
+          "labelKey": "agents.stats.workflowsAutomated"
+        }
+      ]
+    },
+    "custom": {
+      "title": "Custom Agent & Training",
+      "description": "We assemble a tailored agent for your processes and train the team to use AI tools effectively.",
+      "stats": [
+        {
+          "value": "10 days",
+          "labelKey": "agents.stats.launchTime"
+        },
+        {
+          "value": "4",
+          "labelKey": "agents.stats.teamsUpskilled"
+        }
+      ]
+    }
+  },
   "team": {
     "title": "WaiWai Team",
     "members": {

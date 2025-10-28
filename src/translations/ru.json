@@ -47,6 +47,75 @@
       }
     ]
   },
+  "agents": {
+    "title": "Агенты",
+    "stats": {
+      "pipelineGrowth": "Рост воронки продаж",
+      "demosPerWeek": "Демо в неделю",
+      "timeToHireCut": "Сокращение time-to-hire",
+      "candidatesNurtured": "Кандидатов в прогреве",
+      "manualTasksSaved": "Часов рутины автоматизировано",
+      "workflowsAutomated": "Автосценариев запущено",
+      "launchTime": "Время запуска",
+      "teamsUpskilled": "Команд обучили AI"
+    },
+    "sales": {
+      "title": "Агент Sales",
+      "description": "WaiWai собирает ICP-лиды, проверяет намерение и доводит до демо без участия менеджеров.",
+      "stats": [
+        {
+          "value": "46%",
+          "labelKey": "agents.stats.pipelineGrowth"
+        },
+        {
+          "value": "12",
+          "labelKey": "agents.stats.demosPerWeek"
+        }
+      ]
+    },
+    "hr": {
+      "title": "Агент HR",
+      "description": "Закрывает вакансии: ищет кандидатов, отвечает на вопросы, договаривается о собеседованиях и ведет воронку.",
+      "stats": [
+        {
+          "value": "45%",
+          "labelKey": "agents.stats.timeToHireCut"
+        },
+        {
+          "value": "180",
+          "labelKey": "agents.stats.candidatesNurtured"
+        }
+      ]
+    },
+    "automation": {
+      "title": "Агент автоматизации",
+      "description": "Автоматизирует повторяющиеся процессы: обновляет CRM, готовит отчеты и эскалирует только сложные кейсы.",
+      "stats": [
+        {
+          "value": "120",
+          "labelKey": "agents.stats.manualTasksSaved"
+        },
+        {
+          "value": "14",
+          "labelKey": "agents.stats.workflowsAutomated"
+        }
+      ]
+    },
+    "custom": {
+      "title": "Сборка на заказ и обучение AI",
+      "description": "Собираем агента под процессы компании и обучаем команду эффективно использовать AI-инструменты.",
+      "stats": [
+        {
+          "value": "10 дней",
+          "labelKey": "agents.stats.launchTime"
+        },
+        {
+          "value": "4",
+          "labelKey": "agents.stats.teamsUpskilled"
+        }
+      ]
+    }
+  },
   "team": {
     "title": "Команда WaiWai",
     "members": {

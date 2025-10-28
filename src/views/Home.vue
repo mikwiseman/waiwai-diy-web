@@ -65,6 +65,37 @@
       v-if="locale !== 'en'"
       class="sliding-content"
     >
+      <div class="proj-section agents-section">
+        <div class="title-container">
+          <div class="section-label">
+            {{ t('agents.title').toUpperCase() }}
+          </div>
+        </div>
+        <div class="cases-grid">
+          <div
+            v-for="agent in agentCards"
+            :key="agent.key"
+            class="case-card"
+          >
+            <div class="case-header">
+              <h3 class="section-subtitle">
+                {{ agent.title }}
+              </h3>
+              <p>{{ agent.description }}</p>
+            </div>
+            <div class="case-stats">
+              <div
+                v-for="stat in agent.stats"
+                :key="stat.statKey"
+                class="case-stat"
+              >
+                <span class="case-stat-value">{{ stat.value }}</span>
+                <span class="case-stat-label">{{ stat.label }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="proj-section">
         <div class="title-container">
           <div class="section-label">
@@ -564,6 +595,26 @@ export default defineComponent({
       })
     )
 
+    const agentKeys = ['sales', 'hr', 'automation', 'custom']
+
+    const agentCards = computed(() =>
+      agentKeys.map((key) => {
+        const stats = tm(`agents.${key}.stats`)
+        return {
+          key,
+          title: t(`agents.${key}.title`),
+          description: t(`agents.${key}.description`),
+          stats: Array.isArray(stats)
+            ? stats.map((stat, index) => ({
+                value: stat?.value ?? '',
+                label: stat?.labelKey ? t(stat.labelKey) : '',
+                statKey: `stat-${key}-${index}`
+              }))
+            : []
+        }
+      })
+    )
+
     const casesConfig = [
       {
         key: 'falcone',
@@ -625,7 +676,7 @@ export default defineComponent({
       }))
     })
 
-    return { t, locale, teamMembers, caseCards, faqItems }
+    return { t, locale, teamMembers, agentCards, caseCards, faqItems }
   }
 })
 </script>
@@ -901,6 +952,10 @@ export default defineComponent({
   grid-template-columns: 1fr;
   gap: 2.25rem;
   margin-top: 2.25rem;
+}
+
+.agents-section {
+  margin-bottom: 4rem;
 }
 
 .faq-section {
