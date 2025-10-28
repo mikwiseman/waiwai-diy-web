@@ -105,21 +105,6 @@
         }
       ]
     },
-    "implementation": {
-      "title": "Обучение внедрению AI-агентов",
-      "description": "Разбираем процессы внедрения: настраиваем пайплайны, готовим инструкции и сопровождаем запуск в прод.",
-      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-implementation-training",
-      "stats": [
-        {
-          "value": "8",
-          "labelKey": "agents.stats.sessionsHeld"
-        },
-        {
-          "value": "5",
-          "labelKey": "agents.stats.teamsUpskilled"
-        }
-      ]
-    },
     "custom": {
       "title": "Сборка агента на заказ",
       "description": "Настраиваем и внедряем агента под ваши процессы с учетом CRM, каналов и правил согласований.",

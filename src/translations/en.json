@@ -105,21 +105,6 @@
         }
       ]
     },
-    "implementation": {
-      "title": "Agent Implementation Training",
-      "description": "We guide teams through rollout: define processes, document playbooks, and support production launches.",
-      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-implementation-training",
-      "stats": [
-        {
-          "value": "8",
-          "labelKey": "agents.stats.sessionsHeld"
-        },
-        {
-          "value": "5",
-          "labelKey": "agents.stats.teamsUpskilled"
-        }
-      ]
-    },
     "custom": {
       "title": "Tailored Agent Build",
       "description": "We configure and integrate an agent around your CRM, channels, and approval workflows.",
