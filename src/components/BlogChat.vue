@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable vue/no-v-html -->
   <section class="blog-card blog-chat-card">
     <h2 class="blog-chat-title">
       {{ t('blog.chat.title') }}
@@ -27,12 +28,15 @@
         class="blog-chat-message-list"
       >
         <li
-          v-for="message in chatMessages"
+          v-for="message in renderedChatMessages"
           :key="message.id"
           class="blog-chat-message"
           :class="message.role === 'assistant' ? 'blog-chat-message--assistant' : 'blog-chat-message--user'"
         >
-          {{ message.content }}
+          <div
+            class="blog-chat-message-content"
+            v-html="message.renderedContent"
+          />
         </li>
       </ul>
     </div>
@@ -74,6 +78,8 @@
 <script>
 import { computed, defineComponent, nextTick, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import MarkdownIt from 'markdown-it'
+import DOMPurify from 'dompurify'
 
 const CHAT_STORAGE_KEY = 'waiwaiBlogConversationId'
 const CHAT_API_BASE_URL = 'https://content.getwaiwai.com'
@@ -90,6 +96,10 @@ export default defineComponent({
     const chatError = ref('')
     const conversationId = ref('')
     const chatMessagesContainer = ref(null)
+    const markdown = new MarkdownIt({
+      linkify: true,
+      breaks: true
+    })
 
     const scrollChatToBottom = () => {
       nextTick(() => {
@@ -97,6 +107,16 @@ export default defineComponent({
           chatMessagesContainer.value.scrollTop = chatMessagesContainer.value.scrollHeight
         }
       })
+    }
+
+    const renderMarkdown = (content) => {
+      const rawHtml = markdown.render(content || '')
+
+      if (!isBrowser) {
+        return rawHtml
+      }
+
+      return DOMPurify.sanitize(rawHtml)
     }
 
     const hydrateChatMessages = async (existingConversationId) => {
@@ -210,6 +230,13 @@ export default defineComponent({
 
     const isChatSubmitDisabled = computed(() => chatSending.value || chatInput.value.trim().length === 0)
 
+    const renderedChatMessages = computed(() =>
+      chatMessages.value.map((message) => ({
+        ...message,
+        renderedContent: renderMarkdown(message.content)
+      }))
+    )
+
     watch(conversationId, (newId) => {
       if (!isBrowser) {
         return
@@ -238,6 +265,7 @@ export default defineComponent({
     return {
       t,
       chatMessages,
+      renderedChatMessages,
       chatHistoryLoading,
       chatSending,
       chatInput,
@@ -303,6 +331,39 @@ export default defineComponent({
   line-height: 1.5;
   box-shadow: 0 10px 25px rgba(15, 118, 110, 0.08);
   border: 1px solid rgba(15, 118, 110, 0.1);
+}
+
+.blog-chat-message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.blog-chat-message-content p {
+  margin: 0;
+}
+
+.blog-chat-message-content ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.blog-chat-message-content li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.blog-chat-message-content a {
+  color: rgba(20, 83, 45, 0.95);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.blog-chat-message-content a:hover {
+  text-decoration-color: rgba(20, 83, 45, 0.6);
 }
 
 .blog-chat-message--user {

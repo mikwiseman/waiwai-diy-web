@@ -12,6 +12,8 @@
     "@nuxtjs/sitemap": "^7.2.10",
     "@vueuse/head": "^2.0.0",
     "core-js": "^3.8.3",
+    "dompurify": "^3.3.0",
+    "markdown-it": "^14.1.0",
     "vue": "^3.3.0",
     "vue-i18n": "^9.2.2",
     "vue-meta": "^2.4.0",
