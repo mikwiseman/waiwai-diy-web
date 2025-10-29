@@ -18,6 +18,7 @@ npm run lint        # Lint and fix files
 
 ## Architecture
 
+
 ### Internationalization (i18n)
 - **Locale Detection**: [src/i18n/index.js](src/i18n/index.js) determines locale based on `window.location.hostname`
   - `wai.sale` domain → English (`en`)
