@@ -1,6 +1,54 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import Blog from '@/views/Blog.vue'
+import i18n from '@/i18n'
+
+const presentationRedirects = [
+  {
+    path: '/sales',
+    name: 'sales-presentation-redirect',
+    translationKey: 'agents.sales.presentationLink'
+  },
+  {
+    path: '/hr',
+    name: 'hr-presentation-redirect',
+    translationKey: 'agents.hr.presentationLink'
+  },
+  {
+    path: '/agents',
+    name: 'automation-presentation-redirect',
+    translationKey: 'agents.automation.presentationLink'
+  },
+  {
+    path: '/trinity',
+    name: 'custom-presentation-redirect',
+    translationKey: 'agents.custom.presentationLink'
+  },
+  {
+    path: '/wowuni',
+    name: 'training-presentation-redirect',
+    translationKey: 'agents.training.presentationLink'
+  }
+]
+
+const externalRedirectRoutes = presentationRedirects.map(
+  ({ path, name, translationKey }) => ({
+    path,
+    name,
+    beforeEnter: () => {
+      const targetUrl = i18n.global.t(translationKey)
+      if (
+        typeof window !== 'undefined' &&
+        typeof targetUrl === 'string' &&
+        targetUrl !== translationKey
+      ) {
+        window.location.replace(targetUrl)
+        return false
+      }
+      return { name: 'home' }
+    }
+  })
+)
 
 const routes = [
   {
@@ -39,9 +87,9 @@ const routes = [
     path: '/blog',
     name: 'blog',
     component: Blog
-  }
+  },
+  ...externalRedirectRoutes
 ]
-
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
