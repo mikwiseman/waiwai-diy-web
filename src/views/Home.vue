@@ -490,13 +490,13 @@
             {{ t('blog.readMore') }}
           </a>
         </article>
-        <BlogChat />
         <router-link
           class="blog-card-link blog-card-read-more blog-card-read-more--cta"
           :to="{ name: 'blog' }"
         >
           {{ t('blog.readBlogButton') }}
         </router-link>
+        <BlogChat />
       </div>
     </div>
 
