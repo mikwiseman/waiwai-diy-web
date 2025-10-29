@@ -490,6 +490,7 @@
             {{ t('blog.readMore') }}
           </a>
         </article>
+        <BlogChat />
         <router-link
           class="blog-card-link blog-card-read-more blog-card-read-more--cta"
           :to="{ name: 'blog' }"
@@ -600,10 +601,14 @@
 <script>
 import { computed, defineComponent, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import BlogChat from '@/components/BlogChat.vue'
 import { fetchBlogPosts, formatBlogDate } from '@/utils/blogPosts'
 
 export default defineComponent({
   name: 'HomePage',
+  components: {
+    BlogChat
+  },
   setup() {
     const { t, tm, locale } = useI18n()
 
