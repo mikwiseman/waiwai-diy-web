@@ -584,15 +584,13 @@
             </p>
           </div>
         </div>
-        <div class="contact-button-circle">
-          <a
-            href="https://calendly.com/mikwiseman/hi"
-            target="_blank"
-            class="contact-button-circle-link"
-          >
-            <div class="button-text-circle">{{ t('header.discussProject') }}</div>
-          </a>
-        </div>
+        <a
+          href="https://calendly.com/mikwiseman/hi"
+          target="_blank"
+          class="contact-button-circle"
+        >
+          <div class="button-text-circle">{{ t('header.discussProject') }}</div>
+        </a>
       </div>
     </div>
   </div>
@@ -829,6 +827,7 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.5s ease;
 }
