@@ -119,7 +119,7 @@ export default defineComponent({
 }
 
 .blog-container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -145,18 +145,18 @@ export default defineComponent({
 .blog-cards {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .blog-card {
   background: #fff;
-  border-radius: 1.5rem;
-  padding: 2rem;
-  box-shadow: 0 30px 60px -30px rgba(15, 23, 42, 0.2);
-  border: 1px solid rgba(226, 232, 240, 0.7);
+  border-radius: 1.75rem;
+  padding: 2.5rem;
+  box-shadow: 0 24px 48px rgba(0, 39, 19, 0.12);
+  border: 1px solid rgba(0, 27, 15, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.25rem;
 }
 
 .blog-card-date {
@@ -213,11 +213,12 @@ export default defineComponent({
   }
 
   .blog-card {
-    padding: 1.75rem;
+    padding: 2.1rem;
+    gap: 1.1rem;
   }
 
   .blog-card-title {
-    font-size: 1.6rem;
+    font-size: 1.65rem;
   }
 }
 
@@ -233,11 +234,12 @@ export default defineComponent({
   }
 
   .blog-card {
-    padding: 1.5rem;
+    padding: 1.75rem;
+    gap: 1rem;
   }
 
   .blog-card-title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
 }
 </style> 

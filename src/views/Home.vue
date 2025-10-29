@@ -942,17 +942,19 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .blog-card {
   background: #fff;
-  border-radius: 1.5rem;
-  padding: 1.75rem;
-  box-shadow: 0 25px 50px -20px rgba(15, 23, 42, 0.15);
-  border: 1px solid rgba(226, 232, 240, 0.7);
+  border-radius: 1.75rem;
+  padding: 2.25rem;
+  box-shadow: 0 20px 40px rgba(0, 39, 19, 0.08);
+  border: 1px solid rgba(0, 27, 15, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .blog-card-date {
@@ -1013,11 +1015,12 @@ export default defineComponent({
   }
 
   .blog-card {
-    padding: 1.5rem;
+    padding: 1.75rem;
+    gap: 1rem;
   }
-
+ 
   .blog-card-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 
