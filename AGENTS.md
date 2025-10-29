@@ -13,6 +13,7 @@
 - `npm run lint` — run ESLint with `plugin:vue/vue3-recommended` rules to enforce formatting and catch common issues.
 - `node test-meta-tags.js` — run the Puppeteer smoke test. Requires a reachable app URL (local dev or deployed preview).
 
+
 ## Coding Style & Naming Conventions
 - Follow ESLint defaults: two-space indentation, single quotes, no semicolons, and trailing commas only where mandated.
 - Name Vue components in PascalCase (`BlogPosts.vue`), composables/utilities in camelCase, and routes using kebab-case segments.
