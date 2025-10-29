@@ -496,6 +496,12 @@
             {{ t('blog.readMore') }}
           </a>
         </article>
+        <router-link
+          class="blog-card-link blog-card-read-more blog-card-read-more--cta"
+          :to="{ name: 'blog' }"
+        >
+          {{ t('blog.readBlogButton') }}
+        </router-link>
       </div>
     </div>
 
@@ -924,7 +930,8 @@ export default defineComponent({
   font-size: 2rem;
   font-weight: 400;
   line-height: 2rem;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 1280px;
   color: #000;
 }
 
@@ -942,7 +949,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -955,19 +962,22 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  font-family: 'Roboto Mono', monospace;
+  color: #000;
 }
 
 .blog-card-date {
-  font-size: 0.9rem;
-  color: #64748b;
+  font-size: 0.95rem;
+  color: #000;
+  opacity: 0.8;
 }
 
 .blog-card-title {
-  font-family: Inter Tight, sans-serif;
+  font-family: inherit;
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0;
-  color: #0f172a;
+  color: #000;
 }
 
 .blog-card-title-link {
@@ -983,16 +993,17 @@ export default defineComponent({
   margin: 0;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: #1f2937;
+  color: #000;
 }
 
 .blog-card-link {
   font-weight: 600;
   text-decoration: none;
-  color: #2563eb;
+  color: #000;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  font-family: inherit;
 }
 
 .blog-card-link::after {
@@ -1000,8 +1011,27 @@ export default defineComponent({
   font-size: 1rem;
 }
 
+.blog-card-link:hover {
+  color: #2563eb;
+}
+
 .blog-card-read-more {
   font-size: 0.95rem;
+}
+
+.blog-card-read-more--cta {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blog-card-read-more--cta:hover {
+  color: #fff;
+  background: #2563eb;
 }
 
 @media screen and (max-width: 767px) {

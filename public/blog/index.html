@@ -6,57 +6,100 @@
     <title>WaiWai Blog</title>
     <meta name="description" content="Свежие новости и статьи от WaiWai Blog." />
     <link rel="canonical" href="https://getwaiwai.ru/blog" />
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <style>
+      :root {
+        color: #000;
+        background: #fff;
+        font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
       body {
         margin: 0;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        background: radial-gradient(circle at top, #dbeafe, #f8fafc 55%);
-        color: #0f172a;
-        padding: 3rem 1.5rem 4rem;
+        background-color: #fff;
+        color: #000;
       }
       main {
-        max-width: 960px;
+        max-width: 1280px;
         margin: 0 auto;
+        padding: 4rem 1.5rem 5rem;
       }
       h1 {
         font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-weight: 400;
+        margin: 0 0 2.5rem;
       }
       .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
       }
       .card {
         background: #fff;
-        border-radius: 18px;
-        padding: 1.5rem;
-        box-shadow: 0 25px 50px -20px rgba(15, 23, 42, 0.2);
-        border: 1px solid rgba(226, 232, 240, 0.7);
+        border-radius: 1.75rem;
+        padding: 2.25rem;
+        box-shadow: 0 24px 48px rgba(0, 39, 19, 0.12);
+        border: 1px solid rgba(0, 27, 15, 0.08);
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 1.25rem;
+        font-family: 'Roboto Mono', monospace;
+      }
+      .card time {
+        font-size: 0.95rem;
+        opacity: 0.8;
       }
       .card h2 {
         margin: 0;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        font-weight: 500;
       }
-      .card a {
-        color: #2563eb;
+      .card h2 a {
+        color: #000;
         text-decoration: none;
       }
-      .card time {
-        color: #64748b;
-        font-size: 0.85rem;
+      .card h2 a:hover {
+        color: #2563eb;
       }
       .card p {
         margin: 0;
-        color: #1f2937;
+        font-size: 1.05rem;
+        line-height: 1.6rem;
       }
       .read-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
         font-weight: 600;
+        color: #000;
+        text-decoration: none;
+      }
+      .read-more::after {
+        content: '→';
+        font-size: 1rem;
+      }
+      .read-more:hover {
+        color: #2563eb;
+      }
+      @media (max-width: 768px) {
+        main {
+          padding: 2.5rem 1rem 3rem;
+        }
+        h1 {
+          font-size: 2rem;
+          margin-bottom: 2rem;
+        }
+        .card {
+          padding: 1.75rem;
+          gap: 1rem;
+        }
+        .card h2 {
+          font-size: 1.4rem;
+        }
       }
     </style>
+
   </head>
   <body>
     <main>

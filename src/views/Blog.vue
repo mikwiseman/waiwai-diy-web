@@ -119,7 +119,7 @@ export default defineComponent({
 }
 
 .blog-container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -128,7 +128,8 @@ export default defineComponent({
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem;
+  max-width: 1280px;
   color: #000;
 }
 
@@ -157,19 +158,22 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  font-family: 'Roboto Mono', monospace;
+  color: #000;
 }
 
 .blog-card-date {
   font-size: 0.95rem;
-  color: #64748b;
+  color: #000;
+  opacity: 0.8;
 }
 
 .blog-card-title {
-  font-family: Inter Tight, sans-serif;
+  font-family: inherit;
   font-size: 1.75rem;
   font-weight: 500;
   margin: 0;
-  color: #0f172a;
+  color: #000;
 }
 
 .blog-card-title-link {
@@ -185,21 +189,26 @@ export default defineComponent({
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.6rem;
-  color: #1f2937;
+  color: #000;
 }
 
 .blog-card-link {
   font-weight: 600;
   text-decoration: none;
-  color: #2563eb;
+  color: #000;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  font-family: inherit;
 }
 
 .blog-card-link::after {
   content: '→';
   font-size: 1rem;
+}
+
+.blog-card-link:hover {
+  color: #2563eb;
 }
 
 .blog-card-read-more {

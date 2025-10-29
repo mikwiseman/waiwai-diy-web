@@ -21,7 +21,8 @@
     "loading": "Loading posts...",
     "error": "Couldn't load posts. Please try again later.",
     "empty": "No posts yet. Check back soon.",
-    "readMore": "Continue reading"
+    "readMore": "Continue reading",
+    "readBlogButton": "View full blog"
   },
   "capabilities": {
     "title": "Capabilities",
