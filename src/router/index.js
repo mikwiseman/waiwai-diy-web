@@ -31,20 +31,47 @@ const presentationRedirects = [
   }
 ]
 
+const trackAndRedirect = (targetUrl, eventLabel) => {
+  let redirected = false
+
+  const redirect = () => {
+    if (!redirected) {
+      redirected = true
+      window.location.replace(targetUrl)
+    }
+  }
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'external_redirect', {
+      event_category: 'presentation_redirect',
+      event_label: eventLabel,
+      destination_url: targetUrl,
+      transport_type: 'beacon',
+      event_callback: redirect
+    })
+
+    setTimeout(redirect, 500)
+  } else {
+    redirect()
+  }
+}
+
 const externalRedirectRoutes = presentationRedirects.map(
   ({ path, name, translationKey }) => ({
     path,
     name,
     beforeEnter: () => {
       const targetUrl = i18n.global.t(translationKey)
+
       if (
         typeof window !== 'undefined' &&
         typeof targetUrl === 'string' &&
         targetUrl !== translationKey
       ) {
-        window.location.replace(targetUrl)
+        trackAndRedirect(targetUrl, path)
         return false
       }
+
       return { name: 'home' }
     }
   })
