@@ -920,7 +920,7 @@ export default defineComponent({
 
 /* Blog styles */
 .blog {
-  padding: 4rem 2rem;
+  padding: 4rem clamp(1.5rem, 4vw, 3rem);
   background-color: #fff;
 }
 
@@ -930,7 +930,8 @@ export default defineComponent({
   font-weight: 400;
   line-height: 2rem;
   margin: 0 auto 2rem;
-  max-width: 1280px;
+  max-width: 1400px;
+  width: 100%;
   color: #000;
 }
 
@@ -948,7 +949,8 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 1280px;
+  max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
 }
 
