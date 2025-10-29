@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `src/` hosts the Vue 3 app: `main.js` bootstraps the app, `App.vue` sets the base layout, `router/` defines routes, `views/` holds page components, and `utils/` stores helper modules such as `initBlogWidget.js`.
+- `src/` hosts the Vue 3 app: `main.js` bootstraps the app, `App.vue` sets the base layout, `router/` defines routes, `views/` holds page components, and `utils/` stores helper modules such as `blogPosts.js`.
 - Locale resources live in `src/i18n` and `src/translations`; keep keys aligned across languages before shipping copy changes.
 - Place compiled or static assets in `public/`; import processed media from `src/assets/`.
 - Production builds emit to `dist/`. Do not check this directory in unless explicitly coordinating a static deploy.

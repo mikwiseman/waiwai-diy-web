@@ -17,7 +17,11 @@
     "subtitle": "We source qualified talent, run personalised conversations, and schedule interviews while your HR team focuses on selection."
   },
   "blog": {
-    "title": "Blog"
+    "title": "Blog",
+    "loading": "Loading posts...",
+    "error": "Couldn't load posts. Please try again later.",
+    "empty": "No posts yet. Check back soon.",
+    "readMore": "Continue reading"
   },
   "capabilities": {
     "title": "Capabilities",
