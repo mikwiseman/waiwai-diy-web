@@ -5,200 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WaiWai Blog</title>
     <meta name="description" content="Свежие новости и статьи от WaiWai Blog." />
-    <link rel="canonical" href="https://getwaiwai.ru/blog" />
-    <style>
+    <link rel="canonical" href="https://getwaiwai.com/blog" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+        <style>
+      :root {
+        color: #000;
+        background: #fff;
+        font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
       body {
         margin: 0;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        background: radial-gradient(circle at top, #dbeafe, #f8fafc 55%);
-        color: #0f172a;
-        padding: 3rem 1.5rem 4rem;
+        background-color: #fff;
+        color: #000;
       }
       main {
-        max-width: 960px;
+        max-width: 1280px;
         margin: 0 auto;
+        padding: 4rem 1.5rem 5rem;
       }
       h1 {
         font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-weight: 400;
+        margin: 0 0 2.5rem;
       }
       .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
       }
       .card {
         background: #fff;
-        border-radius: 18px;
-        padding: 1.5rem;
-        box-shadow: 0 25px 50px -20px rgba(15, 23, 42, 0.2);
-        border: 1px solid rgba(226, 232, 240, 0.7);
+        border-radius: 1.75rem;
+        padding: 2.25rem;
+        box-shadow: 0 24px 48px rgba(0, 39, 19, 0.12);
+        border: 1px solid rgba(0, 27, 15, 0.08);
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 1.25rem;
+        font-family: 'Roboto Mono', monospace;
+      }
+      .card time {
+        font-size: 0.95rem;
+        opacity: 0.8;
       }
       .card h2 {
         margin: 0;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        font-weight: 500;
       }
-      .card a {
-        color: #2563eb;
+      .card h2 a {
+        color: #000;
         text-decoration: none;
       }
-      .card time {
-        color: #64748b;
-        font-size: 0.85rem;
+      .card h2 a:hover {
+        color: #2563eb;
       }
       .card p {
         margin: 0;
-        color: #1f2937;
+        font-size: 1.05rem;
+        line-height: 1.6rem;
       }
       .read-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
         font-weight: 600;
+        color: #000;
+        text-decoration: none;
+      }
+      .read-more::after {
+        content: '→';
+        font-size: 1rem;
+      }
+      .read-more:hover {
+        color: #2563eb;
+      }
+      @media (max-width: 768px) {
+        main {
+          padding: 2.5rem 1rem 3rem;
+        }
+        h1 {
+          font-size: 2rem;
+          margin-bottom: 2rem;
+        }
+        .card {
+          padding: 1.75rem;
+          gap: 1rem;
+        }
+        .card h2 {
+          font-size: 1.4rem;
+        }
       }
     </style>
+
   </head>
   <body>
     <main>
       <h1>WaiWai Blog</h1>
       <section class="cards">
         <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/sexyagent-waihack">SexyAgent, боты для путешествий и замера обоев для стен: итоги WaiHack</a></h2>
+        <h2><a href="/blog/sexyagent-waihack">SexyAgent, боты для путешествий и замера обоев для стен: итоги WaiHack</a></h2>
         <time datetime="2025-09-24T21:00:00.000Z">Sep 24, 2025</time>
         <p>WaiWai провела хакатон WaiHack по разработке AIагентов. Он стал исследованием, насколько реально применение AIагентов в разных сферах. На хакатон зарегистриров…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/sexyagent-waihack">Читать далее →</a>
+        <a class="read-more" href="/blog/sexyagent-waihack">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/waiwai-sovmestno-s-flru-provedet-hakaton-po-sozdaniyu-ai-agentov-2">Проводим хакатон по созданию AI-агентов и исследуем реальный опыт их внедрения</a></h2>
+        <h2><a href="/blog/waiwai-sovmestno-s-flru-provedet-hakaton-po-sozdaniyu-ai-agentov-2">Проводим хакатон по созданию AI-агентов и исследуем реальный опыт их внедрения</a></h2>
         <time datetime="2025-09-17T21:00:00.000Z">Sep 17, 2025</time>
         <p>! 19 сентября 2025 года стартап WaiWai проведет хакатон WaiHack, посвященный разработке AIагентов. Миссия WaiHack — исследовать опыт реального внедрения AIаген…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/waiwai-sovmestno-s-flru-provedet-hakaton-po-sozdaniyu-ai-agentov-2">Читать далее →</a>
+        <a class="read-more" href="/blog/waiwai-sovmestno-s-flru-provedet-hakaton-po-sozdaniyu-ai-agentov-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/waiwai-sovmestno-s-flru-provedet-hakaton-po-sozdaniyu-ai-agentov">Проводим хакатон по созданию AI-агентов и исследуем реальный опыт их внедрения</a></h2>
+        <h2><a href="/blog/waiwai-sovmestno-s-flru-provedet-hakaton-po-sozdaniyu-ai-agentov">Проводим хакатон по созданию AI-агентов и исследуем реальный опыт их внедрения</a></h2>
         <time datetime="2025-09-17T21:00:00.000Z">Sep 17, 2025</time>
         <p>! 19 сентября 2025 года стартап WaiWai проведет хакатон WaiHack, посвященный разработке AIагентов. Миссия WaiHack — исследовать опыт реального внедрения AIаген…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/waiwai-sovmestno-s-flru-provedet-hakaton-po-sozdaniyu-ai-agentov">Читать далее →</a>
+        <a class="read-more" href="/blog/waiwai-sovmestno-s-flru-provedet-hakaton-po-sozdaniyu-ai-agentov">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/edinstvennyj-startap-v-spiske-top-igrokov-rynka-ai-reshenij-cnews-2">Единственный стартап в списке топ-игроков рынка AI-решений CNews</a></h2>
+        <h2><a href="/blog/edinstvennyj-startap-v-spiske-top-igrokov-rynka-ai-reshenij-cnews-2">Единственный стартап в списке топ-игроков рынка AI-решений CNews</a></h2>
         <time datetime="2025-09-11T21:00:00.000Z">Sep 11, 2025</time>
         <p>WaiWai вошла в обзор CNews Analytics «Крупнейшие игроки российского рынка AIрешений 2024». В рейтинге 37 имен — среди них традиционные компании, digitalагентст…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/edinstvennyj-startap-v-spiske-top-igrokov-rynka-ai-reshenij-cnews-2">Читать далее →</a>
+        <a class="read-more" href="/blog/edinstvennyj-startap-v-spiske-top-igrokov-rynka-ai-reshenij-cnews-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/edinstvennyj-startap-v-spiske-top-igrokov-rynka-ai-reshenij-cnews">Единственный стартап в списке топ-игроков рынка AI-решений CNews</a></h2>
+        <h2><a href="/blog/edinstvennyj-startap-v-spiske-top-igrokov-rynka-ai-reshenij-cnews">Единственный стартап в списке топ-игроков рынка AI-решений CNews</a></h2>
         <time datetime="2025-09-11T21:00:00.000Z">Sep 11, 2025</time>
         <p>WaiWai вошла в обзор CNews Analytics «Крупнейшие игроки российского рынка AIрешений 2024». В рейтинге 37 имен — среди них традиционные компании, digitalагентст…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/edinstvennyj-startap-v-spiske-top-igrokov-rynka-ai-reshenij-cnews">Читать далее →</a>
+        <a class="read-more" href="/blog/edinstvennyj-startap-v-spiske-top-igrokov-rynka-ai-reshenij-cnews">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/waiwai-prisoedinilas-k-kodeksu-etiki-v-sfere-ii-2">WaiWai присоединилась к Кодексу этики в сфере ИИ</a></h2>
+        <h2><a href="/blog/waiwai-prisoedinilas-k-kodeksu-etiki-v-sfere-ii-2">WaiWai присоединилась к Кодексу этики в сфере ИИ</a></h2>
         <time datetime="2025-08-04T21:00:00.000Z">Aug 4, 2025</time>
         <p>Стартап WaiWai стал участником Кодекса этики в сфере искусственного интеллекта. Этим мы подчеркивает ответственность перед клиентами и обществом в целом. Кодек…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/waiwai-prisoedinilas-k-kodeksu-etiki-v-sfere-ii-2">Читать далее →</a>
+        <a class="read-more" href="/blog/waiwai-prisoedinilas-k-kodeksu-etiki-v-sfere-ii-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/waiwai-prisoedinilas-k-kodeksu-etiki-v-sfere-ii">WaiWai присоединилась к Кодексу этики в сфере ИИ</a></h2>
+        <h2><a href="/blog/waiwai-prisoedinilas-k-kodeksu-etiki-v-sfere-ii">WaiWai присоединилась к Кодексу этики в сфере ИИ</a></h2>
         <time datetime="2025-08-04T21:00:00.000Z">Aug 4, 2025</time>
         <p>Стартап WaiWai стал участником Кодекса этики в сфере искусственного интеллекта. Этим мы подчеркивает ответственность перед клиентами и обществом в целом. Кодек…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/waiwai-prisoedinilas-k-kodeksu-etiki-v-sfere-ii">Читать далее →</a>
+        <a class="read-more" href="/blog/waiwai-prisoedinilas-k-kodeksu-etiki-v-sfere-ii">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/waiwai-stala-rezidentom-skolkovo-i-voshla-v-reestr-malyh-tehnologicheskih-kompanij-2">WaiWai стала резидентом Сколково и вошла в Реестр малых технологических компаний</a></h2>
+        <h2><a href="/blog/waiwai-stala-rezidentom-skolkovo-i-voshla-v-reestr-malyh-tehnologicheskih-kompanij-2">WaiWai стала резидентом Сколково и вошла в Реестр малых технологических компаний</a></h2>
         <time datetime="2025-07-09T21:00:00.000Z">Jul 9, 2025</time>
         <p>WaiWai, начавшая свой путь с разработки двух специализированных AIагентов для автоматизации рекрутинга и B2Bпродаж, объявляет о новом этапе развития. Стартап п…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/waiwai-stala-rezidentom-skolkovo-i-voshla-v-reestr-malyh-tehnologicheskih-kompanij-2">Читать далее →</a>
+        <a class="read-more" href="/blog/waiwai-stala-rezidentom-skolkovo-i-voshla-v-reestr-malyh-tehnologicheskih-kompanij-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/waiwai-stala-rezidentom-skolkovo-i-voshla-v-reestr-malyh-tehnologicheskih-kompanij">WaiWai стала резидентом Сколково и вошла в Реестр малых технологических компаний</a></h2>
+        <h2><a href="/blog/waiwai-stala-rezidentom-skolkovo-i-voshla-v-reestr-malyh-tehnologicheskih-kompanij">WaiWai стала резидентом Сколково и вошла в Реестр малых технологических компаний</a></h2>
         <time datetime="2025-07-09T21:00:00.000Z">Jul 9, 2025</time>
         <p>WaiWai, начавшая свой путь с разработки двух специализированных AIагентов для автоматизации рекрутинга и B2Bпродаж, объявляет о новом этапе развития. Стартап п…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/waiwai-stala-rezidentom-skolkovo-i-voshla-v-reestr-malyh-tehnologicheskih-kompanij">Читать далее →</a>
+        <a class="read-more" href="/blog/waiwai-stala-rezidentom-skolkovo-i-voshla-v-reestr-malyh-tehnologicheskih-kompanij">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/waiwai-vyigralo-konkurs-2">WaiWai стала победителем стартап-трека премии Conversation 2025</a></h2>
+        <h2><a href="/blog/waiwai-vyigralo-konkurs-2">WaiWai стала победителем стартап-трека премии Conversation 2025</a></h2>
         <time datetime="2025-06-26T21:00:00.000Z">Jun 26, 2025</time>
         <p>! WaiWai одержала победу в конкурсе стартапов престижной конференции Conversation. Конкуренция была серьезной: 18 genAIстартапов представили свои проекты в рам…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/waiwai-vyigralo-konkurs-2">Читать далее →</a>
+        <a class="read-more" href="/blog/waiwai-vyigralo-konkurs-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/waiwai-vyigralo-konkurs">WaiWai стала победителем стартап-трека премии Conversation 2025</a></h2>
+        <h2><a href="/blog/waiwai-vyigralo-konkurs">WaiWai стала победителем стартап-трека премии Conversation 2025</a></h2>
         <time datetime="2025-06-26T21:00:00.000Z">Jun 26, 2025</time>
         <p>! WaiWai одержала победу в конкурсе стартапов престижной конференции Conversation. Конкуренция была серьезной: 18 genAIстартапов представили свои проекты в рам…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/waiwai-vyigralo-konkurs">Читать далее →</a>
+        <a class="read-more" href="/blog/waiwai-vyigralo-konkurs">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/ak-bars-bank-i-waiwai-vyigrali-premiyu-v-oblasti-iskusstvennogo-intellekta-2">Ак Барс Банк и WaiWai выиграли премию в области искусственного интеллекта</a></h2>
+        <h2><a href="/blog/ak-bars-bank-i-waiwai-vyigrali-premiyu-v-oblasti-iskusstvennogo-intellekta-2">Ак Барс Банк и WaiWai выиграли премию в области искусственного интеллекта</a></h2>
         <time datetime="2025-05-26T21:00:00.000Z">May 26, 2025</time>
         <p>Ак Барс Банк совместно с WaiWai стал лауреатом премии в сфере искусственного интеллекта «AI Олимп» в номинации «Новая цифровая идея года». Церемония награждени…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/ak-bars-bank-i-waiwai-vyigrali-premiyu-v-oblasti-iskusstvennogo-intellekta-2">Читать далее →</a>
+        <a class="read-more" href="/blog/ak-bars-bank-i-waiwai-vyigrali-premiyu-v-oblasti-iskusstvennogo-intellekta-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/ak-bars-bank-i-waiwai-vyigrali-premiyu-v-oblasti-iskusstvennogo-intellekta">Ак Барс Банк и WaiWai выиграли премию в области искусственного интеллекта</a></h2>
+        <h2><a href="/blog/ak-bars-bank-i-waiwai-vyigrali-premiyu-v-oblasti-iskusstvennogo-intellekta">Ак Барс Банк и WaiWai выиграли премию в области искусственного интеллекта</a></h2>
         <time datetime="2025-05-26T21:00:00.000Z">May 26, 2025</time>
         <p>Ак Барс Банк совместно с WaiWai стал лауреатом премии в сфере искусственного интеллекта «AI Олимп» в номинации «Новая цифровая идея года». Церемония награждени…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/ak-bars-bank-i-waiwai-vyigrali-premiyu-v-oblasti-iskusstvennogo-intellekta">Читать далее →</a>
+        <a class="read-more" href="/blog/ak-bars-bank-i-waiwai-vyigrali-premiyu-v-oblasti-iskusstvennogo-intellekta">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/kak-ai-agenty-transformiruyut-marketing-i-prodazhi-2">От SMM до защитника бренда: как AI-агенты трансформируют рекламу</a></h2>
+        <h2><a href="/blog/kak-ai-agenty-transformiruyut-marketing-i-prodazhi-2">От SMM до защитника бренда: как AI-агенты трансформируют рекламу</a></h2>
         <time datetime="2025-05-14T21:00:00.000Z">May 14, 2025</time>
         <p>AIагенты: SMMменеджер Элла, SEOспециалист Джейн, страж репутации бренда и виртуальный продавец, самостоятельно предлагающий скидки. Решения по автоматизации пр…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/kak-ai-agenty-transformiruyut-marketing-i-prodazhi-2">Читать далее →</a>
+        <a class="read-more" href="/blog/kak-ai-agenty-transformiruyut-marketing-i-prodazhi-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/kak-ai-agenty-transformiruyut-marketing-i-prodazhi">От SMM до защитника бренда: как AI-агенты трансформируют рекламу</a></h2>
+        <h2><a href="/blog/kak-ai-agenty-transformiruyut-marketing-i-prodazhi">От SMM до защитника бренда: как AI-агенты трансформируют рекламу</a></h2>
         <time datetime="2025-05-14T21:00:00.000Z">May 14, 2025</time>
         <p>AIагенты: SMMменеджер Элла, SEOспециалист Джейн, страж репутации бренда и виртуальный продавец, самостоятельно предлагающий скидки. Решения по автоматизации пр…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/kak-ai-agenty-transformiruyut-marketing-i-prodazhi">Читать далее →</a>
+        <a class="read-more" href="/blog/kak-ai-agenty-transformiruyut-marketing-i-prodazhi">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/formula-avtomatizacii-processov-2">AI + человек: идеальная формула автоматизации процессов</a></h2>
+        <h2><a href="/blog/formula-avtomatizacii-processov-2">AI + человек: идеальная формула автоматизации процессов</a></h2>
         <time datetime="2025-05-13T21:00:00.000Z">May 13, 2025</time>
         <p>Как и другие технооптимисты, вроде Сэма Альтмана или Илона Маска, мы считаем, что искусственный интеллект не заменит людей. Al — просто еще один инструмент в р…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/formula-avtomatizacii-processov-2">Читать далее →</a>
+        <a class="read-more" href="/blog/formula-avtomatizacii-processov-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/formula-avtomatizacii-processov">AI + человек: идеальная формула автоматизации процессов</a></h2>
+        <h2><a href="/blog/formula-avtomatizacii-processov">AI + человек: идеальная формула автоматизации процессов</a></h2>
         <time datetime="2025-05-13T21:00:00.000Z">May 13, 2025</time>
         <p>Как и другие технооптимисты, вроде Сэма Альтмана или Илона Маска, мы считаем, что искусственный интеллект не заменит людей. Al — просто еще один инструмент в р…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/formula-avtomatizacii-processov">Читать далее →</a>
+        <a class="read-more" href="/blog/formula-avtomatizacii-processov">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/poisk-klientov-2">Поиск клиентов с WaiWai: объясняем пошагово</a></h2>
+        <h2><a href="/blog/poisk-klientov-2">Поиск клиентов с WaiWai: объясняем пошагово</a></h2>
         <time datetime="2025-04-10T21:00:00.000Z">Apr 10, 2025</time>
         <p>WaiWai — система лидогенерации для B2B сегмента. Рассказываем, как WaiWai организует процесс продаж — от поиска клиентов и их ранжирования, до написания им пис…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/poisk-klientov-2">Читать далее →</a>
+        <a class="read-more" href="/blog/poisk-klientov-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/poisk-klientov">Поиск клиентов с WaiWai: объясняем пошагово</a></h2>
+        <h2><a href="/blog/poisk-klientov">Поиск клиентов с WaiWai: объясняем пошагово</a></h2>
         <time datetime="2025-04-10T21:00:00.000Z">Apr 10, 2025</time>
         <p>WaiWai — система лидогенерации для B2B сегмента. Рассказываем, как WaiWai организует процесс продаж — от поиска клиентов и их ранжирования, до написания им пис…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/poisk-klientov">Читать далее →</a>
+        <a class="read-more" href="/blog/poisk-klientov">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/vystuplenie-na-germes-organizovannom-torgovo-promyshlennoj-palatoj-2">CEO WaiWai расскажет об AI в продажах в бизнес-клубе Germes</a></h2>
+        <h2><a href="/blog/vystuplenie-na-germes-organizovannom-torgovo-promyshlennoj-palatoj-2">CEO WaiWai расскажет об AI в продажах в бизнес-клубе Germes</a></h2>
         <time datetime="2025-04-07T21:00:00.000Z">Apr 7, 2025</time>
         <p>17 апреля при поддержке Московской ТорговоПромышленной палаты состоится встреча бизнесклуба Germes. Тема мероприятия: «Цифровая трансформация российского бизне…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/vystuplenie-na-germes-organizovannom-torgovo-promyshlennoj-palatoj-2">Читать далее →</a>
+        <a class="read-more" href="/blog/vystuplenie-na-germes-organizovannom-torgovo-promyshlennoj-palatoj-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/vystuplenie-na-germes-organizovannom-torgovo-promyshlennoj-palatoj">CEO WaiWai расскажет об AI в продажах в бизнес-клубе Germes</a></h2>
+        <h2><a href="/blog/vystuplenie-na-germes-organizovannom-torgovo-promyshlennoj-palatoj">CEO WaiWai расскажет об AI в продажах в бизнес-клубе Germes</a></h2>
         <time datetime="2025-04-07T21:00:00.000Z">Apr 7, 2025</time>
         <p>17 апреля при поддержке Московской ТорговоПромышленной палаты состоится встреча бизнесклуба Germes. Тема мероприятия: «Цифровая трансформация российского бизне…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/vystuplenie-na-germes-organizovannom-torgovo-promyshlennoj-palatoj">Читать далее →</a>
+        <a class="read-more" href="/blog/vystuplenie-na-germes-organizovannom-torgovo-promyshlennoj-palatoj">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/poisk-klientov-s-pomoshyu-ai-agenta-2">Автоматизация продаж с помощью WaiWai: возможности и ограничения</a></h2>
+        <h2><a href="/blog/poisk-klientov-s-pomoshyu-ai-agenta-2">Автоматизация продаж с помощью WaiWai: возможности и ограничения</a></h2>
         <time datetime="2025-03-26T21:00:00.000Z">Mar 26, 2025</time>
         <p>Что такое AIагенты? AIагенты – программы на базе искусственного интеллекта, способные самостоятельно выполнять широкий спектр задач. Подробнее, почему это один…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/poisk-klientov-s-pomoshyu-ai-agenta-2">Читать далее →</a>
+        <a class="read-more" href="/blog/poisk-klientov-s-pomoshyu-ai-agenta-2">Читать далее →</a>
       </article>
 <article class="card">
-        <h2><a href="https://getwaiwai.ru/blog/poisk-klientov-s-pomoshyu-ai-agenta">Автоматизация продаж с помощью WaiWai: возможности и ограничения</a></h2>
+        <h2><a href="/blog/poisk-klientov-s-pomoshyu-ai-agenta">Автоматизация продаж с помощью WaiWai: возможности и ограничения</a></h2>
         <time datetime="2025-03-26T21:00:00.000Z">Mar 26, 2025</time>
         <p>Что такое AIагенты? AIагенты – программы на базе искусственного интеллекта, способные самостоятельно выполнять широкий спектр задач. Подробнее, почему это один…</p>
-        <a class="read-more" href="https://getwaiwai.ru/blog/poisk-klientov-s-pomoshyu-ai-agenta">Читать далее →</a>
+        <a class="read-more" href="/blog/poisk-klientov-s-pomoshyu-ai-agenta">Читать далее →</a>
       </article>
       </section>
     </main>

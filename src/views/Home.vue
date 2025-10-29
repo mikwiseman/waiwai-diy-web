@@ -15,12 +15,6 @@
         >
           <div class="button-text">{{ t('header.discussProject') }}</div>
         </a>
-        <router-link
-          class="nav-link"
-          :to="{ name: 'blog' }"
-        >
-          {{ t('blog.title') }}
-        </router-link>
         <img
           src="@/assets/images/logo_01.svg"
           loading="lazy"
@@ -1051,32 +1045,6 @@ export default defineComponent({
  
   .blog-card-title {
     font-size: 1.4rem;
-  }
-}
-
-.nav-link {
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  text-decoration: none;
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-@media screen and (max-width: 767px) {
-  .nav-link {
-    right: 1rem;
-    font-size: 0.875rem;
   }
 }
 
