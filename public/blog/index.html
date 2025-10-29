@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WaiWai Blog</title>
+    <meta name="description" content="Свежие новости и статьи от WaiWai Blog." />
+    <link rel="canonical" href="https://getwaiwai.ru/blog" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: radial-gradient(circle at top, #dbeafe, #f8fafc 55%);
+        color: #0f172a;
+        padding: 3rem 1.5rem 4rem;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 1.5rem;
+        box-shadow: 0 25px 50px -20px rgba(15, 23, 42, 0.2);
+        border: 1px solid rgba(226, 232, 240, 0.7);
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .card h2 {
+        margin: 0;
+        font-size: 1.4rem;
+      }
+      .card a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+      .card time {
+        color: #64748b;
+        font-size: 0.85rem;
+      }
+      .card p {
+        margin: 0;
+        color: #1f2937;
+      }
+      .read-more {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>WaiWai Blog</h1>
+      <section class="cards">
+        <article class="card">
+        <h2><a href="https://getwaiwai.ru/blog/wefwef">wefwef</a></h2>
+        <time datetime="2025-10-29T05:03:04.515Z">Oct 29, 2025</time>
+        <p>wef</p>
+        <a class="read-more" href="https://getwaiwai.ru/blog/wefwef">Читать далее →</a>
+      </article>
+      </section>
+    </main>
+  </body>
+</html>
