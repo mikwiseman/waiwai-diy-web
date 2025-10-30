@@ -78,8 +78,8 @@
       "sessionsHeld": "Workshops delivered"
     },
     "sales": {
-      "title": "Sales Agent",
-      "description": "WaiWai builds ICP lead lists, qualifies intent, and books demos without manual follow-up.",
+      "title": "WaiSales",
+      "description": "Finds leads, sends personalized outreach, and keeps the conversation going so you can close more deals.",
       "presentationLink": "https://pitch.waiwai.diy/v/waiwai-ai-sales-qkjtuh",
       "stats": [
         {
@@ -93,8 +93,8 @@
       ]
     },
     "hr": {
-      "title": "HR Agent",
-      "description": "Sources and nurtures candidates, answers questions, and schedules interviews for the hiring team.",
+      "title": "WaiHR",
+      "description": "Sources candidates and chats with them, sorts inbound requests, and gives recruiters their time back.",
       "presentationLink": "https://pitch.waiwai.diy/v/waiwai-ai-hr-aeg87h",
       "stats": [
         {
@@ -123,8 +123,8 @@
       ]
     },
     "custom": {
-      "title": "Tailored Agent Build",
-      "description": "We configure and integrate an agent around your CRM, channels, and approval workflows.",
+      "title": "WaiCustom",
+      "description": "We build AI solutions for your goals: define KPIs, continually improve the agents, and stay accountable for performance gains.",
       "presentationLink": "https://pitch.waiwai.diy/v/trinity-monsters-ai-gnjphp",
       "stats": [
         {
@@ -138,8 +138,8 @@
       ]
     },
     "training": {
-      "title": "AI & Agent Training",
-      "description": "Hands-on workshops that teach teams to apply AI tools and design their own agent playbooks.",
+      "title": "WowUni",
+      "description": "We train corporate teams to work with AI—from the basics to rolling smart assistants into your business processes.",
       "presentationLink": "https://pitch.waiwai.diy/v/wowuni-8aptzr",
       "stats": [
         {

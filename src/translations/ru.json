@@ -78,8 +78,8 @@
       "sessionsHeld": "Проведено воркшопов"
     },
     "sales": {
-      "title": "Агент Sales",
-      "description": "WaiWai собирает ICP-лиды, проверяет намерение и доводит до демо без участия менеджеров.",
+      "title": "WaiSales",
+      "description": "Находит лиды, отправляет им персональные сообщения, ведет переписку, а вы закрываете больше сделок.",
       "presentationLink": "https://pitch.waiwai.diy/v/waiwai-ai-sales-qkjtuh",
       "stats": [
         {
@@ -93,8 +93,8 @@
       ]
     },
     "hr": {
-      "title": "Агент HR",
-      "description": "Закрывает вакансии: ищет кандидатов, отвечает на вопросы, договаривается о собеседованиях и ведет воронку.",
+      "title": "WaiHR",
+      "description": "Подбирает кандидатов и общается с ними. Сортирует и обрабатывает входящие запросы, экономя время рекрутеров.",
       "presentationLink": "https://pitch.waiwai.diy/v/waiwai-ai-hr-aeg87h",
       "stats": [
         {
@@ -123,8 +123,8 @@
       ]
     },
     "custom": {
-      "title": "Сборка агента на заказ",
-      "description": "Настраиваем и внедряем агента под ваши процессы с учетом CRM, каналов и правил согласований.",
+      "title": "WaiCustom",
+      "description": "Разрабатываем AI-решения под ваши задачи. Определяем KPI, постоянно улучшаем агентов и отвечаем за рост их эффективности.",
       "presentationLink": "https://pitch.waiwai.diy/v/trinity-monsters-ai-gnjphp",
       "stats": [
         {
@@ -138,8 +138,8 @@
       ]
     },
     "training": {
-      "title": "Обучение AI и AI-агентам",
-      "description": "Проводим практические сессии: учим команду работать с AI-инструментами и строить собственные сценарии.",
+      "title": "WowUni",
+      "description": "Обучаем корпоративные команды работе с AI: от основ до внедрения умных помощников в бизнес-процессы.",
       "presentationLink": "https://pitch.waiwai.diy/v/wowuni-8aptzr",
       "stats": [
         {
