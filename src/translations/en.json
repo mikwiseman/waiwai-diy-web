@@ -291,7 +291,41 @@
     }
   },
   "media": {
-    "title": "Media Mentions"
+    "title": "Media Mentions",
+    "items": {
+      "rb": {
+        "name": "RB.RU",
+        "articleTitle": "Are IT experts the new humanitarians? How AI reshaped the agency market"
+      },
+      "rbc": {
+        "name": "RBC Pro",
+        "articleTitle": "ChatGPT built an app from scratch: the mixed experience of a Russian company"
+      },
+      "secretmag": {
+        "name": "Secret Firmy",
+        "articleTitle": "How to work with foreign partners: life hacks from Russian entrepreneurs"
+      },
+      "hightech": {
+        "name": "Hightech.fm",
+        "articleTitle": "Does AI kill programming: weighing all the pros and cons"
+      },
+      "itworld": {
+        "name": "IT-World",
+        "articleTitle": "Russian IT companies abroad: how to build cultural bridges for success"
+      },
+      "cnews": {
+        "name": "CNews",
+        "articleTitle": "CEO of Trinity Monsters launched WaiWai: AI agents for B2B sales"
+      },
+      "tbank": {
+        "name": "Business Secrets by T-Bank",
+        "articleTitle": "Startup Elegy: how a digital agency founder shipped a product"
+      },
+      "aitoolz": {
+        "name": "AI Toolz",
+        "articleTitle": "AI agents: from hype to real business tools under $20,000 per month"
+      }
+    }
   },
   "contact": {
     "title": "Contacts",

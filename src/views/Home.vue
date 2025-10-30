@@ -208,141 +208,42 @@
       v-if="locale !== 'en'"
       class="media-mentions"
     >
-      <h2 class="media-title">
+      <div class="dot-block">
+        <div class="icon-container" />
+      </div>
+      <h1 class="heading-awards">
         {{ t('media.title') }}
-      </h2>
-      <div class="media-logos">
-        <a
-          href="https://rb.ru/opinion/it-gumanitarii/"
-          target="_blank"
-          class="media-logo-link"
-        >
-          <img
-            src="@/assets/images/rb.svg"
-            alt="RB.RU"
-            class="media-logo bw"
-          >
-          <img
-            src="@/assets/images/rb.svg"
-            alt="RB.RU"
-            class="media-logo color"
-          >
-        </a>
-        <a
-          href="https://pro.rbc.ru/demo/65df21019a79476a26d4cedb"
-          target="_blank"
-          class="media-logo-link"
-        >
-          <img
-            src="@/assets/images/rbc.svg"
-            alt="RBC"
-            class="media-logo bw"
-          >
-          <img
-            src="@/assets/images/rbc.svg"
-            alt="RBC"
-            class="media-logo color"
-          >
-        </a>
-        <a
-          href="https://secretmag.ru/practice/kak-rabotat-s-inostrannymi-partnyorami-laifkhaki-rossiiskikh-biznesmenov.htm"
-          target="_blank"
-          class="media-logo-link"
-        >
-          <img
-            src="@/assets/images/sf.svg"
-            alt="Secret Firmy"
-            class="media-logo bw"
-          >
-          <img
-            src="@/assets/images/sf.svg"
-            alt="Secret Firmy"
-            class="media-logo color"
-          >
-        </a>
-        <a
-          href="https://hightech.fm/2024/01/23/ai-kills"
-          target="_blank"
-          class="media-logo-link"
-        >
-          <img
-            src="@/assets/images/hitech.svg"
-            alt="Hightech"
-            class="media-logo bw"
-          >
-          <img
-            src="@/assets/images/hitech.svg"
-            alt="Hightech"
-            class="media-logo color"
-          >
-        </a>
-        <a
-          href="https://www.it-world.ru/cionews/practice/214762.html"
-          target="_blank"
-          class="media-logo-link"
-        >
-          <img
-            src="@/assets/images/itworld.svg"
-            alt="IT World"
-            class="media-logo bw"
-          >
-          <img
-            src="@/assets/images/itworld.svg"
-            alt="IT World"
-            class="media-logo color"
-          >
-        </a>
-        <a
-          href="https://www.cnews.ru/news/line/2025-04-23_ceo_trinity_monsters_zapustil_startap"
-          target="_blank"
-          class="media-logo-link"
-        >
-          <img
-            src="@/assets/images/cnews.svg"
-            alt="CNews"
-            class="media-logo bw"
-          >
-          <img
-            src="@/assets/images/cnews.svg"
-            alt="CNews"
-            class="media-logo color"
-          >
-        </a>
-        <a
-          href="https://secrets.tbank.ru/startapnaya-elegiya"
-          target="_blank"
-          class="media-logo-link"
-        >
-          <img
-            src="@/assets/images/biznes-sekrety.svg"
-            alt="Secrets Tbank"
-            class="media-logo bw"
-          >
-          <img
-            src="@/assets/images/biznes-sekrety.svg"
-            alt="Secrets Tbank"
-            class="media-logo color"
-          >
-        </a>
-        <a
-          href="https://aitoolz.ru/news/ai-agenty-ot-khajpa-k-realnym-biznes-instrumentam-stoimostyu-do-20-000-v-mesyats@215"
-          target="_blank"
-          class="media-logo-link"
-        >
-          <img
-            src="@/assets/images/ai-toolz.svg"
-            alt="AI Toolz"
-            class="media-logo bw"
-          >
-          <img
-            src="@/assets/images/ai-toolz.svg"
-            alt="AI Toolz"
-            class="media-logo color"
-          >
-        </a>
+      </h1>
+      <div
+        v-for="item in mediaMentions"
+        :key="item.key"
+        class="awards-container media-container"
+      >
+        <div class="award-name media-name">
+          <div class="awards-title media-name-title">
+            <img
+              :src="item.logo"
+              :alt="t(`media.items.${item.key}.name`)"
+              class="media-logo"
+            >
+            <span>{{ t(`media.items.${item.key}.name`) }}</span>
+          </div>
+        </div>
+        <div class="award-collection media-collection">
+          <div class="award-entry media-entry">
+            <div class="media-article">
+              <a
+                :href="item.url"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ t(`media.items.${item.key}.articleTitle`) }}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
     <!-- Awards section -->
     <div
       v-if="locale !== 'en'"
@@ -724,6 +625,55 @@ export default defineComponent({
       })
     )
 
+    const mediaConfig = [
+      {
+        key: 'rb',
+        logo: new URL('../assets/images/rb.svg', import.meta.url).href,
+        url: 'https://rb.ru/opinion/it-gumanitarii/'
+      },
+      {
+        key: 'rbc',
+        logo: new URL('../assets/images/rbc.svg', import.meta.url).href,
+        url: 'https://pro.rbc.ru/demo/65df21019a79476a26d4cedb'
+      },
+      {
+        key: 'secretmag',
+        logo: new URL('../assets/images/sf.svg', import.meta.url).href,
+        url: 'https://secretmag.ru/practice/kak-rabotat-s-inostrannymi-partnyorami-laifkhaki-rossiiskikh-biznesmenov.htm'
+      },
+      {
+        key: 'hightech',
+        logo: new URL('../assets/images/hitech.svg', import.meta.url).href,
+        url: 'https://hightech.fm/2024/01/23/ai-kills'
+      },
+      {
+        key: 'itworld',
+        logo: new URL('../assets/images/itworld.svg', import.meta.url).href,
+        url: 'https://www.it-world.ru/cionews/practice/214762.html'
+      },
+      {
+        key: 'cnews',
+        logo: new URL('../assets/images/cnews.svg', import.meta.url).href,
+        url: 'https://www.cnews.ru/news/line/2025-04-23_ceo_trinity_monsters_zapustil_startap'
+      },
+      {
+        key: 'tbank',
+        logo: new URL('../assets/images/biznes-sekrety.svg', import.meta.url).href,
+        url: 'https://secrets.tbank.ru/startapnaya-elegiya'
+      },
+      {
+        key: 'aitoolz',
+        logo: new URL('../assets/images/ai-toolz.svg', import.meta.url).href,
+        url: 'https://aitoolz.ru/news/ai-agenty-ot-khajpa-k-realnym-biznes-instrumentam-stoimostyu-do-20-000-v-mesyats@215'
+      }
+    ]
+
+    const mediaMentions = mediaConfig.map((item) => ({
+      key: item.key,
+      logo: item.logo,
+      url: item.url
+    }))
+
     const casesConfig = [
       {
         key: 'falcone',
@@ -797,6 +747,7 @@ export default defineComponent({
       locale,
       teamMembers,
       agentCards,
+      mediaMentions,
       caseCards,
       faqItems,
       featuredBlogPosts,
@@ -1432,79 +1383,115 @@ export default defineComponent({
   border-bottom: 1px solid var(--border);
 }
 
-.media-title {
-  font-family: Inter Tight, sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 2rem;
-  margin-bottom: 3rem;
-  color: #000;
-}
-
-.media-logos {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
+.media-container {
+  display: flex;
   align-items: center;
-  justify-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.media-logo-link {
-  position: relative;
-  display: block;
-  width: 100%;
-  text-align: center;
+.media-container:last-of-type {
+  border-bottom: none;
+}
+
+.media-name {
+  flex: 0 0 320px;
+}
+
+.media-name-title {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .media-logo {
-  max-width: 100%;
+  width: 84px;
   height: auto;
-  transition: opacity 0.3s ease;
-}
-
-.media-logo.bw {
   filter: grayscale(100%);
-  opacity: 0.5;
+  opacity: 0.75;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
-.media-logo.color {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+.media-name-title span {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-.media-logo-link:hover .media-logo.bw {
-  opacity: 0;
+.media-collection {
+  flex: 1;
 }
 
-.media-logo-link:hover .media-logo.color {
+.media-entry {
+  display: flex;
+  align-items: center;
+}
+
+.media-article a {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6rem;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.media-article a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.media-container:hover .media-logo {
+  filter: none;
   opacity: 1;
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 991px) {
-  .media-logos {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  .media-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .media-name {
+    flex: none;
+  }
+
+  .media-logo {
+    width: 72px;
+  }
+
+  .media-name-title span {
+    font-size: 1rem;
+  }
+
+  .media-article a {
+    font-size: 0.98rem;
+    line-height: 1.5rem;
   }
 }
 
 @media screen and (max-width: 767px) {
   .media-mentions {
-    padding: 2rem 1rem;
+    padding: 2.5rem 1.5rem;
   }
 
-  .media-title {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    margin-bottom: 2rem;
+  .media-container {
+    padding: 1rem 0;
   }
 
-  .media-logos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  .media-logo {
+    width: 60px;
+  }
+
+  .media-article a {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
   }
 }
 
