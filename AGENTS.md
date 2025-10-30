@@ -19,6 +19,7 @@
 - Name Vue components in PascalCase (`BlogPosts.vue`), composables/utilities in camelCase, and routes using kebab-case segments.
 - Prefer the `@/` alias for imports rather than brittle relative paths; co-locate page-specific assets under their view folder when practical.
 
+
 ## Testing Guidelines
 - Automated unit tests are not yet configured; when adding them, mirror component structure (`ComponentName.spec.js`) alongside the source.
 - Run `npm run lint` before every commit and include the meta-tag script output when working on SEO or localization changes.
