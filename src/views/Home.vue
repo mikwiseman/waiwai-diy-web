@@ -82,16 +82,6 @@
                 </span>
               </a>
             </div>
-            <div class="case-stats">
-              <div
-                v-for="stat in agent.stats"
-                :key="stat.statKey"
-                class="case-stat"
-              >
-                <span class="case-stat-value">{{ stat.value }}</span>
-                <span class="case-stat-label">{{ stat.label }}</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
