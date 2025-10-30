@@ -208,19 +208,16 @@
       v-if="locale !== 'en'"
       class="media-mentions"
     >
-      <div class="dot-block">
-        <div class="icon-container" />
-      </div>
-      <h1 class="heading-awards">
+      <h2 class="media-title">
         {{ t('media.title') }}
-      </h1>
+      </h2>
       <div
         v-for="item in mediaMentions"
         :key="item.key"
-        class="awards-container media-container"
+        class="media-container"
       >
-        <div class="award-name media-name">
-          <div class="awards-title media-name-title">
+        <div class="media-name">
+          <div class="media-name-title">
             <img
               :src="item.logo"
               :alt="t(`media.items.${item.key}.name`)"
@@ -229,8 +226,8 @@
             <span>{{ t(`media.items.${item.key}.name`) }}</span>
           </div>
         </div>
-        <div class="award-collection media-collection">
-          <div class="award-entry media-entry">
+        <div class="media-collection">
+          <div class="media-entry">
             <div class="media-article">
               <a
                 :href="item.url"
@@ -1228,7 +1225,7 @@ export default defineComponent({
 }
 
 .team-section {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 2.5rem;
   background-color: #fff;
 }
 
@@ -1378,17 +1375,25 @@ export default defineComponent({
 
 /* Media Mentions Section */
 .media-mentions {
-  padding: 4rem 2rem;
+  padding: 2.25rem 2rem 2rem;
   background-color: #fff;
   border-bottom: 1px solid var(--border);
+}
+
+.media-title {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: #04170e;
+  margin-bottom: 1.75rem;
 }
 
 .media-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 2rem;
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -1396,14 +1401,14 @@ export default defineComponent({
   border-bottom: none;
 }
 
-.media-name {
-  flex: 0 0 320px;
-}
-
 .media-name-title {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+}
+
+.media-name {
+  flex: 0 0 320px;
 }
 
 .media-logo {
@@ -1416,7 +1421,7 @@ export default defineComponent({
 
 .media-name-title span {
   font-family: "Inter Tight", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -1432,8 +1437,8 @@ export default defineComponent({
 
 .media-article a {
   font-family: "Inter Tight", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.6rem;
+  font-size: 1.02rem;
+  line-height: 1.55rem;
   color: #000;
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -1471,18 +1476,18 @@ export default defineComponent({
   }
 
   .media-article a {
-    font-size: 0.98rem;
+    font-size: 0.96rem;
     line-height: 1.5rem;
   }
 }
 
 @media screen and (max-width: 767px) {
   .media-mentions {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.5rem 1.75rem;
   }
 
   .media-container {
-    padding: 1rem 0;
+    padding: 0.9rem 0;
   }
 
   .media-logo {
