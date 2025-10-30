@@ -1113,7 +1113,7 @@ export default defineComponent({
 
 .case-header--agent {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -1137,6 +1137,10 @@ export default defineComponent({
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 12px 24px rgba(0, 39, 19, 0.12);
+}
+
+.case-header--agent .contact-button-card {
+  margin-top: 0.35rem;
 }
 
 .contact-button-card:hover {
