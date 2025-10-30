@@ -383,7 +383,6 @@
         >
           {{ t('blog.readBlogButton') }}
         </router-link>
-        <BlogChat />
       </div>
     </div>
 
@@ -486,14 +485,10 @@
 <script>
 import { computed, defineComponent, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import BlogChat from '@/components/BlogChat.vue'
 import { fetchBlogPosts, formatBlogDate } from '@/utils/blogPosts'
 
 export default defineComponent({
   name: 'HomePage',
-  components: {
-    BlogChat
-  },
   setup() {
     const { t, tm, locale } = useI18n()
 

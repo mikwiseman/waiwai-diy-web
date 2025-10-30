@@ -23,18 +23,7 @@
     "empty": "No posts yet. Check back soon.",
     "readMore": "Continue reading",
     "readBlogButton": "View full blog",
-    "backToSite": "Back to site",
-    "chat": {
-      "title": "Chat with the WaiWai blog",
-      "subtitle": "Ask about AI agents, hiring workflows, or our recent articles and the assistant will reply with curated answers.",
-      "loadingHistory": "Fetching your conversation...",
-      "emptyState": "Ask the blog anything to start the conversation.",
-      "inputPlaceholder": "What would you like to know?",
-      "send": "Send",
-      "sending": "Sending...",
-      "sendError": "Couldn't send the message. Please try again.",
-      "historyError": "Couldn't restore the conversation. Start a new chat to continue."
-    }
+    "backToSite": "Back to site"
   },
   "capabilities": {
     "title": "Capabilities",
