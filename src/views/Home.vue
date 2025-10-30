@@ -703,7 +703,7 @@ export default defineComponent({
       })
     )
 
-    const agentKeys = ['sales', 'hr', 'automation', 'custom', 'training']
+    const agentKeys = ['sales', 'hr', 'custom', 'training']
 
     const agentCards = computed(() =>
       agentKeys.map((key) => {
