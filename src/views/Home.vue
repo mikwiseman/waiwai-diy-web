@@ -235,6 +235,9 @@
       v-if="locale !== 'en'"
       class="awards"
     >
+      <div class="dot-block">
+        <div class="icon-container" />
+      </div>
       <h1 class="heading-awards">
         {{ t('awards.title') }}
       </h1>
