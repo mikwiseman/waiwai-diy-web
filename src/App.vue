@@ -100,15 +100,9 @@ export default {
 
 /* Other styles */
 .logo-card-whoverp .logo-image-media {
-  filter: grayscale(100%);
-  opacity: 50%;
-  transition: opacity 0.3s ease;
-  transition: filter 0.3s ease;
-}
-
-.logo-card-whoverp:hover .logo-image-media {
   filter: none;
   opacity: 100%;
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .bg-gradient:tiny {

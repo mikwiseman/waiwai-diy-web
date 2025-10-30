@@ -213,7 +213,6 @@
               :alt="t(`media.items.${item.key}.name`)"
               class="media-logo"
             >
-            <span>{{ t(`media.items.${item.key}.name`) }}</span>
           </div>
         </div>
         <div class="media-collection">
@@ -1402,22 +1401,17 @@ export default defineComponent({
 }
 
 .media-name {
-  flex: 0 0 320px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .media-logo {
   width: 84px;
   height: auto;
-  filter: grayscale(100%);
-  opacity: 0.75;
-  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-}
-
-.media-name-title span {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-transform: uppercase;
+  filter: none;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .media-collection {
@@ -1445,8 +1439,6 @@ export default defineComponent({
 }
 
 .media-container:hover .media-logo {
-  filter: none;
-  opacity: 1;
   transform: scale(1.05);
 }
 
@@ -1463,10 +1455,6 @@ export default defineComponent({
 
   .media-logo {
     width: 72px;
-  }
-
-  .media-name-title span {
-    font-size: 1rem;
   }
 
   .media-article a {
