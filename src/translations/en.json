@@ -207,7 +207,19 @@
       "replyRateGrowth": "Growth in candidate reply rate",
       "timeToHireCut": "Reduction in time-to-hire",
       "hoursSaved": "Hours of recruiter work saved",
-      "interviewsScheduled": "Interviews scheduled automatically"
+      "interviewsScheduled": "Interviews scheduled automatically",
+      "workshopsRun": "Workshops delivered",
+      "specialistsUpskilled": "Specialists upskilled"
+    },
+    "alphaBank": {
+      "title": "Alfa Bank",
+      "description": "Developed a bank-grade AI enablement program that meets security requirements. Rolled out masterclasses and workshops to automate routine workflows.",
+      "tags": [
+        "Finance",
+        "Training",
+        "AI",
+        "Security"
+      ]
     },
     "falcone": {
       "title": "Falcone",

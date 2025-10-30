@@ -740,6 +740,13 @@ export default defineComponent({
         ]
       },
       {
+        key: 'alphaBank',
+        stats: [
+          { value: '4', labelKey: 'cases.stats.workshopsRun' },
+          { value: '48', labelKey: 'cases.stats.specialistsUpskilled' }
+        ]
+      },
+      {
         key: 'ontico',
         stats: [
           { value: '27', labelKey: 'cases.stats.positionsClosed' },
