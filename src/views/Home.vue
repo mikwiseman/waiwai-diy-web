@@ -657,6 +657,13 @@ export default defineComponent({
 
     const casesConfig = [
       {
+        key: 'samolet',
+        stats: [
+          { value: '6', labelKey: 'cases.stats.workshopsRun' },
+          { value: '5000', labelKey: 'cases.stats.specialistsUpskilled' }
+        ]
+      },
+      {
         key: 'falcone',
         stats: [
           { value: '38', labelKey: 'cases.stats.positionsClosed' },
