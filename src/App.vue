@@ -99,6 +99,14 @@ export default {
 @import '@/assets/css/waiwaidiy.webflow.css';
 
 /* Other styles */
+body {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+body * {
+  font-family: inherit !important;
+}
+
 .logo-card-whoverp .logo-image-media {
   filter: none;
   opacity: 100%;
