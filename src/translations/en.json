@@ -68,7 +68,7 @@
     },
     "sales": {
       "title": "WaiSales",
-      "description": "Finds leads, sends personalized outreach, and keeps the conversation going so you can close more deals.",
+      "description": "Automates and scales sales. Identifies prospects, starts the conversation, and keeps it moving until the deal is closed. Lifts conversion by learning from every successful negotiation.",
       "presentationLink": "https://pitch.waiwai.diy/v/waiwai-ai-sales-qkjtuh",
       "stats": [
         {
@@ -83,7 +83,7 @@
     },
     "hr": {
       "title": "WaiHR",
-      "description": "Sources candidates and chats with them, sorts inbound requests, and gives recruiters their time back.",
+      "description": "Matches candidates to your brief, runs the conversations, and handles the screening. Also triages and processes inbound requests so recruiters can focus on choosing the best.",
       "presentationLink": "https://pitch.waiwai.diy/v/waiwai-ai-hr-aeg87h",
       "stats": [
         {
@@ -113,7 +113,7 @@
     },
     "custom": {
       "title": "WaiCustom",
-      "description": "We build AI solutions for your goals: define KPIs, continually improve the agents, and stay accountable for performance gains.",
+      "description": "We build AI agents for enterprise programs, integrate them safely into business processes, set the KPIs, and continually refine performance so results keep growing.",
       "presentationLink": "https://pitch.waiwai.diy/v/trinity-monsters-ai-gnjphp",
       "stats": [
         {
@@ -128,7 +128,7 @@
     },
     "training": {
       "title": "WowUni",
-      "description": "We train corporate teams to work with AI—from the basics to rolling smart assistants into your business processes.",
+      "description": "We train corporate teams to work with AI: from the fundamentals to deploying intelligent assistants across business workflows.",
       "presentationLink": "https://pitch.waiwai.diy/v/wowuni-8aptzr",
       "stats": [
         {
@@ -200,9 +200,19 @@
       "workshopsRun": "Workshops delivered",
       "specialistsUpskilled": "Specialists upskilled"
     },
+    "samolet": {
+      "title": "Samolet Group",
+      "description": "Upskilled the company's key developers with a six-lecture immersion, a hackathon, and an internal AI lab. Formed an in-house core team that now drives AI adoption across the corporation. Scaled the curriculum to the entire organization with lectures delivered to 5,000 employees.",
+      "tags": [
+        "Development",
+        "Training",
+        "AI",
+        "Hackathon"
+      ]
+    },
     "alphaBank": {
       "title": "Alfa Bank",
-      "description": "Developed a bank-grade AI enablement program that meets security requirements. Rolled out masterclasses and workshops to automate routine workflows.",
+      "description": "Designed an AI learning program aligned with banking specifics and security standards. Launched a series of masterclasses and workshops focused on automating routine work.",
       "tags": [
         "Finance",
         "Training",
