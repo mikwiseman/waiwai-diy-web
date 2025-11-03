@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="proj-section">
+      <div class="proj-section cases-section">
         <div class="title-container">
           <div class="section-label">
             {{ t('cases.title').toUpperCase() }}
@@ -1052,6 +1052,31 @@ export default defineComponent({
 
 .agents-section {
   margin-bottom: 4rem;
+}
+
+.agents-section,
+.agents-section * {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.faq-section,
+.faq-section * {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.cases-section,
+.cases-section * {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.team-section,
+.team-section * {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.media-mentions,
+.media-mentions * {
+  font-family: 'Roboto Mono', monospace !important;
 }
 
 .faq-section {
