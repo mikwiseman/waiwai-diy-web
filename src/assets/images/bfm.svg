@@ -1,0 +1,38 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-label="BFM logo"
+>
+  <title>BFM</title>
+  <rect
+    width="512"
+    height="512"
+    fill="#050505"
+  />
+  <rect
+    x="64"
+    y="120"
+    width="384"
+    height="6"
+    fill="#f8f8f8"
+  />
+  <rect
+    x="64"
+    y="386"
+    width="384"
+    height="6"
+    fill="#f8f8f8"
+  />
+  <text
+    x="256"
+    y="320"
+    font-family="'Playfair Display', 'Times New Roman', serif"
+    font-size="220"
+    font-weight="600"
+    text-anchor="middle"
+    fill="#f8f8f8"
+  >
+    BFM
+  </text>
+</svg>

@@ -1,6 +1,9 @@
 <template>
   <div class="smooth-scroll">
-    <div class="hero-section">
+    <div
+      id="home"
+      class="hero-section"
+    >
       <a
         href="https://calendly.com/mikwiseman/hi"
         target="_blank"
@@ -51,7 +54,10 @@
       v-if="locale !== 'en'"
       class="sliding-content"
     >
-      <div class="proj-section agents-section">
+      <div
+        id="ai-marketplace"
+        class="proj-section agents-section"
+      >
         <div class="title-container">
           <div class="section-label">
             {{ t('agents.title').toUpperCase() }}
@@ -108,7 +114,10 @@
           </div>
         </div>
       </div>
-      <div class="proj-section cases-section">
+      <div
+        id="waicode-waisdk"
+        class="proj-section cases-section"
+      >
         <div class="title-container">
           <div class="section-label">
             {{ t('cases.title').toUpperCase() }}
@@ -608,9 +617,24 @@ export default defineComponent({
 
     const mediaConfig = [
       {
-        key: 'rb',
-        logo: new URL('../assets/images/rb.svg', import.meta.url).href,
-        url: 'https://rb.ru/opinion/it-gumanitarii/'
+        key: 'tadviserMetrics',
+        logo: new URL('../assets/images/tadviser.svg', import.meta.url).href,
+        url: 'https://www.tadviser.ru/index.php/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D1%8F:%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D1%8B%D0%B5_%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D0%BA%D0%B8_%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE_%D0%BC%D0%B8%D0%BB%D0%BB%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D1%85_%D0%B3%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B9:_%D0%B7%D0%B0%D1%87%D0%B5%D0%BC_%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D1%83_%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%BF%D0%BB%D0%B5%D0%B9%D1%81_%D0%98%D0%98-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D0%BE%D0%B2?erid=2W5zFJGSuQ4'
+      },
+      {
+        key: 'bfm',
+        logo: new URL('../assets/images/bfm.svg', import.meta.url).href,
+        url: 'https://kzn.bfm.ru/news/15156'
+      },
+      {
+        key: 'cnews',
+        logo: new URL('../assets/images/cnews.svg', import.meta.url).href,
+        url: 'https://www.cnews.ru/articles/2025-06-04_mik_vajsmanwaiwai_ii-agenty_ishchut_klientov?erid=2W5zFHaHT8t'
+      },
+      {
+        key: 'tadviserMarketplace',
+        logo: new URL('../assets/images/tadviser.svg', import.meta.url).href,
+        url: 'https://www.tadviser.ru/index.php/%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82:WaiWai_%D0%9C%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%BF%D0%BB%D0%B5%D0%B9%D1%81_AI-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D0%BE%D0%B2'
       },
       {
         key: 'rbc',
@@ -618,24 +642,9 @@ export default defineComponent({
         url: 'https://pro.rbc.ru/demo/65df21019a79476a26d4cedb'
       },
       {
-        key: 'secretmag',
-        logo: new URL('../assets/images/sf.svg', import.meta.url).href,
-        url: 'https://secretmag.ru/practice/kak-rabotat-s-inostrannymi-partnyorami-laifkhaki-rossiiskikh-biznesmenov.htm'
-      },
-      {
-        key: 'hightech',
-        logo: new URL('../assets/images/hitech.svg', import.meta.url).href,
-        url: 'https://hightech.fm/2024/01/23/ai-kills'
-      },
-      {
         key: 'itworld',
         logo: new URL('../assets/images/itworld.svg', import.meta.url).href,
         url: 'https://www.it-world.ru/cionews/practice/214762.html'
-      },
-      {
-        key: 'cnews',
-        logo: new URL('../assets/images/cnews.svg', import.meta.url).href,
-        url: 'https://www.cnews.ru/news/line/2025-04-23_ceo_trinity_monsters_zapustil_startap'
       },
       {
         key: 'tbank',
@@ -646,6 +655,21 @@ export default defineComponent({
         key: 'aitoolz',
         logo: new URL('../assets/images/ai-toolz.svg', import.meta.url).href,
         url: 'https://aitoolz.ru/news/ai-agenty-ot-khajpa-k-realnym-biznes-instrumentam-stoimostyu-do-20-000-v-mesyats@215'
+      },
+      {
+        key: 'rb',
+        logo: new URL('../assets/images/rb.svg', import.meta.url).href,
+        url: 'https://rb.ru/opinion/it-gumanitarii/'
+      },
+      {
+        key: 'secretmag',
+        logo: new URL('../assets/images/sf.svg', import.meta.url).href,
+        url: 'https://secretmag.ru/practice/kak-rabotat-s-inostrannymi-partnyorami-laifkhaki-rossiiskikh-biznesmenov.htm'
+      },
+      {
+        key: 'hightech',
+        logo: new URL('../assets/images/hitech.svg', import.meta.url).href,
+        url: 'https://hightech.fm/2024/01/23/ai-kills'
       }
     ]
 

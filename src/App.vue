@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <SiteToolbar />
     <div id="luxy">
       <router-view />
     </div>
@@ -10,9 +11,13 @@
 import { onMounted, computed, watch } from 'vue'
 import { useHead } from '@vueuse/head'
 import { useI18n } from 'vue-i18n'
+import SiteToolbar from '@/components/SiteToolbar.vue'
 
 export default {
   name: 'App',
+  components: {
+    SiteToolbar
+  },
   setup() {
     const { t, locale } = useI18n()
 
