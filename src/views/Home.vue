@@ -55,7 +55,7 @@
       class="sliding-content"
     >
       <div
-        id="ai-marketplace"
+        id="agents"
         class="proj-section agents-section"
       >
         <div class="title-container">
@@ -91,7 +91,10 @@
           </div>
         </div>
       </div>
-      <div class="faq-section">
+      <div
+        id="faq"
+        class="faq-section"
+      >
         <div class="title-container">
           <div class="section-label">
             {{ t('faq.title').toUpperCase() }}
@@ -115,7 +118,7 @@
         </div>
       </div>
       <div
-        id="waicode-waisdk"
+        id="cases"
         class="proj-section cases-section"
       >
         <div class="title-container">
@@ -162,6 +165,7 @@
     <!-- Team Section -->
     <div
       v-if="locale !== 'en'"
+      id="team"
       class="team-section"
     >
       <div class="title-container">
@@ -205,6 +209,7 @@
     <!-- Media Mentions Section -->
     <div
       v-if="locale !== 'en'"
+      id="media"
       class="media-mentions"
     >
       <h2 class="media-title">
@@ -242,6 +247,7 @@
     <!-- Awards section -->
     <div
       v-if="locale !== 'en'"
+      id="awards"
       class="awards"
     >
       <div class="dot-block">
@@ -330,6 +336,7 @@
     <!-- Blog Section -->
     <div
       v-if="locale !== 'en'"
+      id="blog"
       class="blog"
     >
       <h2 class="blog-title">
@@ -397,6 +404,7 @@
 
     <div
       v-if="locale !== 'en'"
+      id="contact"
       class="contact-section"
     >
       <div class="contacts">

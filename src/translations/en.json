@@ -14,12 +14,23 @@
   },
   "toolbar": {
     "home": "Home",
-    "marketplace": "AI Marketplace",
-    "waicode": "WaiCode & WaiSDK"
+    "agents": "Agents",
+    "faq": "FAQ",
+    "cases": "Cases",
+    "team": "Team",
+    "media": "Media",
+    "awards": "Awards",
+    "blog": "Blog",
+    "contact": "Contacts"
   },
   "hero": {
     "title": "AI recruiters that keep your hiring pipeline moving",
     "subtitle": "We source qualified talent, run personalised conversations, and schedule interviews while your HR team focuses on selection."
+  },
+  "marketplace": {
+    "badge": "AI marketplace",
+    "title": "Agents for sales, hiring, knowledge search, and content",
+    "description": "Pick a ready-made WaiWai agent or plug in DeepWai and our summarisation bots to launch AI workflows without custom development."
   },
   "blog": {
     "title": "Blog",
@@ -145,6 +156,18 @@
           "labelKey": "agents.stats.teamsUpskilled"
         }
       ]
+    },
+    "deepSearch": {
+      "title": "DeepWai",
+      "description": "Deep research across Confluence, Notion, and company archives. Answers complex questions and cites trusted sources.",
+      "presentationLink": "https://deepwai.xyz/",
+      "stats": []
+    },
+    "summarizer": {
+      "title": "WaiSummarizer",
+      "description": "A Telegram bot that summarises calls, chats, and docs. Shares key insights and next steps in a single message.",
+      "presentationLink": "https://t.me/wairocks_bot",
+      "stats": []
     }
   },
   "team": {

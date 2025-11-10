@@ -14,12 +14,23 @@
   },
   "toolbar": {
     "home": "Главная",
-    "marketplace": "AI-Маркетплейс",
-    "waicode": "WaiCode & WaiSDK"
+    "agents": "Агенты",
+    "faq": "FAQ",
+    "cases": "Кейсы",
+    "team": "Команда",
+    "media": "Медиа",
+    "awards": "Награды",
+    "blog": "Блог",
+    "contact": "Контакты"
   },
   "hero": {
     "title": "AI-агенты с тонкой настройкой под ваш бизнес",
     "subtitle": "Измеряем эффективность заработанными деньгами и решенными задачами"
+  },
+  "marketplace": {
+    "badge": "AI-маркетплейс",
+    "title": "Агенты для продаж, найма, поиска знаний и контента",
+    "description": "Выбирайте готового агента или подключайте DeepWai и ботов WaiWai, чтобы запустить поисковые и коммуникационные сценарии без разработки."
   },
   "blog": {
     "title": "Блог",
@@ -145,6 +156,18 @@
           "labelKey": "agents.stats.teamsUpskilled"
         }
       ]
+    },
+    "deepSearch": {
+      "title": "DeepWai",
+      "description": "Глубокий поиск по Confluence, Notion и архивам компании. Находит ответы на сложные вопросы и прикладывает проверенные источники.",
+      "presentationLink": "https://deepwai.xyz/",
+      "stats": []
+    },
+    "summarizer": {
+      "title": "WaiSummarizer",
+      "description": "Телеграм-бот для саммаризации звонков, переписок и документов. Возвращает инсайты и список next steps в одном сообщении.",
+      "presentationLink": "https://t.me/wairocks_bot",
+      "stats": []
     }
   },
   "team": {

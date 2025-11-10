@@ -39,17 +39,47 @@ export default {
       {
         key: 'home',
         label: t('toolbar.home'),
-        to: { name: 'home' }
+        to: { name: 'home', hash: '#home' }
       },
       {
-        key: 'marketplace',
-        label: t('toolbar.marketplace'),
-        to: { name: 'ai-marketplace' }
+        key: 'agents',
+        label: t('toolbar.agents'),
+        to: { name: 'home', hash: '#agents' }
       },
       {
-        key: 'waicode',
-        label: t('toolbar.waicode'),
-        to: { name: 'home', hash: '#waicode-waisdk' }
+        key: 'faq',
+        label: t('toolbar.faq'),
+        to: { name: 'home', hash: '#faq' }
+      },
+      {
+        key: 'cases',
+        label: t('toolbar.cases'),
+        to: { name: 'home', hash: '#cases' }
+      },
+      {
+        key: 'team',
+        label: t('toolbar.team'),
+        to: { name: 'home', hash: '#team' }
+      },
+      {
+        key: 'media',
+        label: t('toolbar.media'),
+        to: { name: 'home', hash: '#media' }
+      },
+      {
+        key: 'awards',
+        label: t('toolbar.awards'),
+        to: { name: 'home', hash: '#awards' }
+      },
+      {
+        key: 'blog',
+        label: t('toolbar.blog'),
+        to: { name: 'home', hash: '#blog' }
+      },
+      {
+        key: 'contact',
+        label: t('toolbar.contact'),
+        to: { name: 'home', hash: '#contact' }
       }
     ])
 
@@ -87,6 +117,7 @@ export default {
   flex: 1;
   display: flex;
   justify-content: flex-start;
+  margin-right: auto;
   gap: 2rem;
   font-family: 'Elmamono', 'Roboto Mono', monospace;
   text-transform: uppercase;

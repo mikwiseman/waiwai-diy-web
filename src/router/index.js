@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import Blog from '@/views/Blog.vue'
+import AiMarketplace from '@/views/AiMarketplace.vue'
 import i18n from '@/i18n'
 
 const presentationRedirects = [
@@ -82,6 +83,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/ai-marketplace',
+    name: 'ai-marketplace',
+    component: AiMarketplace
   },
   {
     path: '/mikwiseman',
