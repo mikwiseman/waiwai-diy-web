@@ -44,7 +44,7 @@ export default {
       {
         key: 'marketplace',
         label: t('toolbar.marketplace'),
-        to: { name: 'home', hash: '#ai-marketplace' }
+        to: { name: 'ai-marketplace' }
       },
       {
         key: 'waicode',
@@ -86,7 +86,7 @@ export default {
 .site-toolbar__nav {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 2rem;
   font-family: 'Elmamono', 'Roboto Mono', monospace;
   text-transform: uppercase;
