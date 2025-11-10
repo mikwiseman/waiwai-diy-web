@@ -1,17 +1,6 @@
 <template>
   <header class="site-toolbar">
     <div class="site-toolbar__inner">
-      <router-link
-        class="site-toolbar__brand"
-        :to="{ name: 'home' }"
-        aria-label="WaiWai home"
-      >
-        <img
-          src="@/assets/images/logo_01.svg"
-          alt="WaiWai"
-          class="site-toolbar__logo"
-        >
-      </router-link>
       <nav
         class="site-toolbar__nav"
         aria-label="Primary"
@@ -74,8 +63,10 @@ export default {
 
 <style scoped>
 .site-toolbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   background: rgba(3, 10, 6, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -85,21 +76,11 @@ export default {
 .site-toolbar__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1.5rem;
   max-width: 1440px;
   margin: 0 auto;
   padding: 1rem 2.5rem;
-}
-
-.site-toolbar__brand {
-  display: inline-flex;
-  align-items: center;
-}
-
-.site-toolbar__logo {
-  height: 28px;
-  width: auto;
 }
 
 .site-toolbar__nav {
@@ -126,6 +107,7 @@ export default {
 }
 
 .site-toolbar__cta {
+  margin-left: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -156,10 +138,6 @@ export default {
     gap: 1rem;
   }
 
-  .site-toolbar__brand {
-    order: 0;
-  }
-
   .site-toolbar__nav {
     flex: 1 1 100%;
     justify-content: center;
@@ -169,6 +147,7 @@ export default {
 
   .site-toolbar__cta {
     order: 1;
+    margin-left: 0;
   }
 }
 

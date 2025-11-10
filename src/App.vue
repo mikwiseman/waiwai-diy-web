@@ -114,4 +114,14 @@ export default {
   filter: blur(100px);
   -webkit-filter: blur(100px);
 }
+
+#luxy {
+  padding-top: 84px;
+}
+
+@media (max-width: 600px) {
+  #luxy {
+    padding-top: 120px;
+  }
+}
 </style>
