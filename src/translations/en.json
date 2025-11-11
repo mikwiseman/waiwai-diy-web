@@ -82,6 +82,12 @@
       "teamsUpskilled": "Teams upskilled in AI",
       "sessionsHeld": "Workshops delivered"
     },
+    "store": {
+      "title": "WaiStore + WaiCode + WaiSDK",
+      "description": "WaiWai is a marketplace of AI agents. Through it, companies easily plug artificial intelligence into their infrastructure.",
+      "presentationLink": "https://pitch.waiwai.diy/v/waiwai-ai-8gxm37",
+      "stats": []
+    },
     "sales": {
       "title": "WaiSales",
       "description": "Automates and scales sales. Identifies prospects, starts the conversation, and keeps it moving until the deal is closed. Lifts conversion by learning from every successful negotiation.",

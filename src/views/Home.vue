@@ -602,7 +602,7 @@ export default defineComponent({
       })
     )
 
-    const agentKeys = ['sales', 'hr', 'custom', 'training']
+    const agentKeys = ['store', 'training', 'sales', 'hr', 'custom']
 
     const agentCards = computed(() =>
       agentKeys.map((key) => {
