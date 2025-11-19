@@ -1,8 +1,26 @@
 :root {
-  --main-dark: #042f1b;
-  --secondary: #ddf000;
-  --main-accent: #d4ed6d;
-  --border: #0000001a;
+  --wai-gradient-top: #000000;
+  --wai-gradient-mid: #050f2f;
+  --wai-gradient-bottom: #0f5bff;
+  --wai-hero-gradient: linear-gradient(180deg, var(--wai-gradient-top) 0%, var(--wai-gradient-mid) 55%, var(--wai-gradient-bottom) 100%);
+  --wai-accent-gradient: linear-gradient(135deg, #041337 0%, #0f5bff 100%);
+  --wai-panel-gradient: linear-gradient(155deg, rgba(1, 4, 12, 0.92) 0%, rgba(15, 91, 255, 0.6) 100%);
+  --deep-blue-950: #03051a;
+  --deep-blue-900: #05123d;
+  --deep-blue-850: #061b55;
+  --deep-blue-800: #082a7d;
+  --deep-blue-750: #0b3caa;
+  --deep-blue-700: #0d49d4;
+  --deep-blue-600: #0f5bff;
+  --deep-blue-500: #3e79ff;
+  --deep-blue-border: rgba(12, 54, 159, 0.35);
+  --deep-blue-text: #d6e4ff;
+  --deep-blue-text-muted: rgba(214, 228, 255, 0.65);
+  --deep-blue-highlight: #8fb2ff;
+  --main-dark: var(--deep-blue-850);
+  --secondary: var(--deep-blue-700);
+  --main-accent: var(--deep-blue-500);
+  --border: var(--deep-blue-border);
 }
 
 .w-layout-hflex {
@@ -82,16 +100,17 @@ body {
 .bg-gradient {
   z-index: -5;
   filter: blur(150px);
-  background-color: #d4ed6d;
+  background: var(--wai-hero-gradient);
   border-radius: 100%;
   width: 150%;
   height: 100%;
   position: absolute;
   inset: -100% 0% auto;
+  opacity: 0.85;
 }
 
 .button-text {
-  color: #000;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-feature-settings: "dlig" on, "ss07" on, "ss04" on;
@@ -112,7 +131,7 @@ body {
 
 .contact-button {
   z-index: 10;
-  background-color: var(--main-dark);
+  background: var(--wai-accent-gradient);
   border-radius: 100%;
   flex: none;
   justify-content: center;
@@ -124,6 +143,8 @@ body {
   position: absolute;
   bottom: 1.75rem;
   right: 1.75rem;
+  border: 1px solid rgba(15, 91, 255, 0.35);
+  box-shadow: 0 20px 45px rgba(3, 8, 24, 0.55);
 }
 
 .contact-button:hover {
@@ -131,11 +152,11 @@ body {
 }
 
 .contact-button.down {
-  background-color: var(--secondary);
+  background: var(--wai-accent-gradient);
 }
 
 .contact-button.top {
-  background-color: var(--main-accent);
+  background: var(--wai-accent-gradient);
   display: none;
 }
 
@@ -156,7 +177,7 @@ body {
 
 
 .icon-container {
-  background-color: var(--main-accent);
+  background: var(--wai-accent-gradient);
   border-radius: 100%;
   width: 3rem;
   height: 3rem;
@@ -701,8 +722,8 @@ body {
 }
 
 .footer-button {
-  background-color: var(--main-accent);
-  color: #000;
+  background: var(--wai-accent-gradient);
+  color: #fff;
   text-transform: uppercase;
   border-radius: .5rem;
   justify-content: center;
@@ -717,7 +738,7 @@ body {
 }
 
 .footer-button:hover {
-  background-color: #c0da59;
+  background: linear-gradient(135deg, #052157 0%, #1672ff 100%);
 }
 
 .group {
@@ -918,7 +939,7 @@ body {
 }
 
 .error-message {
-  background-color: var(--main-accent);
+  background: var(--wai-accent-gradient);
   border: 1px solid #ffffff26;
   border-radius: .5rem;
   margin-top: .5rem;
@@ -1188,7 +1209,7 @@ body {
   }
 
   .contact-button.top {
-    background-color: var(--secondary);
+    background: var(--wai-accent-gradient);
     text-decoration: none;
     display: flex;
     bottom: -80%;
@@ -1353,7 +1374,7 @@ body {
   }
 
   .contact-button-footer.top {
-    background-color: var(--secondary);
+    background: var(--wai-accent-gradient);
     text-decoration: none;
     display: flex;
     bottom: -80%;

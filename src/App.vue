@@ -102,6 +102,7 @@ export default {
 @import '@/assets/css/normalize.css';
 @import '@/assets/css/webflow.css';
 @import '@/assets/css/waiwaidiy.webflow.css';
+@import '@/assets/css/deep-blue-overrides.css';
 
 /* Other styles */
 .logo-card-whoverp .logo-image-media {

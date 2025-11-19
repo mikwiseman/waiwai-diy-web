@@ -786,7 +786,7 @@ export default defineComponent({
   bottom: 24px;
   font-family: 'Courier', monospace;
   font-size: 14px;
-  color: #E5FF32;
+  color: var(--deep-blue-bright, #8fb2ff);
   opacity: 0.8;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -800,7 +800,7 @@ export default defineComponent({
   transform: translate(-50%, -50%);
   width: 600px;
   height: 600px;
-  background-color: #E5FF32;
+  background: var(--wai-hero-gradient, linear-gradient(180deg, #000000 0%, #050f2f 55%, #0f5bff 100%));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -808,6 +808,8 @@ export default defineComponent({
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s ease;
+  box-shadow: 0 60px 140px rgba(6, 18, 59, 0.55);
+  border: 1px solid rgba(15, 91, 255, 0.3);
 }
 
 .contact-button-circle:hover {
@@ -826,14 +828,14 @@ export default defineComponent({
   text-align: center;
   letter-spacing: 2px;
   transition: transform 0.5s ease;
-  color: #002713;
+  color: #fff;
 }
 
 .form-container {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #002713;
+  background: #020202;
   overflow: hidden;
 }
 
@@ -881,18 +883,19 @@ export default defineComponent({
 }
 
 .footer-copyright {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
   font-size: 14px;
   margin: 0;
 }
 
 .footer-link {
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* Blog styles */
@@ -935,8 +938,8 @@ export default defineComponent({
   background: #fff;
   border-radius: 1.75rem;
   padding: 2.25rem;
-  box-shadow: 0 20px 40px rgba(0, 39, 19, 0.08);
-  border: 1px solid rgba(0, 27, 15, 0.08);
+  box-shadow: 0 20px 40px rgba(8, 34, 120, 0.08);
+  border: 1px solid rgba(4, 26, 82, 0.08);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -1033,7 +1036,7 @@ export default defineComponent({
 }
 
 .proj-section .title {
-  color: #04170e;
+  color: #02102a;
 }
 
 .section-label {
@@ -1041,8 +1044,10 @@ export default defineComponent({
   margin-bottom: 0.75rem;
   padding: 0.4rem 1rem;
   border-radius: 999px;
-  background: #e5ff32;
-  color: #04170e;
+  background: var(--wai-accent-gradient, linear-gradient(135deg, #041336 0%, #0f5bff 100%));
+  color: #fff;
+  border: 1px solid rgba(15, 91, 255, 0.4);
+  box-shadow: 0 12px 24px rgba(5, 16, 59, 0.35);
   font-family: "Inter Tight", sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
@@ -1062,7 +1067,7 @@ export default defineComponent({
   font-weight: 500;
   line-height: 1.5rem;
   margin: 0;
-  color: #04170e;
+  color: #02102a;
 }
 
 .scenario-text p {
@@ -1147,25 +1152,25 @@ export default defineComponent({
 .case-card {
   background: #ffffff;
   border-radius: 1.75rem;
-  border: 1px solid rgba(0, 27, 15, 0.08);
+  border: 1px solid rgba(4, 26, 82, 0.08);
   padding: 2.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  box-shadow: 0 20px 40px rgba(0, 39, 19, 0.08);
+  box-shadow: 0 20px 40px rgba(8, 34, 120, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .case-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 24px 48px rgba(0, 39, 19, 0.12);
+  box-shadow: 0 24px 48px rgba(8, 34, 120, 0.12);
 }
 
 .case-header p {
   font-family: Inter, sans-serif;
   font-size: 1.05rem;
   line-height: 1.7;
-  color: rgba(4, 23, 14, 0.72);
+  color: rgba(4, 26, 82, 0.72);
   margin: 0;
 }
 
@@ -1186,7 +1191,7 @@ export default defineComponent({
 
 .contact-button-card {
   flex: 0 0 auto;
-  background-color: var(--secondary);
+  background: var(--wai-accent-gradient, linear-gradient(135deg, #041336 0%, #0f5bff 100%));
   border-radius: 999px;
   padding: 0.9rem 1.85rem;
   display: inline-flex;
@@ -1194,7 +1199,8 @@ export default defineComponent({
   justify-content: center;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 12px 24px rgba(0, 39, 19, 0.12);
+  box-shadow: 0 18px 32px rgba(4, 16, 59, 0.35);
+  border: 1px solid rgba(15, 91, 255, 0.35);
 }
 
 .case-header--agent .contact-button-card {
@@ -1203,11 +1209,11 @@ export default defineComponent({
 
 .contact-button-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 32px rgba(0, 39, 19, 0.16);
+  box-shadow: 0 24px 44px rgba(4, 16, 59, 0.45);
 }
 
 .contact-button-card-text {
-  color: #04170e;
+  color: #fff;
   text-transform: uppercase;
   font-feature-settings: "dlig" on, "ss07" on, "ss04" on;
   font-family: Elmamono, sans-serif;
@@ -1234,7 +1240,7 @@ export default defineComponent({
   gap: 2rem;
   margin-top: 0.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 27, 15, 0.08);
+  border-top: 1px solid rgba(4, 26, 82, 0.08);
 }
 
 .case-stat {
@@ -1247,13 +1253,13 @@ export default defineComponent({
   font-family: "Inter Tight", sans-serif;
   font-size: 1.65rem;
   font-weight: 600;
-  color: #04170e;
+  color: #02102a;
 }
 
 .case-stat-label {
   font-family: Inter, sans-serif;
   font-size: 0.95rem;
-  color: rgba(4, 23, 14, 0.6);
+  color: rgba(4, 26, 82, 0.6);
 }
 
 .case-tags {
@@ -1262,14 +1268,14 @@ export default defineComponent({
   gap: 0.75rem;
   margin-top: 0.75rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 27, 15, 0.08);
+  border-top: 1px solid rgba(4, 26, 82, 0.08);
 }
 
 .case-tag {
   padding: 0.5rem 1rem;
   border-radius: 999px;
-  background: rgba(0, 39, 19, 0.08);
-  color: #04170e;
+  background: var(--wai-accent-gradient, linear-gradient(135deg, #041336 0%, #0f5bff 100%));
+  color: #fff;
   font-family: Inter, sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.4px;
@@ -1282,7 +1288,7 @@ export default defineComponent({
 }
 
 .team-section .title {
-  color: #04170e;
+  color: #02102a;
 }
 
 .team-grid {
@@ -1302,14 +1308,14 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border: 1px solid rgba(0, 27, 15, 0.06);
-  box-shadow: 0 20px 40px rgba(0, 39, 19, 0.08);
+  border: 1px solid rgba(4, 26, 82, 0.06);
+  box-shadow: 0 20px 40px rgba(8, 34, 120, 0.08);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .team-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 28px 60px rgba(0, 39, 19, 0.12);
+  box-shadow: 0 28px 60px rgba(8, 34, 120, 0.12);
 }
 
 .team-photo-wrapper {
@@ -1339,8 +1345,8 @@ export default defineComponent({
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: #120025;
-  color: #e5ff32;
+  background: var(--wai-accent-gradient, linear-gradient(135deg, #041336 0%, #0f5bff 100%));
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1354,7 +1360,7 @@ export default defineComponent({
   font-family: "Inter Tight", sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
-  color: #040404;
+  color: #02102a;
 }
 
 .team-role {
@@ -1437,7 +1443,7 @@ export default defineComponent({
   font-size: 1.7rem;
   font-weight: 500;
   line-height: 1.9rem;
-  color: #04170e;
+  color: #02102a;
   margin-bottom: 1.75rem;
 }
 
@@ -1446,7 +1452,7 @@ export default defineComponent({
   align-items: center;
   gap: 2rem;
   padding: 1.25rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(4, 26, 82, 0.12);
 }
 
 .media-container:last-of-type {
@@ -1551,9 +1557,23 @@ export default defineComponent({
 }
 
 .contact-button.mobile {
-  background-color: var(--secondary);
+  background: var(--wai-accent-gradient, linear-gradient(135deg, #041336 0%, #0f5bff 100%));
+  border: 1px solid rgba(15, 91, 255, 0.35);
+  box-shadow: 0 16px 40px rgba(5, 16, 59, 0.4);
   position: static;
   margin: 0;
+}
+
+.contact-button.top,
+.contact-button.down {
+  background: var(--wai-accent-gradient, linear-gradient(135deg, #041336 0%, #0f5bff 100%));
+  border: 1px solid rgba(15, 91, 255, 0.35);
+  box-shadow: 0 16px 40px rgba(5, 16, 59, 0.4);
+}
+
+.contact-button .button-text,
+.mobile-buttons .button-text {
+  color: #fff;
 }
 
 .hero-logo-vertical {

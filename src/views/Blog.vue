@@ -130,13 +130,13 @@ export default defineComponent({
   line-height: 1.2;
   margin: 0 auto 3rem;
   max-width: 1280px;
-  color: #000;
+  color: var(--deep-blue-900, #02102a);
 }
 
 .blog-status {
   font-family: Inter Tight, sans-serif;
   font-size: 1rem;
-  color: #475569;
+  color: rgba(2, 16, 42, 0.6);
 }
 
 .blog-status--error {
@@ -153,18 +153,18 @@ export default defineComponent({
   background: #fff;
   border-radius: 1.75rem;
   padding: 2.5rem;
-  box-shadow: 0 24px 48px rgba(0, 39, 19, 0.12);
-  border: 1px solid rgba(0, 27, 15, 0.08);
+  box-shadow: 0 24px 48px rgba(2, 16, 42, 0.08);
+  border: 1px solid rgba(2, 16, 42, 0.08);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   font-family: 'Roboto Mono', monospace;
-  color: #000;
+  color: var(--deep-blue-900, #02102a);
 }
 
 .blog-card-date {
   font-size: 0.95rem;
-  color: #000;
+  color: rgba(2, 16, 42, 0.6);
   opacity: 0.8;
 }
 
@@ -173,7 +173,7 @@ export default defineComponent({
   font-size: 1.75rem;
   font-weight: 500;
   margin: 0;
-  color: #000;
+  color: var(--deep-blue-900, #02102a);
 }
 
 .blog-card-title-link {
@@ -182,20 +182,20 @@ export default defineComponent({
 }
 
 .blog-card-title-link:hover {
-  color: #2563eb;
+  color: var(--deep-blue-bright, #8fb2ff);
 }
 
 .blog-card-description {
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.6rem;
-  color: #000;
+  color: rgba(2, 16, 42, 0.92);
 }
 
 .blog-card-link {
   font-weight: 600;
   text-decoration: none;
-  color: #000;
+  color: var(--deep-blue-accent, #124f9f);
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -208,7 +208,7 @@ export default defineComponent({
 }
 
 .blog-card-link:hover {
-  color: #2563eb;
+  color: var(--deep-blue-bright, #8fb2ff);
 }
 
 .blog-card-read-more {

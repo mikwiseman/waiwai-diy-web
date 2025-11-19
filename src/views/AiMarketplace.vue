@@ -97,9 +97,9 @@ export default defineComponent({
 <style scoped>
 .marketplace {
   padding: 8rem 2rem 4rem;
-  background: #010603;
+  background: var(--wai-hero-gradient, linear-gradient(180deg, #000000 0%, #050f2f 55%, #0f5bff 100%));
   min-height: 100vh;
-  color: #f4f7ed;
+  color: #fff;
 }
 
 .marketplace__hero {
@@ -112,7 +112,7 @@ export default defineComponent({
   font-family: 'Elmamono', 'Roboto Mono', monospace;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #d7ff32;
+  color: var(--deep-blue-bright, #8fb2ff);
   margin-bottom: 1rem;
 }
 
@@ -125,7 +125,7 @@ export default defineComponent({
 .marketplace__description {
   font-size: 1.15rem;
   line-height: 1.6;
-  color: rgba(244, 247, 237, 0.85);
+  color: var(--deep-blue-text-muted-override, rgba(214, 228, 255, 0.65));
 }
 
 .marketplace__grid {
@@ -137,14 +137,15 @@ export default defineComponent({
 }
 
 .marketplace-card {
-  background: #031209;
+  background: var(--wai-panel-gradient, linear-gradient(155deg, rgba(1, 4, 12, 0.92) 0%, rgba(15, 91, 255, 0.6) 100%));
   border-radius: 1.75rem;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(15, 91, 255, 0.35);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   min-height: 100%;
+  box-shadow: 0 35px 80px rgba(3, 8, 24, 0.65);
 }
 
 .marketplace-card__header h2 {
@@ -154,7 +155,7 @@ export default defineComponent({
 
 .marketplace-card__header p {
   margin: 0;
-  color: rgba(244, 247, 237, 0.8);
+  color: var(--deep-blue-text-muted-override, rgba(214, 228, 255, 0.65));
 }
 
 .marketplace-card__stats {
@@ -166,7 +167,7 @@ export default defineComponent({
 .marketplace-card__stat {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(214, 228, 255, 0.25);
   padding-top: 0.75rem;
 }
 
@@ -174,7 +175,7 @@ export default defineComponent({
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(244, 247, 237, 0.65);
+  color: var(--deep-blue-text-muted-override, rgba(214, 228, 255, 0.65));
 }
 
 .marketplace-card__stat dd {
@@ -186,13 +187,14 @@ export default defineComponent({
   align-self: flex-start;
   padding: 0.75rem 1.25rem;
   border-radius: 999px;
-  background: #d7ff32;
-  color: #041106;
+  background: var(--wai-accent-gradient, linear-gradient(135deg, #041336 0%, #0f5bff 100%));
+  color: #fff;
   font-family: 'Elmamono', 'Roboto Mono', monospace;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-decoration: none;
-  border: 2px solid #0d1b11;
+  border: 1px solid rgba(15, 91, 255, 0.45);
+  box-shadow: 0 20px 45px rgba(3, 8, 24, 0.5);
 }
 
 @media (max-width: 640px) {

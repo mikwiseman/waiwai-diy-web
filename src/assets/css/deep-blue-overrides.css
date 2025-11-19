@@ -1,0 +1,34 @@
+:root {
+  --deep-blue-bg: var(--deep-blue-950, #010612);
+  --deep-blue-surface: var(--deep-blue-850, #041632);
+  --deep-blue-card: var(--deep-blue-800, #062249);
+  --deep-blue-accent: var(--deep-blue-600, #124f9f);
+  --deep-blue-bright: var(--deep-blue-highlight, #8fb2ff);
+  --deep-blue-border-strong: var(--deep-blue-border, rgba(18, 76, 156, 0.32));
+  --deep-blue-text-strong: var(--deep-blue-text, #d6e4ff);
+  --deep-blue-text-muted-override: var(--deep-blue-text-muted, rgba(214, 228, 255, 0.65));
+}
+
+body {
+  background-color: #fff;
+  color: var(--deep-blue-900, #02102a);
+}
+
+body :where(a) {
+  color: var(--deep-blue-accent);
+  transition: color 0.2s ease;
+}
+
+body :where(a:hover, a:focus-visible) {
+  color: var(--deep-blue-bright);
+}
+
+body :where(.site-toolbar) {
+  backdrop-filter: blur(14px);
+  background-color: rgba(2, 10, 26, 0.92) !important;
+  border-bottom: 1px solid rgba(15, 63, 141, 0.45) !important;
+}
+
+body :where(.bg-gradient) {
+  background: var(--wai-hero-gradient, linear-gradient(180deg, #000000 0%, #050f2f 55%, #0f5bff 100%)) !important;
+}

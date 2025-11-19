@@ -98,8 +98,8 @@ export default {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(3, 10, 6, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
 }
 
@@ -124,7 +124,7 @@ export default {
 }
 
 .site-toolbar__link {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(214, 228, 255, 0.78);
   font-size: 0.92rem;
   letter-spacing: 0.04em;
   text-decoration: none;
@@ -134,7 +134,7 @@ export default {
 .site-toolbar__link.router-link-active,
 .site-toolbar__link:hover,
 .site-toolbar__link:focus-visible {
-  color: #d7ff32;
+  color: var(--deep-blue-bright);
 }
 
 .site-toolbar__cta {
@@ -144,22 +144,22 @@ export default {
   justify-content: center;
   padding: 0.8rem 1.5rem;
   border-radius: 999px;
-  background: #d7ff32;
-  color: #091106;
+  background: var(--wai-accent-gradient, linear-gradient(135deg, #041336 0%, #0f5bff 100%));
+  color: #fff;
   text-transform: uppercase;
   font-family: 'Elmamono', 'Roboto Mono', monospace;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   text-decoration: none;
-  border: 2px solid #0d1b11;
-  box-shadow: 0 8px 30px rgba(215, 255, 50, 0.35);
+  border: 1px solid rgba(15, 91, 255, 0.45);
+  box-shadow: 0 12px 32px rgba(5, 16, 59, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .site-toolbar__cta:hover,
 .site-toolbar__cta:focus-visible {
   transform: translateY(-1px);
-  box-shadow: 0 12px 38px rgba(215, 255, 50, 0.45);
+  box-shadow: 0 16px 40px rgba(5, 16, 59, 0.6);
 }
 
 @media (max-width: 1024px) {
