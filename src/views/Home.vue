@@ -698,8 +698,8 @@ export default defineComponent({
       {
         key: 'falcone',
         stats: [
-          { value: '38', labelKey: 'cases.stats.positionsClosed' },
-          { value: '62%', labelKey: 'cases.stats.replyRateGrowth' }
+          { value: '21%', labelKey: 'cases.stats.salesGrowth' },
+          { value: '420', labelKey: 'cases.stats.conversationsPerMonth' }
         ]
       },
       {

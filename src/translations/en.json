@@ -232,7 +232,9 @@
       "hoursSaved": "Hours of recruiter work saved",
       "interviewsScheduled": "Interviews scheduled automatically",
       "workshopsRun": "Workshops delivered",
-      "specialistsUpskilled": "Specialists upskilled"
+      "specialistsUpskilled": "Specialists upskilled",
+      "salesGrowth": "Sales growth per month",
+      "conversationsPerMonth": "Conversations per month"
     },
     "samolet": {
       "title": "Samolet Group",

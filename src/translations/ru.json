@@ -232,7 +232,9 @@
       "hoursSaved": "Часов работы рекрутеров сэкономлено",
       "interviewsScheduled": "Интервью, назначенные автоматически",
       "workshopsRun": "Проведено воркшопов",
-      "specialistsUpskilled": "Специалистов обучено"
+      "specialistsUpskilled": "Специалистов обучено",
+      "salesGrowth": "Рост продаж в месяц",
+      "conversationsPerMonth": "Диалогов в месяц"
     },
     "samolet": {
       "title": "ГК «Самолет»",
