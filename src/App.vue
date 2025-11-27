@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { onMounted, computed, watch } from 'vue'
+import { onMounted, computed } from 'vue'
 import { useHead } from '@vueuse/head'
 import { useI18n } from 'vue-i18n'
 import SiteToolbar from '@/components/SiteToolbar.vue'
@@ -19,7 +19,7 @@ export default {
     SiteToolbar
   },
   setup() {
-    const { t, locale } = useI18n()
+    const { t } = useI18n()
 
     // Compute meta tags based on current locale
     const metaTags = computed(() => ({
@@ -48,7 +48,7 @@ export default {
         },
         {
           property: 'og:url',
-          content: locale.value === 'en' ? 'https://wai.sale' : 'https://waiwai.diy'
+          content: 'https://waiwai.diy'
         },
         // Twitter Card tags
         {
@@ -66,24 +66,19 @@ export default {
         // Language tag
         {
           name: 'language',
-          content: locale.value
+          content: 'ru'
         }
       ],
       link: [
         {
           rel: 'canonical',
-          href: locale.value === 'en' ? 'https://wai.sale' : 'https://waiwai.diy'
+          href: 'https://waiwai.diy'
         }
       ]
     }))
 
     // Apply meta tags
     useHead(metaTags)
-
-    // Watch for locale changes and update meta tags
-    watch(locale, () => {
-      // Meta tags will automatically update due to computed property
-    })
 
     onMounted(() => {
       // Initialize Luxy.js

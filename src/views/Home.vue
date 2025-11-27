@@ -50,10 +50,7 @@
       </div>
     </div>
     
-    <div
-      v-if="locale !== 'en'"
-      class="sliding-content"
-    >
+    <div class="sliding-content">
       <div
         id="agents"
         class="proj-section agents-section"
@@ -154,7 +151,6 @@
 
     <!-- Team Section -->
     <div
-      v-if="locale !== 'en'"
       id="team"
       class="team-section"
     >
@@ -198,7 +194,6 @@
 
     <!-- Media Mentions Section -->
     <div
-      v-if="locale !== 'en'"
       id="media"
       class="media-mentions"
     >
@@ -236,7 +231,6 @@
     </div>
     <!-- Awards section -->
     <div
-      v-if="locale !== 'en'"
       id="awards"
       class="awards"
     >
@@ -325,7 +319,6 @@
 
     <!-- Blog Section -->
     <div
-      v-if="locale !== 'en'"
       id="blog"
       class="blog"
     >
@@ -393,7 +386,6 @@
     </div>
 
     <div
-      v-if="locale !== 'en'"
       id="contact"
       class="contact-section"
     >
@@ -466,7 +458,7 @@
               {{ t('contact.copyright') }}
             </p>
             <a
-              :href="$i18n.locale === 'ru' ? 'https://docs.google.com/document/d/1Xh5HF6y-1nSrwcg6mxpdzgU_uz3Q9DNy' : 'https://docs.google.com/document/d/1wAv1IuOxSROJ8Vr4aRrxPFLmZvnWeyIu'" 
+              href="https://docs.google.com/document/d/1Xh5HF6y-1nSrwcg6mxpdzgU_uz3Q9DNy" 
               target="_blank" 
               class="footer-copyright footer-link"
             >
@@ -490,7 +482,7 @@
 </template>
 
 <script>
-import { computed, defineComponent, onMounted, ref, watch } from 'vue'
+import { computed, defineComponent, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { fetchBlogPosts, formatBlogDate } from '@/utils/blogPosts'
 
@@ -524,19 +516,7 @@ export default defineComponent({
     }
 
     onMounted(() => {
-      if (locale.value !== 'en') {
-        loadBlogPosts()
-      }
-    })
-
-    watch(locale, (newLocale, oldLocale) => {
-      if (newLocale === 'en') {
-        return
-      }
-
-      if (oldLocale === 'en' || blogPosts.value.length === 0) {
-        loadBlogPosts()
-      }
+      loadBlogPosts()
     })
 
     const featuredBlogPosts = computed(() =>
