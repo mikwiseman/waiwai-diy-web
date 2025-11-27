@@ -138,16 +138,6 @@
               </h3>
               <p>{{ caseItem.description }}</p>
             </div>
-            <div class="case-stats">
-              <div
-                v-for="stat in caseItem.stats"
-                :key="stat.label"
-                class="case-stat"
-              >
-                <span class="case-stat-value">{{ stat.value }}</span>
-                <span class="case-stat-label">{{ stat.label }}</span>
-              </div>
-            </div>
             <div class="case-tags">
               <span
                 v-for="(tag, index) in caseItem.tags"
@@ -688,49 +678,12 @@ export default defineComponent({
     }))
 
     const casesConfig = [
-      {
-        key: 'samolet',
-        stats: [
-          { value: '6', labelKey: 'cases.stats.workshopsRun' },
-          { value: '5000', labelKey: 'cases.stats.specialistsUpskilled' }
-        ]
-      },
-      {
-        key: 'falcone',
-        stats: [
-          { value: '21%', labelKey: 'cases.stats.salesGrowth' },
-          { value: '420', labelKey: 'cases.stats.conversationsPerMonth' }
-        ]
-      },
-      {
-        key: 'akBarsBank',
-        stats: [
-          { value: '45%', labelKey: 'cases.stats.timeToHireCut' },
-          { value: '120', labelKey: 'cases.stats.hoursSaved' }
-        ]
-      },
-      {
-        key: 'alphaBank',
-        stats: [
-          { value: '4', labelKey: 'cases.stats.workshopsRun' },
-          { value: '48', labelKey: 'cases.stats.specialistsUpskilled' }
-        ]
-      },
-      {
-        key: 'ontico',
-        stats: [
-          { value: '27', labelKey: 'cases.stats.positionsClosed' },
-          { value: '3.1x', labelKey: 'cases.stats.replyRateGrowth' }
-        ]
-      },
-      {
-        key: 'kodix',
-        stats: [
-          { value: '68%', labelKey: 'cases.stats.timeToHireCut' },
-          { value: '18', labelKey: 'cases.stats.interviewsScheduled' },
-          { value: '40', labelKey: 'cases.stats.hoursSaved' }
-        ]
-      }
+      { key: 'samolet' },
+      { key: 'falcone' },
+      { key: 'akBarsBank' },
+      { key: 'alphaBank' },
+      { key: 'ontico' },
+      { key: 'kodix' }
     ]
 
     const caseCards = computed(() =>
@@ -740,10 +693,6 @@ export default defineComponent({
           key: item.key,
           title: t(`cases.${item.key}.title`),
           description: t(`cases.${item.key}.description`),
-          stats: item.stats.map((stat) => ({
-            value: stat.value,
-            label: t(stat.labelKey)
-          })),
           tags: Array.isArray(tags) ? tags : []
         }
       })
@@ -1234,34 +1183,6 @@ export default defineComponent({
   }
 }
 
-.case-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 0.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(4, 26, 82, 0.08);
-}
-
-.case-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.case-stat-value {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 1.65rem;
-  font-weight: 600;
-  color: #02102a;
-}
-
-.case-stat-label {
-  font-family: Inter, sans-serif;
-  font-size: 0.95rem;
-  color: rgba(4, 26, 82, 0.6);
-}
-
 .case-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1398,10 +1319,6 @@ export default defineComponent({
   .case-card {
     padding: 1.75rem;
     gap: 1rem;
-  }
-
-  .case-stats {
-    gap: 1.5rem;
   }
 
   .faq-section {

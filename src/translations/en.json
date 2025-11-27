@@ -225,17 +225,6 @@
     "title": "Hiring case studies",
     "comingSoon": "New case study coming soon",
     "yourProject": "Space for your HR project",
-    "stats": {
-      "positionsClosed": "Roles closed per month",
-      "replyRateGrowth": "Growth in candidate reply rate",
-      "timeToHireCut": "Reduction in time-to-hire",
-      "hoursSaved": "Hours of recruiter work saved",
-      "interviewsScheduled": "Interviews scheduled automatically",
-      "workshopsRun": "Workshops delivered",
-      "specialistsUpskilled": "Specialists upskilled",
-      "salesGrowth": "Sales growth per month",
-      "conversationsPerMonth": "Conversations per month"
-    },
     "samolet": {
       "title": "Samolet Group",
       "description": "Upskilled the company's key developers with a six-lecture immersion, a hackathon, and an internal AI lab. Formed an in-house core team that now drives AI adoption across the corporation. Scaled the curriculum to the entire organization with lectures delivered to 5,000 employees.",
