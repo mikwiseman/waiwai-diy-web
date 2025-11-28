@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="148" height="29" viewBox="0 0 148 29" fill="none">
-<g clip-path="url(#clip0_5907_5637)">
+<svg xmlns="http://www.w3.org/2000/svg" width="148" height="37" viewBox="0 0 148 37" fill="none">
+<g clip-path="url(#clip0_5907_5637)" transform="scale(1, 1.28)">
 <path d="M3.18359 28.8477L0 0.839844H6.875L8.10547 19.3164L9.86328 0.839844H17.0508L18.8281 19.4727L20.0781 0.839844H26.7383L23.5547 28.8477H14.9805L13.3398 10.2344L11.7969 28.8477H3.18359Z" fill="url(#waiBlueGradientLg)" />
 <path d="M24.8333 28.8477L29.4231 0.839844H40.1067L44.9505 28.8477H37.4309L36.7473 23.1055H32.8606L32.2161 28.8477H24.8333ZM33.5052 17.5781H36.0638L34.7356 6.91406L33.5052 17.5781Z" fill="url(#waiBlueGradientLg)" />
 <path d="M44.608 28.8477V7.24609H51.4048V28.8477H44.608ZM44.2955 3.26172C44.2955 1.32812 45.897 0 48.0064 0C50.1158 0 51.7173 1.32812 51.7173 3.26172C51.7173 5.15625 50.1158 6.50391 48.0064 6.50391C45.897 6.50391 44.2955 5.15625 44.2955 3.26172Z" fill="url(#waiBlueGradientLg)" />
@@ -14,7 +14,7 @@
 <stop offset="100%" stop-color="#0f5bff" />
 </linearGradient>
 <clipPath id="clip0_5907_5637">
-<rect width="147.143" height="28.8477" fill="white" />
+<rect width="148" height="37" fill="white" />
 </clipPath>
 </defs>
 </svg>
