@@ -540,13 +540,13 @@ export default defineComponent({
     ]
 
     const membersConfig = [
+      { key: 'mik', image: teamImages[6] },
       { key: 'egor', image: teamImages[0] },
       { key: 'pavel', image: teamImages[1] },
       { key: 'anastasiaM', image: teamImages[2] },
       { key: 'aleksey', image: teamImages[3] },
       { key: 'vyacheslav', image: teamImages[4] },
       { key: 'anastasiaS', image: teamImages[5] },
-      { key: 'mik', image: teamImages[6] },
       { key: 'waiComputer', image: teamImages[7] }
     ]
 
